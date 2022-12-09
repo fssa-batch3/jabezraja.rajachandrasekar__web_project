@@ -1,0 +1,807 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+/*------Header Section Begin------*/
+header{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: crimson;
+    width: 100%;
+    height: 56px;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+.header-left{
+    width: 20%;
+    text-align: right;
+    margin: 5px 0px;
+    cursor: pointer;
+}
+
+.header-left a{
+    color: whitesmoke;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 1.5px;
+}
+
+.header-left-p a{
+    font-size: 15px;
+    letter-spacing: 1.5px;
+}
+
+.header-center{
+    width: 40%;
+    text-align: left;
+    line-height: 50px;
+    cursor: pointer;
+    padding: relative;
+}
+
+.header-center-input{
+    margin-top: 10px;
+    height: 36px;
+    width: 100%;
+    border:none;
+    text-align: left;
+    padding-left: 20px;
+    cursor: auto;
+    border-radius: 2px;
+}
+
+.fa-magnifying-glass{
+    position: absolute;
+    top: 36%;
+    left: 64%;
+    font-size: 18px;
+    color:crimson;
+}
+
+/*------Header Section End------*/
+
+/*------Login Button Begin------*/
+.login{
+    position: relative;
+    left: 45px;
+    margin-top: 17px;
+}
+
+.login_btn{
+    color: crimson;
+    border-radius: 2px;
+    border: 1px solid whitesmoke;
+    background-color: whitesmoke;
+    height: 32px;
+    letter-spacing: 1px;
+    padding: 6px 40px;
+    font-weight: bold;
+    margin: 0px 20px;
+    cursor: pointer;
+    text-decoration:none;
+    font: size 16px;
+}
+
+.login_dropdown{
+    position: relative;
+    top: 12px;
+}
+
+.login_dropdown_list{
+    position: absolute;
+    list-style: none;
+    background-color: whitesmoke;
+    width: max-content;
+    box-shadow: 0 4px 16px rgb(0 0 0 /20%);
+    min-width: 240px;
+    transform: translate(-30px);
+}
+
+.login_drop_li{
+    padding: 16px 20px;
+    border-bottom: 1px solid whitesmoke;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.login_drop_li:hover{
+    background: lightgrey;
+}
+
+.login_drop_li.fa-solid{
+    color: crimson;
+    padding-right: 10px;
+}
+
+.login_drop_li:first-child{
+    padding: 20px;
+}
+
+.login_drop_li:first-child:hover{
+    color: black;
+}
+
+.login_drop_li:first-child{
+    padding: 20px;
+}
+
+.login:hover .login_dropdown{
+    display: block;
+}
+
+.sign_up{
+    text-decoration: none;
+    color: crimson;
+}
+
+.sign_up:hover{
+    text-decoration: underline;
+}
+
+.sign_li{
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.new_login{
+    font-weight: bold;
+}
+/*------Login Section End------*/
+
+/*-----more details Begin-----*/
+.more{
+    position: relative;
+    margin-top: 17px;
+}
+
+.cart{
+    margin-top: 17px;
+    margin-right: 60px;
+}
+
+.none{
+    display: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.more-icon{
+    color:crimson;
+    margin-left: 15px;
+    padding: 20px;
+}
+
+.more_lan{
+    color: whitesmoke;
+    cursor: pointer;
+    font-size: 15px;
+    padding:20px;
+
+}
+
+.pointer{
+    width:20px;
+    height: 20px;
+    background:black ;
+    transform: rotate(45deg);
+    position: relative;
+    top: 10px;
+    left: 80%;
+}
+
+.fa-angle-down:hover{
+    transform: rotate(180deg);
+}
+
+.more_dropdown{
+    position: relative;
+    top: 12px;
+}
+
+.more_dropdown_list{
+    position: absolute;
+    list-style: none;
+    background-color: whitesmoke;
+    width: max-content;
+    box-shadow: 0 4px 16px rgb(0 0 0 /20%);
+    min-width: 240px;
+    transform: translate(-30px);
+}
+
+.more:hover .more_dropdown{
+    display: block;
+}
+/*-----more details End-----*/
+
+
+/*-----Add to Cart details Begin-----*/
+.body{
+    background-color:white;
+} 
+
+
+
+.product-table{
+    width: 950px;
+    border-collapse:collapse;
+}
+.product-table th{
+    background-color:#f5f1e9 ;
+    color: #886619;
+    font-size: 12px;
+    letter-spacing: 1.68px;
+    padding: 12px 20px;
+    margin-bottom: 8px;
+}
+
+.product-table td{
+    padding-left: 40px;
+    font-family: 'poppins';
+    border-bottom: 1px solid #eee;
+}
+
+.product-table td input{
+      width: 30px;
+}
+
+.details td{
+    padding: 12px 0px 11px;
+}
+
+.details{
+    width: 20pc;
+}
+.dub{
+    padding-left: 7px;
+}
+
+
+
+
+
+
+
+
+
+.cartimg{}
+
+.cartimg img{
+    width: 100%;
+    padding: 2% 0;
+}
+
+.head1, .head2{
+    text-align: center;
+    line-height: 45px;
+    color: #aa8531;
+}
+.head1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+}
+.head2{
+    font-size: 15px;
+}
+
+.content{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+width: 100%;
+}
+
+.lifeside{
+    border: 1px solid #e5decf;
+}
+
+.carthead{
+    display:flex;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f5f1e9;
+    color: #886619;
+    font-size: 12px;
+    letter-spacing: 1.68px;
+    padding: 12px 20px;
+    margin-bottom: 8px;
+    justify-content:space-evenly;
+}
+
+.cartdetails{
+    display: flex;
+    flex-direction: row;
+    padding: 20px 10px 12px;
+    background-color: #fff;  
+    justify-content:space-evenly;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.cartlist img{
+    width: 100px;
+    height: 90px;
+}
+.number{
+    width: 40px;
+}
+
+.rm{
+    display: flex;
+    justify-content: center;
+    padding-left: 105px;
+    margin-top: 10px;
+    border-top: 1px solid #e5decf;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.rm1{
+    cursor: pointer;
+    border-right: 1px solid #d5c8aa;
+    color:#3a302e;
+    font-size: 14px;
+    padding: 0 18px 0 15px;
+
+}
+    
+.rm2{
+    cursor: pointer;
+    padding: 0 0 0 15px;
+    color:#3a302e;
+    font-size: 14px;
+}
+
+.rightside{
+    padding: 0;
+    
+}
+.rightside h4{
+    color: #9b7c35;
+    font-size: 18px;
+    letter-spacing: 2.25px;
+    margin: 0 0 18px;
+}
+.rsb{
+    display: flex;
+    
+    font-size: 14px;
+    color: #42515b;
+    border-bottom: 1px solid #e5decf;
+    padding: 12px 0px 11px;
+    
+}
+
+.rsbr{
+    padding: 0;
+    
+}
+
+.rsbl{
+    text-align: right;
+    padding: 0;
+    margin-left: 100;
+}
+
+.smallinc{
+    float: right;
+    font-size: 12px;
+    color: #848484;
+    text-align: right;
+    margin-top: 8px;
+}
+
+.cbtn{
+    cursor: pointer;
+    background-color: #900c19;
+    color: #f2c452;
+    padding: 0;
+    height: 44px;
+    width: 100%;
+    font-size: 13px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    line-height: 4px;
+    border-radius: 0;
+    border: none;
+}
+
+.cartfoot{
+    padding: 0px 5px 0px;
+    width: 100%;
+    position: absolute;
+    bottom: -0px;
+    background-color:#fffbf2;
+
+}
+
+.cfr img{
+    float: right;
+    text-align: right;
+    width:577px;
+    height:38px;
+    margin: 18px;
+    
+}
+
+.cfl{
+    float: left;
+    display: flex;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 30px;
+}
+.cfl a{
+    text-decoration: none;
+}
+
+.cfl p{
+    padding: 5px;
+}
+
+
+/*-----Add to Cart details End-----*/
+
+
+/*--cart details Begin--*/
+.cart_lan .fa-cart-shopping{
+    padding-right: 12px;
+    padding-top: 20px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+ 
+.category-row{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.category-col{
+     padding: 10px 0;
+     cursor: pointer;
+     color: rgb(85, 83, 83);
+}
+
+.category-col img{
+    width: 64px;
+    height: 64px;
+}
+.category-col h5{
+    color: crimson;
+}
+
+/*-----Category Dropdown Section-----*/
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content .header{
+    background: gainsboro;
+    padding: 0px;
+    color: whitesmoke;
+}
+
+.col{
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    background-color: whitesmoke;
+    height: auto;
+}
+
+.col a{
+    float: none;
+    color: black;
+    padding: 8px;
+    border-radius: 2px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.col a:hover{
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+/*--55---Banner Begin----56-*/
+.banner{
+    width: 100%;
+    overflow: hidden;
+}
+.slider{
+    overflow: hidden;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.slider::-webkit-scrollbar{
+    display: none;
+}
+
+
+.slider img{
+    position: relative;
+    height: 380px;
+    min-width: 1470px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+    
+}
+ 
+/*-----Common Things-----*/
+
+.card{
+    box-shadow: rgb(117,174,174) 0px 0px 5px 1px;
+    padding: 10px 0px;
+    margin: 10px 5px;
+    border-radius: 5px;
+}
+
+.common-heading{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 20px ;
+    margin: 5px;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 /16%);
+}
+
+.common-heading-left h1{
+    font-size: 20px;
+    font-weight: 400;
+    padding: auto;
+}
+
+.common-heading-right button{
+    width: 90px;
+    height: 40px;
+    font-size: 18px;
+    background-color: crimson;
+    border: none;
+    color: whitesmoke;
+    border-radius: 2px;
+}
+
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.common-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    max-height: 366px;
+    margin: 10px 0px;
+}
+.common-col{
+    text-align: center;
+    line-height: 22px;
+}
+
+.common-col img{
+    width: 150px;
+    height: 150px;
+    transform: 300ms;
+
+}
+
+.common-row-col-deals{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;    
+}
+
+.common-col img:hover{
+    transform: scale(1.1);
+}
+
+.common-col h3 h4 h6{
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.common-col h3{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.common-col h4{
+    color: rgb(7, 101, 28);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.common-col h6{
+    color: grey;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+/*****Add Detial*****/
+.offers{
+    box-shadow: rgb(117,174,174) 0px 0px 5px 1px;
+    padding: 10px 0px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #fffbf2;
+}
+
+ .offers .free{
+    position: relative;
+    left: 15px;
+}
+
+.offers a{
+    position: relative;
+    left: 11px;
+}
+
+.offers a img{
+    height: 75px;
+    padding: 5px 40px ;
+    margin-top: 20px;
+}
+
+.offers p{
+    color: goldenrod;
+    padding: 5px 20px ;
+}
+
+/*-----Footer-----*/
+
+.footer{
+    /* background-color:  #172337; */
+    background-image: url(../images/footer/red.png);
+    background-repeat: no-repeat;
+    
+    height: 332;
+}
+
+.footer-row{
+    width: 100%;
+    height: 270px;
+    display:flex;
+    padding: 30px 60px;
+}
+
+.footer-row2{
+    display: flex;
+    border-top:1px solid #454d53;
+    justify-content: space-evenly;
+    margin-top: 5px;
+}
+
+
+.footer-row2-col img{
+    width:377px;
+    height:18px;
+    margin: 18px;
+}
+.footer-col-1{
+    width: 15%;
+}
+
+.footer-col-2{
+    width: 15%;
+}
+
+.footer-col-3{
+    width: 15%;
+}
+
+.footer-col-4{
+    width: 15%;
+}
+
+.footer-col-5{
+    width: 15%;
+    border-left: 1px solid #454d53;
+    height: 120px;
+    padding-left: 25px;
+}
+
+.footer-col-6{
+    width: 15%;
+    padding-left: 50px;
+}
+
+.footer-heading p{
+    color: #878787;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    padding: 10px 0px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.footer-list a{
+    text-align: left;
+    display: block;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 5px 0px;
+}
+
+.footer-list a:hover{
+    text-decoration: underline;
+}
+
+.footer-list p{
+    text-align: left;
+    display: block;
+    color: white;
+    font-size: 12px;
+    font-weight: 100px;
+    padding: 5px 0px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.footer-list-address p{
+    text-align: left;
+    display: block;
+    color: white;
+    font-size: 12px;
+    font-weight: 100px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.footer-list-address span{
+    color: #2874f0;
+    cursor: pointer;
+}
+
+.footer-row2-col p{
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+.fa-shopping-bag, .fa-star, .fa-gift, .fa-question-circle{
+    color: crimson;
+    cursor: pointer;
+    padding-right: 10px;
+    font-size: 14px;
+}

@@ -1,0 +1,504 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+/*------Header Section Begin------*/
+header{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: crimson;
+    width: 100%;
+    height: 56px;
+    position: sticky;
+    top: 0px;
+    z-index:1;
+}
+
+.header-left{
+    width: 20%;
+    text-align: right;
+    margin: 5px 0px;
+    cursor: pointer;
+}
+
+.header-left a{
+    color: whitesmoke;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 1.5px;
+}
+
+.header-left-p a{
+    font-size: 15px;
+    letter-spacing: 1.5px;
+}
+
+.header-center{
+    width: 40%;
+    text-align: left;
+    line-height: 50px;
+    cursor: pointer;
+    padding: relative;
+}
+
+.header-center-input{
+    margin-top: 10px;
+    height: 36px;
+    width: 100%;
+    border:none;
+    text-align: left;
+    padding-left: 20px;
+    cursor: auto;
+    border-radius: 2px;
+}
+
+.fa-magnifying-glass{
+    position: absolute;
+    top: 36%;
+    left: 64%;
+    font-size: 18px;
+    color:crimson;
+}
+
+/*------Header Section End------*/
+
+/*------Login Button Begin------*/
+.login{
+    position: relative;
+    left: 45px;
+    margin-top: 17px;
+}
+
+.login_btn{
+    color: crimson;
+    border-radius: 2px;
+    border: 1px solid whitesmoke;
+    background-color: whitesmoke;
+    height: 32px;
+    letter-spacing: 1px;
+    padding: 6px 40px;
+    font-weight: bold;
+    margin: 0px 20px;
+    cursor: pointer;
+    text-decoration:none;
+    font: size 16px;
+}
+
+.login_dropdown{
+    position: relative;
+    top: 12px;
+}
+
+.login_dropdown_list{
+    position: absolute;
+    list-style: none;
+    background-color: whitesmoke;
+    width: max-content;
+    box-shadow: 0 4px 16px rgb(0 0 0 /20%);
+    min-width: 240px;
+    transform: translate(-30px);
+}
+
+.login_drop_li{
+    padding: 16px 20px;
+    border-bottom: 1px solid whitesmoke;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.login_drop_li:hover{
+    background: lightgrey;
+}
+
+.login_drop_li.fa-solid{
+    color: crimson;
+    padding-right: 10px;
+}
+
+.login_drop_li:first-child{
+    padding: 20px;
+}
+
+.login_drop_li:first-child:hover{
+    color: black;
+}
+
+.login_drop_li:first-child{
+    padding: 20px;
+}
+
+.login:hover .login_dropdown{
+    display: block;
+}
+
+.sign_up{
+    text-decoration: none;
+    color: crimson;
+}
+
+.sign_up:hover{
+    text-decoration: underline;
+}
+
+.sign_li{
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.new_login{
+    font-weight: bold;
+}
+/*------Login Section End------*/
+
+/*-----more details Begin-----*/
+.more{
+    position: relative;
+    margin-top: 17px;
+}
+
+.cart{
+    margin-top: 17px;
+    margin-right: 60px;
+}
+
+.none{
+    display: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.more-icon{
+    color:crimson;
+    margin-left: 15px;
+    padding: 20px;
+}
+
+.more_lan{
+    color: whitesmoke;
+    cursor: pointer;
+    font-size: 15px;
+    padding:20px;
+
+}
+
+.pointer{
+    width:20px;
+    height: 20px;
+    background:black ;
+    transform: rotate(45deg);
+    position: relative;
+    top: 10px;
+    left: 80%;
+}
+
+.fa-angle-down:hover{
+    transform: rotate(180deg);
+}
+
+.more_dropdown{
+    position: relative;
+    top: 12px;
+}
+
+.more_dropdown_list{
+    position: absolute;
+    list-style: none;
+    background-color: whitesmoke;
+    width: max-content;
+    box-shadow: 0 4px 16px rgb(0 0 0 /20%);
+    min-width: 240px;
+    transform: translate(-30px);
+}
+
+.more:hover .more_dropdown{
+    display: block;
+}
+/*-----more details End-----*/
+
+/*--cart details Begin--*/
+.cart_lan .fa-cart-shopping{
+    padding-right: 12px;
+    padding-top: 20px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+ 
+.category-row{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.category-col{
+     padding: 10px 0;
+     cursor: pointer;
+     color: rgb(85, 83, 83);
+}
+
+.category-col img{
+    width: 64px;
+    height: 64px;
+}
+.category-col h5{
+    color: crimson;
+}
+
+/*-----Category Dropdown Section-----*/
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content .header{
+    background: gainsboro;
+    padding: 0px;
+    color: whitesmoke;
+}
+
+.col{
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    background-color: whitesmoke;
+    height: auto;
+}
+
+.col a{
+    float: none;
+    color: black;
+    padding: 8px;
+    border-radius: 2px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.col a:hover{
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+/*-----Common Things-----*/
+
+.card{
+    box-shadow: rgb(117,174,174) 0px 0px 5px 1px;
+    padding: 10px 0px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    height: 120vh ;
+
+}
+
+.common-heading{
+   padding: 32px;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+   text-align: center;
+}
+
+.common-heading-left h1{
+    font-size: 24px;
+    font-weight: 500;
+    padding: auto;
+}
+
+.common-heading-right button{
+    width: 90px;
+    height: 40px;
+    font-size: 18px;
+    background-color: crimson;
+    border: none;
+    color: whitesmoke;
+    border-radius: 2px;
+}
+
+.common-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    max-height: 366px;
+    margin: 10px 0px;
+}
+.common-col{
+    text-align: center;
+    line-height: 22px;
+}
+
+.common-col img{
+    width: 170px;
+    height: 170px;
+    transform: 300ms;
+
+}
+
+.common-row-col-deals{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    padding: 40px;
+}
+
+.common-col img:hover{
+    transform: scale(1.1);
+}
+
+.common-col h3 h4 h6{
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.common-col h3{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.common-col h4{
+    color: rgb(7, 101, 28);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.common-col h6{
+    color: grey;
+    font-size: 12px;
+    font-weight: 100;
+}
+/*-----Footer-----*/
+
+.footer{
+    background-color:  #172337;;
+    height: 332;
+}
+
+.footer-row{
+    width: 100%;
+    height: 270px;
+    display:flex;
+    padding: 30px 60px;
+}
+
+.footer-row2{
+    display: flex;
+    border-top:1px solid #454d53;
+    justify-content: space-evenly;
+    margin-top: 5px;
+}
+
+
+.footer-row2-col img{
+    width:377px;
+    height:18px;
+    margin: 18px;
+}
+.footer-col-1{
+    width: 15%;
+}
+
+.footer-col-2{
+    width: 15%;
+}
+
+.footer-col-3{
+    width: 15%;
+}
+
+.footer-col-4{
+    width: 15%;
+}
+
+.footer-col-5{
+    width: 15%;
+    border-left: 1px solid #454d53;
+    height: 120px;
+    padding-left: 25px;
+}
+
+.footer-col-6{
+    width: 15%;
+    padding-left: 50px;
+}
+
+.footer-heading p{
+    color: #878787;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    padding: 10px 0px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.footer-list a{
+    text-align: left;
+    display: block;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 5px 0px;
+}
+
+.footer-list a:hover{
+    text-decoration: underline;
+}
+
+.footer-list p{
+    text-align: left;
+    display: block;
+    color: white;
+    font-size: 12px;
+    font-weight: 100px;
+    padding: 5px 0px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.footer-list-address p{
+    text-align: left;
+    display: block;
+    color: white;
+    font-size: 12px;
+    font-weight: 100px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.footer-list-address span{
+    color: #2874f0;
+    cursor: pointer;
+}
+
+.footer-row2-col p{
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+.fa-shopping-bag, .fa-star, .fa-gift, .fa-question-circle{
+    color: crimson;
+    cursor: pointer;
+    padding-right: 10px;
+    font-size: 14px;
+}

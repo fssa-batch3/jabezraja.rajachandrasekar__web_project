@@ -1,0 +1,89 @@
+body{
+    background-color:#f4efef;
+    font-family:  'Roboto', sans-serif;
+}
+.signup-box{
+    width: 360px;
+    height: 690px;
+    margin: auto;
+    background-color: #fff;
+    background-image: url(Background3.jpeg);
+    border-radius: 3px;
+    color: #3c3c3c;
+    margin-top: 5em;
+}
+
+.login-box{
+    width: 360px;
+    height: 280px;
+    margin: auto;
+    border-radius: 3px;
+    background-color: #fff;
+    background-image: url(Background3.jpeg);
+    color: #3c3c3c;
+    margin-top: 16em;
+
+}
+
+
+h1{
+    text-align: center;
+    padding-top: 15px;
+}
+h4{
+    text-align: center;
+}
+form{
+    width: 300px;
+    margin-left: 20px;
+}
+form label{
+    display: flex;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+form input{
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid grey;
+    border-radius: 6px;
+    outline: none;
+} 
+.btn{
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: #49c1a2;
+    color: #fff;
+    font-size: 18px;
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+input[type="button"]{
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: #49c1a2;
+    color: #fff;
+    font-size: 18px;
+}
+p{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+}
+.para2{
+       text-align: center;
+       color: rgb(21, 19, 19);
+       font-size: 15px;
+       margin-top: -10px;
+}
+.para2 a{
+    color: #49c1a2;
+}
