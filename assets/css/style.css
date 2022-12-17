@@ -910,8 +910,8 @@ font-size: 15px;
 }
 
 .common-col img{
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     transform: 300ms;
 
 }
@@ -956,7 +956,7 @@ font-size: 15px;
     padding: 10px 0px;
     margin: 10px 5px;
     border-radius: 5px;
-    height: 120vh ;
+    height: auto ;
 }
 
 .cardvd{
