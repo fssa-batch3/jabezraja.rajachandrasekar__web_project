@@ -315,17 +315,17 @@ header{
     letter-spacing: 1.68px;
     padding: 12px 20px;
     margin-bottom: 8px;
-    font-family: 'Philosopher';
+    font-family: 'Philosopher',Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .product-table td{
     padding-left: 40px;
-    font-family: 'Philosopher';
+    font-family: 'Philosopher',Verdana, Geneva, Tahoma, sans-serif;
     border-bottom: 1px solid #eee;
 }
 
 .product-table td p, .codproduct-table td p{
-    font-family: 'Philosopher';
+    font-family: 'Philosopher',Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .product-table td input{
@@ -333,14 +333,14 @@ header{
 }
 #re a{
     color: black;
-    font-family: 'Philosopher';
+    font-family: 'Philosopher',Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: none;
 }
 
 .details td{
     padding: 12px 0px 11px;
     border-bottom: 1px solid #e5decf;
-    font-family: 'Philosopher';
+    font-family: 'Philosopher',Verdana, Geneva, Tahoma, sans-serif;
     color: #42515b;
 }
 
@@ -357,7 +357,7 @@ header{
     text-align: center;
     line-height: 45px;
     color: #aa8531;
-    font-family: 'Philosopher';
+    font-family: 'Philosopher',Verdana, Geneva, Tahoma, sans-serif;
 }
 .head1{
     font-size: 50px;
@@ -372,7 +372,7 @@ header{
     color: #900c19;
     font-size: 25px;
     margin: 38px 0;
-    font-family: 'Philosopher';
+    font-family: 'Philosopher',Verdana, Geneva, Tahoma, sans-serif;
     line-height: 45px;
 }
 .content{
@@ -391,7 +391,7 @@ header{
     font-size: 18px;
     letter-spacing: 2.25px;
     margin: 0 0 18px;
-    font-family: 'Philosopher';
+    font-family: 'Philosopher',Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
@@ -414,7 +414,7 @@ header{
 
 .cbtn a{
     color: #f2c452;
-    font-family: 'Philosopher';
+    font-family: 'Philosopher',Verdana, Geneva, Tahoma, sans-serif;
     font-size: 13px;
     text-decoration: none;
 }
@@ -444,12 +444,12 @@ header{
 
 .cfl a{
     text-decoration: none;
-    font-family: 'Philosopher';
+    font-family: 'Philosopher',Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .cfl p{
     padding: 5px;
-    font-family: 'Philosopher';
+    font-family: 'Philosopher',Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /*-----Add to Cart details page End-----*/
@@ -462,7 +462,7 @@ header{
     color: #886619;
     font-size: 12px;
     letter-spacing: 1.68px;
-    font-family: 'Philosopher';
+    font-family: 'Philosopher',Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700;
     padding: 10px 15px 9px;
     margin-bottom: 20px;
@@ -486,7 +486,7 @@ header{
 .log h2{
     font-size: 16px;
     color: #886619;
-    font-family: 'Philosopher';
+    font-family: 'Philosopher',Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 700;
     letter-spacing: 2.24px;
     display: inline-block;
@@ -507,7 +507,7 @@ header{
 
 .codproduct-table td{
     padding-left: 70px;
-    font-family: 'Philosopher';
+    font-family: 'Philosopher',Verdana, Geneva, Tahoma, sans-serif;
     border-bottom: 1px solid #eee;
 }
 
@@ -547,7 +547,7 @@ header{
     width: 25pc;
     border: 1px solid #d5c8aa;
     font-size: 15px;
-    font-family:'Philosopher' ;
+    font-family: 'Philosopher',Verdana, Geneva, Tahoma, sans-serif;
     outline: none;
 }
 
@@ -1327,7 +1327,7 @@ font-size: 15px;
     color: black;
     text-decoration: none;
     color: #f2c452;
-    font-family: 'Philosopher';
+    font-family: 'Philosopher',Verdana, Geneva, Tahoma, sans-serif;
     font-size: 13px;
 }
 
