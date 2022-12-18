@@ -247,7 +247,7 @@ header{
     display: flex;
 }
 
-.more-icon, .fa-circle-User, .fa-bag-shopping, .fa-heart{
+.more-icon, .fa-user, .fa-bag-shopping, .fa-heart{
     color:#900c19;
     margin-left: 5px;
     padding: 10px;
