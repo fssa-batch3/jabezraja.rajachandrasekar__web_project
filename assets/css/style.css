@@ -1138,38 +1138,48 @@ font-size: 15px;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*****ABOUTUS begin*****/
+.about{
+    width: 100%;
+    min-height: 10vh;
+    overflow: hidden;
+}
+.us{
+    width: 100%;
+    padding: 50px 100px;
+}
+.imgsec{
+    width: 30%;
+    float: left;
+}
+.imgsec img{
+    width: 100%;
+    height: auto;
+}
+.aboutuscontant{
+    width: 60%;
+    float: left;
+    margin-left: 50px;
+}
+.aboutuscontant h1{
+    font-size: 90px;
+    letter-spacing: 3.5px;
+    margin-top: 25px;
+}
+.aboutuscontant p{
+    font-size: 20px;
+    font-family: 'Philosopher',serif;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+.moreaboutjr{
+    padding: 6pc;
+}
+.moreaboutjr h2{
+    margin-top: 1pc;
+    margin-bottom: 1pc;
+}
+/*****ABOUTUS End*****/
 
 
 
