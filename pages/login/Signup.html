@@ -3,6 +3,8 @@
     <head>
         <title>REGISTER</title>
         <link rel="stylesheet" href="../../assets/css/loginstyle.css">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div class="signup-box">
@@ -10,24 +12,46 @@
             <h4>It's free and only takes a minute</h4>
             <form>
                 <label>NAME</label>
-                <input type="text">
+                <input id="name" type="text">
                 <label>PHONE</label>
-                <input type="text">
+                <input id="phonenumber" type="text">
                 <label>EMAIL</label>
-                <input type="email">
-                <label>LOCATION</label>
-                <input type="text">
+                <input id="email" type="email">
                 <label>PASSWORD</label>
-                <input type="password">
+                <input id="password" type="password">
                 <label>CONFORM PASSWORD</label>
-                <input type="password"> 
-               <button class="btn"> <a href="../../index.html" >SUBMIT</a></button>           
+                <input id="confirm_password" type="password"> 
+
             </form>
+               <button class="btn" type="button" onclick="submit()">SUBMIT</button>           
+
             <p>
                 By clicking the Submit button, you agree to our <br>
                 <a href="#"> Terms and Condition</a> and <a href="#"> Policy And Privacy</a>
             </p>
         </div>
         <p class="para2">Already have an account? <a href="Login.html">Login here</a></p>
+
+<script>
+    
+    function submit(){
+
+    const name = document.getElementById("name").value
+    const phonenumber = document.getElementById("phonenumber").value
+    const email = document.getElementById("email").value
+    const password= document.getElementById("password").value
+    const confirm_password = document.getElementById("confirm_password").value
+
+    console.log(name)
+    console.log(phonenumber)
+    console.log(email)
+    console.log(password)
+    console.log(confirm_password)
+
+    window.location.href ="../../index.html"
+}
+    
+</script>
+
     </body>
 </html>
