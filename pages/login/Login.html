@@ -9,12 +9,28 @@
             <h1>LOGIN</h1>
             <form>
                 <label>EMAIL</label>
-                <input type="email">
+                <input id="email" type="email">
                 <label>PASSWORD</label>
-                <input type="password">
-                <button  class="btn" ><a href="../../index.html" >SUBMIT</a> </button>            
+                <input id="password" type="password">
+                <button class="btn" type="button" onclick="subit()">SUBMIT</button>           
             </form>
+
         </div>
         <p class="para2">Not have an account? <a href="Signup.html">Sign Up here</a></p>
+        
+        <script>
+    
+            function subit(){
+        
+            const email = document.getElementById("email").value
+            const password= document.getElementById("password").value
+        
+            console.log(email)
+            console.log(password)
+        
+            window.location.href ="../../index.html"
+        }
+            
+        </script>
     </body>
 </html> 
