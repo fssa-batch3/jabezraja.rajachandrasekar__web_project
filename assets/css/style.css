@@ -1387,3 +1387,74 @@ padding-bottom: 10pc;
     border: 2px solid rgb(191, 73, 29);
 }
 /*****conclude end*****/
+
+/*****RESPONSIVE*****/
+@media (max-width: 857px) 
+{
+    .more, .login{
+        display: none;
+    }
+    .header-center-input{
+        width: 130%;
+    }
+    .fa-magnifying-glass {
+        position: absolute;
+        top: 36%;
+        left: 74%;
+        font-size: 18px;
+        color: #aa8531;
+    }
+    .cart_lan{
+        margin-left: 50px;
+    }
+    .common-headingv {
+        padding: 2px;
+        text-align: center;
+    }
+    .common-heading-leftv h1{
+        margin-top: 10px;
+    }
+    .common-row-col-dealsv{
+        display: block;
+        padding: 40px 25px;
+    }
+    .common-col{
+        width: 320px;
+        height: 320px;
+        margin-bottom: 40px;
+        margin-left: 9px;
+        box-shadow: 1px 1px 3px rgb(145 145 145);
+    }
+    .common-col h4{
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .common-col h6{
+        font-weight: bold;
+        font-size: 14px;
+    
+    }
+    .offers{
+        display: none;
+    }
+    .footer{
+        width: 100%;
+    }
+    .footer-row{
+        padding: 0px;
+        height: auto;
+    }
+    .footer-col-1, .footer-col-4{
+        width: 100%;
+    }
+    .footer-col-1{
+        margin-left: 10px;
+    }
+    .footer-col-2, .footer-col-3, .footer-col-5, .footer-col-6{
+        display:none;
+    }
+    .footer-row2-col{
+        display: none;
+    }
+}
+
