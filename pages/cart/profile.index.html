@@ -77,15 +77,14 @@
         <section class="pnem">
             <h2>PROFILE</h2>
             <form>
-               
                 <div class="pnem-nen">
-                    <input class="cofd" type="text" placeholder="NAME" required="true"/>
+                    <input class="cofd" type="text" id="user_name" placeholder="NAME" required="true"/>
                 </div>
                 <div class="pnem-nen">
-                    <input class="cofd" type="email" placeholder="EMAIL" required="true"/>
+                    <input class="cofd" type="email" id="user_email" placeholder="EMAIL" required="true"/>
                 </div>
                 <div class="pnem-nen">
-                    <input class="cofd" type="text" placeholder="MOBIL NUMBER" required="true"/>
+                    <input class="cofd" type="text" id="user_phonenumber" placeholder="MOBIL NUMBER" required="true"/>
                 </div>
             <div class="sacabtn">
                 <button class="cbtn" id="sav" > <a href="" class="">SAVE</a> </button>
@@ -100,13 +99,10 @@
     
     <section class="offers">
         <div>
-
             <img src="../../assets/images/products/ad1.png" alt="">
-
           <p>EASY RETURNS</p>
         </div>
         <div>
-
             <img src="../../assets/images/products/ad2.png" alt="">
           <p>CASH ON DELIVERY</p>
         </div>
@@ -115,16 +111,16 @@
           <p>SECURE PAYMENT</p>
         </div>
         <div>
-                <img src="../../assets/images/products/ad4.png" alt="">
-            <p>FREE DELIVERY</p>
+             <img src="../../assets/images/products/ad4.png" alt="">
+          <p>FREE DELIVERY</p>
           </div>
           <div>
-                <img src="../../assets/images/products/ad5.png" alt="">
-            <p>BEST QUALITY</p>
+            <img src="../../assets/images/products/ad5.png" alt="">
+          <p>BEST QUALITY</p>
           </div>
           <div>
-                <img src="../../assets/images/products/ad6.png" alt="">    
-            <p>CUSTOMER SERVICE</p>
+            <img src="../../assets/images/products/ad6.png" alt="">    
+          <p>CUSTOMER SERVICE</p>
           </div>
       </section>
     <!-----Add Detials End----->
@@ -232,5 +228,25 @@
         </div>
     </footer>
     <!-----Footer End----->
+
+
+<script>
+    
+    //   localStorage.getItem("key")   //
+
+    const user_name = localStorage.getItem("user_name")
+    const user_email = localStorage.getItem("user_email")
+    const user_phonenumber = localStorage.getItem("user_phonenumber")
+
+    console.log(user_name)
+    console.log(user_email)
+    console.log(user_phonenumber)
+
+    document.getElementById("user_name").value = user_name
+    document.getElementById("user_email").value = user_email
+    document.getElementById("user_phonenumber").value = user_phonenumber
+
+</script>
+
 </body>
 </html>
