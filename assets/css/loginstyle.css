@@ -4,12 +4,12 @@ body{
 }
 .signup-box{
     width: 360px;
-    height: 690px;
+    height: 590px;
     margin: auto;
     background-color: #fff;
     border-radius: 3px;
     color: #3c3c3c;
-    margin-top: 5em;
+    margin-top: 9em;
 }
 
 .login-box{
