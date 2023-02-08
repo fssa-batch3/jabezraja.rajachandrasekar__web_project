@@ -56,7 +56,7 @@
             </div>
             <div class="common-row-col-dealsv">
                 
-                <div class="common-col">
+                <!-- <div class="common-col">
                     <a href="./best of electronincs.html"><img src="../../assets/images/products/r1.jpg"  alt=""  class="product-img"> </a>
                     <h3 class="product-title">Best of Electronics</h3>
                     <h4>from &#8377 1777</h4>
@@ -116,7 +116,7 @@
                     <h4>Extra 10% off</h4>
                     <h6 class="price">Saving space furniture</h6>
                     
-                </div>
+                </div> -->
             </div>
             </div>
         
@@ -256,5 +256,105 @@
         </div>
     </footer>
     <!-----Footer End----->
+    <script>
+
+const deals_of_the_day =[
+        {
+           "title":"Best of Electronics",
+           "image":{
+                "source": "../../assets/images/products/r1.jpg",
+                "alt": "Best of Electronics",
+             },
+           "price-offers":"₹1,777",
+           "sub":"Apple, Samsung  & more",
+           "path":"",
+        },
+            
+        {
+           "title":"Barware & Bakeware",
+           "image":{
+                "source": "../../assets/images/products/r2.jpg",
+                "alt": "Barware & Bakeware",
+             },
+           "price-offers":"Upto 67% off",
+           "sub":"Grab & Gone",
+           "path":"",
+        },
+
+        {
+           "title":"Cars & Bikes",
+           "image":{
+                "source": "../../assets/images/products/r3.jpg",
+                "alt": "Cars & Bikes",
+             },
+           "price-offers":"Top Selling!",
+           "sub":"Starts from ₹299",
+           "path":"",
+        },
+
+        {
+           "title":"Best of Hair Dryers",
+           "image":{
+                "source": "../../assets/images/products/r4.jpg",
+                "alt": "Best of Hair Dryers",
+             },
+           "price-offers":"Top Brands",
+           "sub":"Starts from ₹499",
+           "path":"",
+        },
+
+        {
+           "title":"Personal care essential",
+           "image":{
+                "source": "../../assets/images/products/r6.jpg",
+                "alt": "Personal care essential",
+             },
+           "price-offers":"Min 10% off + extra 15% off",
+           "sub":"Wisper, colgate & nivea",
+           "path":"",
+        },
+        {
+           "title":"Home Templates",
+           "image":{
+                "source": "../../assets/images/products/r5.webp",
+                "alt": "Home Templates",
+             },
+           "price-offers":"Extra 10% off",
+           "sub":"Saving space furniture",
+           "path":"",
+        },
+        
+    ]
+
+        for(let i = 0; i<=5; i++){
+
+    card_1 = document.createElement("div");
+    card_1.setAttribute("class", "common-col");
+    document.querySelector("div.common-row-col-dealsv").append(card_1)
+
+    img_of_electronics = document.createElement("img");
+    img_of_electronics.setAttribute("class", "product-img");
+    img_of_electronics.setAttribute("src", deals_of_the_day[i]["image"]["source"]);
+    img_of_electronics.setAttribute("alt", deals_of_the_day[i]["image"]["alt"]);
+    card_1.append(img_of_electronics);
+
+    h3_for_product = document.createElement("h3");
+    h3_for_product.setAttribute("class", "product-title");
+    h3_for_product.innerText=(deals_of_the_day[i]["title"]);
+    card_1.append(h3_for_product);
+
+    h4_for_product = document.createElement("h4");
+    h4_for_product.setAttribute("class", "-title");
+    h4_for_product.innerText=(deals_of_the_day[i]["price-offers"]);
+    card_1.append(h4_for_product);
+
+    h6_for_product = document.createElement("h6");
+    h6_for_product.setAttribute("class", "price");
+    h6_for_product.innerText=(deals_of_the_day[i]["sub"]);
+    card_1.append(h6_for_product);
+
+    document.querySelector("div.common-row-col-dealsv").append(card_1)
+}
+    </script>
 </body>
 </html>

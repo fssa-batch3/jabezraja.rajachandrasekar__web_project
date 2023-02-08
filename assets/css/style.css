@@ -715,9 +715,18 @@ font-size: 15px;
     height: 390px;
     padding: 30px;
 }
+.lrspimob{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#leftspi a img{
+    width: 250px;
+    height: 300px;
+}
+
 #rightspi{
-    margin-left: 20px;
-    margin-top: 30px;
+    margin-left: 150px;
+    margin-top: 60px;
 }
 
 #rightspi a, #rightspimob a{
@@ -768,12 +777,15 @@ font-size: 15px;
 .moreoffbox{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    margin-top: 20px;
 }
 
 #rightspimob, #leftspimob{
     text-align: center;
 }
-
+#leftspimob a img{
+    height: 300px;
+}
 #rightspimob a p{
     font-size: 18px;
     color: #000;
@@ -826,6 +838,11 @@ font-size: 15px;
 }
 
 /*--55---Banner Begin----56-*/
+.mbody{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
 .banner{
     width: 100%;
     overflow: hidden;
@@ -835,6 +852,7 @@ font-size: 15px;
     overflow-x: scroll;
     display: flex;
     flex-direction: row;
+
     
 }
 
@@ -845,15 +863,13 @@ font-size: 15px;
 
 .slider img{
     position: relative;
-    height: 450px;
-    min-width: 1500px;
+    height: 400px;
+    min-width: 1400px;
     width: 100%;
     left: 50%;
     transform: translateX(-50%);
     padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 10px;
-    
+    padding-right: 5px;    
 }
  
 /*-----Common Things-----*/
@@ -906,6 +922,7 @@ font-size: 15px;
 .common-col{
     text-align: center;
     line-height: 22px;
+    margin-top: 20px;
 }
 
 .common-col img{
@@ -916,9 +933,8 @@ font-size: 15px;
 }
 
 .common-row-col-deals{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;    
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);  
 }
 
 .common-col img:hover{

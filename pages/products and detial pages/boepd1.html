@@ -12,8 +12,6 @@
 </head>
 <body id="mainco">
 
-
-
    <!-----Header Section----->
     <header>
         <div class="header-left">
@@ -41,17 +39,17 @@
     <main >
 
     <div class="detail">
-        <div class="left">
-            <div class="image">
+        <!-- <div class="left"> -->
+            <!-- <div class="image">
                 <img src="../../assets/images/products/cr1boe1.jpg" alt="boAt BassHeads 950v2 wired Over Ear Headphones (Warm Grey)" height="450px" width="400px" />
-            </div>
-            <div class="subi">
-            <div class="sub-images"> <img src="../../assets/images/products/cr1boe1.jpg" alt="boAt BassHeads 950v2 wired Over Ear Headphones (Warm Grey)"/>  </div>
+            </div> -->
+            <!--<div class="subi">
+             <div class="sub-images"> <img src="../../assets/images/products/cr1boe1.jpg" alt="boAt BassHeads 950v2 wired Over Ear Headphones (Warm Grey)"/>  </div>
             <div class="sub-images"> <img src="../../assets/images/products/cr1boe1.1.jpg" alt="40mm driver"/> </div>
             <div class="sub-images"> <img src="../../assets/images/products/cr1boe1.2.jpg" alt="lightweight"/> </div>
-            <div class="sub-images"> <img src="../../assets/images/products/cr1boe1.4.jpg" alt="3.5mm gold plated jack"/> </div>
-        </div>
-        </div>
+            <div class="sub-images"> <img src="../../assets/images/products/cr1boe1.4.jpg" alt="3.5mm gold plated jack"/> </div> 
+        </div>-->
+        <!-- </div> -->
         <div class="right">
             <h2 id="ph"> boAt BassHeads 950v2 wired Over Ear Headphones (Warm Grey)</h2>
 
@@ -96,7 +94,7 @@
         </div>
     </div>
 </main>
-</body>
+
     <!-----Add Detials Start----->
     
     <section class="offers">
@@ -232,5 +230,87 @@
   
   </div>
 </footer>
+
+<script>
+
+    const images=[
+        {
+            "images": {
+                source: "../../assets/images/products/cr1boe1.jpg",
+                alt: "boAt BassHeads 950v2 wired Over Ear Headphones (Warm Grey)",
+            }
+        },
+        {
+            "images": {
+                source: "../../assets/images/products/cr1boe1.1.jpg",
+                alt: "40mm driver",
+            }
+        },
+        {
+            "images": {
+                source: "../../assets/images/products/cr1boe1.2.jpg",
+                alt: "lightweight",
+            }
+        },
+        {
+            "images": {
+                source: "../../assets/images/products/cr1boe1.4.jpg",
+                alt: "3.5mm gold plated jack",
+            }
+        },
+    ]
+
+    left_div = document.createElement("div");
+    left_div.setAttribute("class","left");
+    console.log(left_div);
+
+    img_div = document.createElement("div");
+    img_div.setAttribute("class","image");
+    left_div.append(img_div)
+
+
+    img_of_product = document.createElement("img");
+    img_of_product.setAttribute("src","../../assets/images/products/cr1boe1.jpg");
+    img_of_product.setAttribute("height", "450px");
+    img_of_product.setAttribute("width", "400px");
+    img_of_product.setAttribute("class", "image");
+    left_div.append(img_of_product);
+
+    
+    img_of_subi = document.createElement("div");
+    img_of_subi.setAttribute("class", "subi");
+    left_div.append(img_of_subi);
+
+    for(i=0; i<4; i++){
+    img_of_sub = document.createElement("div");
+    img_of_sub.setAttribute("class", "sub-images");
+    img_of_subi.append(img_of_sub);
+    
+    down_images = document.createElement("img");
+    down_images.setAttribute("src", images[i]["images"]["source"]);
+    down_images.setAttribute("alt", images[i]["images"]["alt"])
+    down_images.append(img_of_sub);
+    }
+
+    // document.querySelector("div.left").append(img_of_subi);
+
+    // for(i=0; i<4; i++)
+    // {
+    //     div_thumbnails = document.createElement("div");
+    //     div_thumbnails.setAttribute("class","sub-images");
+    //     document.querySelector("div.subi").append(div_thumbnails); 
+
+    //     thumbnails = document.createElement("img");
+    //     thumbnails.setAttribute("src",images[0]["source"]);
+    //     thumbnails.append("div_thumbnails");
+        
+    // }
+
+    document.querySelector("div.details").pre(left_div);
+    
+
+</script>
+
+</body>
 <!-----Footer End----->
 </html>

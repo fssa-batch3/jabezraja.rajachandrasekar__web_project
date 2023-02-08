@@ -10,7 +10,7 @@
         <div class="signup-box">
             <h1>SIGN UP</h1>
             <h4>It's free and only takes a minute</h4>
-            <form>
+            <form role="form" onsubmit="Registered(event);">
                 <label>NAME</label>
                 <input id="name" type="text">
                 <label>PHONE</label>
@@ -21,7 +21,9 @@
                 <input id="password" type="password">
                 <label>CONFORM PASSWORD</label>
                 <input id="confirm_password" type="password"> 
-                <button class="btn" type="button" onclick="subit()">SUBMIT</button>           
+                <!-- <button class="btn" type="button"  onclick="subit()">SUBMIT</button>            -->
+                <button class="btn" type="submit">SUBMIT</button>           
+
             </form>
 
             <p>
@@ -33,32 +35,31 @@
 
 <script>
     
-    function subit(){
+    // function subit(){
 
-    const name = document.getElementById("name").value
-    const phonenumber = document.getElementById("phonenumber").value
-    const email = document.getElementById("email").value
-    const password = document.getElementById("password").value
-    const confirm_password = document.getElementById("confirm_password").value
+    // const name = document.getElementById("name").value
+    // const phonenumber = document.getElementById("phonenumber").value
+    // const email = document.getElementById("email").value
+    // const password = document.getElementById("password").value
+    // const confirm_password = document.getElementById("confirm_password").value
 
-    console.log(name)
-    console.log(phonenumber)
-    console.log(email)
-    console.log(password)
-    console.log(confirm_password)
+    // console.log(name)
+    // console.log(phonenumber)
+    // console.log(email)
+    // console.log(password)
+    // console.log(confirm_password)
 
-    //localStorage.setItem("key",value)//
+    // //localStorage.setItem("key",value)//
 
-    localStorage.setItem("user_name",name)
-    localStorage.setItem("user_phonenumber",phonenumber)
-    localStorage.setItem("user_email",email)
-    localStorage.setItem("user_password",password)
-    localStorage.setItem("user_confirm_password",confirm_password)
+    // localStorage.setItem("user_name",name)
+    // localStorage.setItem("user_phonenumber",phonenumber)
+    // localStorage.setItem("user_email",email)
+    // localStorage.setItem("user_password",password)
+    // localStorage.setItem("user_confirm_password",confirm_password)
 
-    window.location.href ="../../index.html"
-}
-    
+//     window.location.href ="../../index.html"
+// }
 </script>
-
+<script src="/js/register.js"></script>
     </body>
 </html>
