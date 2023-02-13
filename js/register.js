@@ -12,39 +12,42 @@ const Registered = e =>{
      JSON.parse(localStorage.getItem('user_list')).some(data =>
      data.email.toLowerCase()== email.toLowerCase() ||
      data.phonenumber.toLowerCase() == phonenumber.toLowerCase());
-
+    
+     if (password != confirm_password){
+       return alert("password and confirm_password is not match")
+     }
      if(!exist){
-        user_list.push({name, phonenumber, email, password, confirm_password});
+        user_list.push({"name":name,"phonenumber":phonenumber,"email":email, password, confirm_password});
         localStorage.setItem('user_list', JSON.stringify(user_list));
         console.log(localStorage.getItem('user_list'));
         document.querySelector('form').reset();
         document.getElementById('email').focus();
         alert('Account created Successfully');
-        location.href = "../../index.html";
+        location.href = "Login.html";
      }
      else{
         alert('Sorry the User already Exist!! \n Try with different Phone number or email');
         document.querySelector('form').reset();
-    }
-     
+    }  
 }
-// for sign in()
+// for login()
 function login(e){
-    e.preventDefault();
+    
     let email = document.getElementById('email').value,
         password = document.getElementById('password').value;    
     let user_list = JSON.parse(localStorage.getItem('user_list')) || [];
     let exist = user_list.length &&
     JSON.parse(localStorage.getItem('user_list')).some(data =>
-         data.email.toLowerCase() == email && 
-         data.password.toLowerCase() == password);
+         data.email.toLowerCase() == email.toLowerCase() && 
+         data.password.toLowerCase() == password.toLowerCase());
          
     if(exist){
-        alert("Your login in successful");
+        alert("Your login is successful");
         location.href = "../../index.html";
+        localStorage.setItem("user_data", JSON.stringify(email));
     }
     else{
         alert("Incorrect login credentials");
-
     }
+    e.preventDefault();
 }

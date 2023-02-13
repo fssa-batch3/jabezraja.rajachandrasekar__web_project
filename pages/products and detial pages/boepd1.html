@@ -262,12 +262,12 @@
 
     left_div = document.createElement("div");
     left_div.setAttribute("class","left");
+    document.querySelector("div.detail").prepend(left_div);
     console.log(left_div);
 
     img_div = document.createElement("div");
     img_div.setAttribute("class","image");
     left_div.append(img_div)
-
 
     img_of_product = document.createElement("img");
     img_of_product.setAttribute("src","../../assets/images/products/cr1boe1.jpg");
@@ -276,7 +276,6 @@
     img_of_product.setAttribute("class", "image");
     left_div.append(img_of_product);
 
-    
     img_of_subi = document.createElement("div");
     img_of_subi.setAttribute("class", "subi");
     left_div.append(img_of_subi);
@@ -289,24 +288,10 @@
     down_images = document.createElement("img");
     down_images.setAttribute("src", images[i]["images"]["source"]);
     down_images.setAttribute("alt", images[i]["images"]["alt"])
-    down_images.append(img_of_sub);
+    img_of_sub.prepend(down_images);
     }
 
-    // document.querySelector("div.left").append(img_of_subi);
-
-    // for(i=0; i<4; i++)
-    // {
-    //     div_thumbnails = document.createElement("div");
-    //     div_thumbnails.setAttribute("class","sub-images");
-    //     document.querySelector("div.subi").append(div_thumbnails); 
-
-    //     thumbnails = document.createElement("img");
-    //     thumbnails.setAttribute("src",images[0]["source"]);
-    //     thumbnails.append("div_thumbnails");
-        
-    // }
-
-    document.querySelector("div.details").pre(left_div);
+    document.querySelector("div.details").prepend(left_div);
     
 
 </script>

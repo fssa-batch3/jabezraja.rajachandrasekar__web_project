@@ -9,9 +9,9 @@
             <h1>LOGIN</h1>
             <form role="form" onsubmit="login(event);">
                 <label>EMAIL</label>
-                <input id="email" type="email">
+                <input id="email" type="email" required="true">
                 <label>PASSWORD</label>
-                <input id="password" type="password">
+                <input id="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required="true">
                 <button class="btn" type="submit">SUBMIT</button>           
             </form>
         </div>

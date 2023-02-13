@@ -231,21 +231,19 @@
 
 
 <script>
-    
-    //   localStorage.getItem("key")   //
+        // localStorage.setItem("user_data", JSON.stringify(email));
+        // localStorage.setItem('user_list', JSON.stringify(user_list));
 
-    const user_name = localStorage.getItem("user_name")
-    const user_email = localStorage.getItem("user_email")
-    const user_phonenumber = localStorage.getItem("user_phonenumber")
+let user_data = JSON.parse(localStorage.getItem("user_data"));
+let user_list = JSON.parse(localStorage.getItem("user_list"));
 
-    console.log(user_name)
-    console.log(user_email)
-    console.log(user_phonenumber)
-
-    document.getElementById("user_name").value = user_name
-    document.getElementById("user_email").value = user_email
-    document.getElementById("user_phonenumber").value = user_phonenumber
-
+function profile_details(e){
+    return e.email == user_data;
+}
+customer_data = user_list.find(profile_details);
+document.getElementById("user_name").value = customer_data["name"];
+document.getElementById("user_email").value = customer_data["phonenumber"];
+document.getElementById("user_phonenumber").value = customer_data["email"];
 </script>
 
 </body>

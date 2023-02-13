@@ -12,16 +12,16 @@
             <h4>It's free and only takes a minute</h4>
             <form role="form" onsubmit="Registered(event);">
                 <label>NAME</label>
-                <input id="name" type="text">
+                <input id="name" type="text" pattern="[A-Za-z]+" required="true"/>
                 <label>PHONE</label>
-                <input id="phonenumber" type="text">
+                <input id="phonenumber" type="tel" pattern="[0-9].{9}" required="true"/>
                 <label>EMAIL</label>
-                <input id="email" type="email">
+                <input id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required="true">
                 <label>PASSWORD</label>
-                <input id="password" type="password">
+                <input id="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required="true">
                 <label>CONFORM PASSWORD</label>
-                <input id="confirm_password" type="password"> 
-                <!-- <button class="btn" type="button"  onclick="subit()">SUBMIT</button>            -->
+                <input id="confirm_password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required="true"> 
+                <!-- <button class="btn" type="button"  onclick="subit()">SUBMIT</button> -->
                 <button class="btn" type="submit">SUBMIT</button>           
 
             </form>
@@ -61,5 +61,6 @@
 // }
 </script>
 <script src="/js/register.js"></script>
-    </body>
+
+</body>
 </html>
