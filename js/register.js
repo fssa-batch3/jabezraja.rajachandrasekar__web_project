@@ -19,11 +19,12 @@ const Registered = e =>{
      if(!exist){
         user_list.push({"name":name,"phonenumber":phonenumber,"email":email, password, confirm_password});
         localStorage.setItem('user_list', JSON.stringify(user_list));
+        localStorage.setItem("user_data", JSON.stringify(email));
         console.log(localStorage.getItem('user_list'));
         document.querySelector('form').reset();
         document.getElementById('email').focus();
         alert('Account created Successfully');
-        location.href = "Login.html";
+        location.href = "../../index.html";
      }
      else{
         alert('Sorry the User already Exist!! \n Try with different Phone number or email');

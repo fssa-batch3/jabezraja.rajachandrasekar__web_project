@@ -197,7 +197,7 @@ header{
     padding-left: 50px;
 }
 
-.pnem h2{
+.pnem h2 , .pnem p{
     color: #a37e2b;
     font-size: 20px;
     letter-spacing: 2.8px;
@@ -206,6 +206,11 @@ header{
     line-height: 18px;
     margin-bottom: 10px;
     font-weight: 500;
+    text-decoration: none;
+}
+
+.pnem p{
+    cursor: pointer;
 }
 
 .pnem-nen{
@@ -213,18 +218,16 @@ header{
     margin-bottom: 20px;
 }
 
+.proedi{
+    display: flex;
+    justify-content: space-between;
+    max-width: 24pc;
+}
 .sacabtn{
     display: flex;
     max-width: 400px;
 }
 
-#sav{
-    margin-right: 5px;
-}
-
-#can{
-    margin-left: 5px;
-}
 /*-----Profile End-----*/
 
 
@@ -247,7 +250,7 @@ header{
     display: flex;
 }
 
-.more-icon, .fa-user, .fa-bag-shopping, .fa-heart{
+.more-icon, .fa-user, .fa-bag-shopping, .fa-heart, .fa-right-from-bracket{
     color:#900c19;
     margin-left: 5px;
     padding: 10px;
@@ -411,12 +414,14 @@ header{
     margin-top: 8px;
 }
 
-.cbtn a{
+#sav, #can{
+    margin-right: 5px;
     color: #f2c452;
     font-family: 'Philosopher',serif;
     font-size: 13px;
     text-decoration: none;
 }
+
 .cartfoot{
     padding: 0px 5px 0px;
     width: 100%;

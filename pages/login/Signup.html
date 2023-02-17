@@ -16,8 +16,8 @@
                 <label>PHONE</label>
                 <input id="phonenumber" type="tel" pattern="[0-9]+" minlength="10" maxlength="10" required="true"/>
                 <label>EMAIL</label>
-                <input id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required="true">
-                <label>PASSWORD</label>
+                <input id="email" type="email" required="true">
+                <label>PASSWORD</label>                  
                 <input id="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required="true">
                 <label>CONFORM PASSWORD</label>
                 <input id="confirm_password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required="true"> 
@@ -33,33 +33,6 @@
         </div>
         <p class="para2">Already have an account? <a href="Login.html">Login here</a></p>
 
-<script>
-    
-    // function subit(){
-
-    // const name = document.getElementById("name").value
-    // const phonenumber = document.getElementById("phonenumber").value
-    // const email = document.getElementById("email").value
-    // const password = document.getElementById("password").value
-    // const confirm_password = document.getElementById("confirm_password").value
-
-    // console.log(name)
-    // console.log(phonenumber)
-    // console.log(email)
-    // console.log(password)
-    // console.log(confirm_password)
-
-    // //localStorage.setItem("key",value)//
-
-    // localStorage.setItem("user_name",name)
-    // localStorage.setItem("user_phonenumber",phonenumber)
-    // localStorage.setItem("user_email",email)
-    // localStorage.setItem("user_password",password)
-    // localStorage.setItem("user_confirm_password",confirm_password)
-
-//     window.location.href ="../../index.html"
-// }
-</script>
 <script src="/js/register.js"></script>
 
 </body>

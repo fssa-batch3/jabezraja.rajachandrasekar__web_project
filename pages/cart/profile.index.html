@@ -75,20 +75,24 @@
         </aside>
 
         <section class="pnem">
-            <h2>PROFILE</h2>
-            <form>
+            <div class="proedi">
+                 <h2>PROFILE</h2>
+                  <p class="enable">Edit</p>
+            </div>
+            <form onsubmit="eprofile_details(event)">
                 <div class="pnem-nen">
-                    <input class="cofd" type="text" id="user_name" placeholder="NAME" required="true"/>
+                    <input class="cofd" type="text" id="user_name"  placeholder="NAME" readonly required="true"/ >
+                    
                 </div>
                 <div class="pnem-nen">
-                    <input class="cofd" type="email" id="user_email" placeholder="EMAIL" required="true"/>
+                    <input class="cofd" type="email" id="user_email" placeholder="EMAIL" disabled required="true"/>
                 </div>
                 <div class="pnem-nen">
-                    <input class="cofd" type="text" id="user_phonenumber" placeholder="MOBIL NUMBER" required="true"/>
+                    <input class="cofd" type="text" id="user_phonenumber" pattern="[0-9]+" minlength="10" readonly  maxlength="10" placeholder="MOBIL NUMBER" required="true"/>
                 </div>
             <div class="sacabtn">
-                <button class="cbtn" id="sav" > <a href="" class="">SAVE</a> </button>
-                <button class="cbtn" id="can"> <a href="" class="">CANCEL</a> </button>
+                <button class="cbtn" id="sav" type="submit" >SAVE</button>
+                <button class="cbtn" id="can" type="button" onclick="deleteaccount()"> DELETE </button>
             </div>
          </form>
         </section>
@@ -234,6 +238,7 @@
         // localStorage.setItem("user_data", JSON.stringify(email));
         // localStorage.setItem('user_list', JSON.stringify(user_list));
 
+// getting data from login and register
 let user_data = JSON.parse(localStorage.getItem("user_data"));
 let user_list = JSON.parse(localStorage.getItem("user_list"));
 
@@ -242,8 +247,49 @@ function profile_details(e){
 }
 customer_data = user_list.find(profile_details);
 document.getElementById("user_name").value = customer_data["name"];
-document.getElementById("user_email").value = customer_data["phonenumber"];
-document.getElementById("user_phonenumber").value = customer_data["email"];
+document.getElementById("user_phonenumber").value = customer_data["phonenumber"];
+document.getElementById("user_email").value = customer_data["email"];
+
+//edit function
+function eprofile_details(e){
+
+customer_data["name"] = document.getElementById("user_name").value ;
+customer_data["phonenumber"] = document.getElementById("user_phonenumber").value
+
+
+localStorage.setItem("user_list",JSON.stringify(user_list));
+location.href="#"
+}
+
+// delete function
+function deleteaccount(e){
+    if(confirm("Are You Sure on deleting?"))
+    {
+        let user_data = JSON.parse(localStorage.getItem("user_data"));
+        let user_list = JSON.parse(localStorage.getItem("user_list"));
+
+        function profile_details(e){
+         return e.email == user_data;
+        }
+customer_data = user_list.find(profile_details);
+
+const removedata = user_list.indexOf(customer_data);
+
+user_list.splice(removedata, 1);
+localStorage.setItem("user_list", JSON.stringify(user_list));
+location.href="../login/Signup.html";
+    }
+}
+
+// enable and disable function
+
+function enableInput(e){
+    document.getElementById("user_name").removeAttribute("readonly");
+    document.getElementById("user_phonenumber").removeAttribute("readonly");
+}
+
+const enable = document.querySelector(".enable");
+enable.addEventListener("click",enableInput)
 </script>
 
 </body>
