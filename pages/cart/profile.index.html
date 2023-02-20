@@ -256,7 +256,6 @@ function eprofile_details(e){
 customer_data["name"] = document.getElementById("user_name").value ;
 customer_data["phonenumber"] = document.getElementById("user_phonenumber").value
 
-
 localStorage.setItem("user_list",JSON.stringify(user_list));
 location.href="#"
 }
@@ -282,7 +281,6 @@ location.href="../login/Signup.html";
 }
 
 // enable and disable function
-
 function enableInput(e){
     document.getElementById("user_name").removeAttribute("readonly");
     document.getElementById("user_phonenumber").removeAttribute("readonly");

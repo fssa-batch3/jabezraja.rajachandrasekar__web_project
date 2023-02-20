@@ -4,8 +4,8 @@ const Registered = e =>{
       phonenumber = document.getElementById("phonenumber").value,
       email = document.getElementById("email").value,
       password = document.getElementById("password").value,
-      confirm_password = document.getElementById("confirm_password").value;
-
+      confirm_password = document.getElementById("confirm_password").value,
+      user_uniqueId = uuidv4();
      // Parshing  the JSON
      let user_list = JSON.parse(localStorage.getItem('user_list')) || [];
      let exist = user_list.length &&
@@ -17,7 +17,7 @@ const Registered = e =>{
        return alert("password and confirm_password is not match")
      }
      if(!exist){
-        user_list.push({"name":name,"phonenumber":phonenumber,"email":email, password, confirm_password});
+        user_list.push({"name":name,"phonenumber":phonenumber,"email":email, password, confirm_password,user_uniqueId});
         localStorage.setItem('user_list', JSON.stringify(user_list));
         localStorage.setItem("user_data", JSON.stringify(email));
         console.log(localStorage.getItem('user_list'));
