@@ -1,6 +1,12 @@
 # JAUNTY-RIALTO
 100-DAY-PROJECT
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fssa-batch3_jabezraja.rajachandrasekar__web_project&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=fssa-batch3_jabezraja.rajachandrasekar__web_project)
+
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=fssa-batch3_jabezraja.rajachandrasekar__web_project)](https://sonarcloud.io/summary/new_code?id=fssa-batch3_jabezraja.rajachandrasekar__web_project)
+
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=fssa-batch3_jabezraja.rajachandrasekar__web_project)
+
 This project is an Online Shopping Website
 
 user flow: https://drive.google.com/drive/folders/194XjWT9ErdifJ6Gwnv_jmEPzoaGB2zdI
