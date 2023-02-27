@@ -9,18 +9,16 @@ Problemstatement:https://docs.google.com/document/d/1DgyCzRPSK__jVkDJzd4rAu2nw6s
 
 Wireframe:https://drive.google.com/drive/folders/1dh4Wnas5y_7h9lV0Ukn1O9kUL-rGOhsq
 
-USER CRUD
+1. User CRUD
+    - Create user CRUD
+    - Read user CRUD
+    - Update Userr CRUD
+    - Delete user CRUD
 
-*Login
-*Register
-*Edit
-*Delete
+2. PRODUCTS CRUD
+    - Create product CRUD
+    - Read product CRUD
+    - Update product CRUD
+    - Delete product CRUD
 
-PRODUCTS CRUD
-
-*Create
-*Read
-*Update
-*Delete
-*Peoduct list
 
