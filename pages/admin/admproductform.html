@@ -2,109 +2,207 @@
 <html lang="en">
     <head>
         <title>ADMIN FORM FOR PRODUCT</title>
-        <!-- <link rel="stylesheet" href="../../assets/css/loginstyle.css"> -->
+        <link rel="stylesheet" href="../../assets/css/admstyle.css">
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
-        <div class="signup-box">
-            <h1>Add Products</h1>
-            <form role="form" onsubmit="Registered(event);">
-                <label>Category</label>
-                <input id="" type="" title="" required="true"/>
-                <label>Product Category</label>
-                <input id="" type="" title="" required="true"/>
+    <body class="admfbody">
+        <div class="admformbox">
+            <h1 id="admh1">Add Products</h1>
+            <form role="form" onsubmit="createproduct(event);">
+        <div class="admform">
+         <div>  <label>Product Category</label>
+                <select name="" id="pcate" required>
+                    <option>--Select Product Category--</option>
+                    <option id="pcboe">Best of Electronics</option>
+                    <option id="pcbb">Barware & Bakeware</option>
+                    <option id="pccb">Cars & Bikes</option>
+                    <option id="pcbohd">Best of Hair Dryers</option>
+                    <option id="pcpce">Personal care essential</option>
+                    <option id="pcht">Home Templates</option>
+                    <option id="pcw">Wardrobes</option>
+                    <option id="pcs">Sofa</option>
+                    <option id="pcosc">Office Study Chairs</option>
+                    <option id="pcm">Mattresses</option>
+                    <option id="plst">Office Study Table</option>
+                    <option id="pcbsb">Best Selling Bed</option>
+                    <option id="pcr">Reclinear</option>
+                    <option id="pcm">Monitors</option>
+                    <option id="pctm">Top Mirrorless camers</option>
+                    <option id="pctca">Top Camera Accessories</option>
+                    <option id="pcbohd">Best of Hair Dryers</option>
+                    <option id="pcpb">Power Bank</option>
+                    <option id="pcp">Printer</option>
+                    <option id="pcpr">Projectors</option>
+                    <option id="pcbs">Bath & Shower</option>
+                    <option id="pcfs">Food Spreads</option>
+                    <option id="pcdt">Doboo Toys</option>
+                    <option id="pcym">Yoga Mat</option>
+                    <option id="pch">Helmet</option>
+                    <option id="pcsi">Sting Instruments</option>
+                    <option id="pcp">Puzzles</option>
+                    <option id="pcc">Cycle</option>
+                    <option id="pcd">Dumbbell</option>
+                    <option id="pcbc">Breakfast Cereal</option>
+                    <option id="pcsc">Skin Care</option>
+                    <option id="pcme">Makeup Essentials</option>
+                    <option id="pch">Honey</option>
+                    <option id="pcg">Grooming</option>
+                    <option id="pcw">Watches</option>
+                    <option id="pcj">Jewellary</option>
+                    <option id="pcjh">Jackets & Hoodies</option>
+                    <option id="pcdre">Dresses</option>
+                    <option id="pcdm">Door Mats</option>
+                    <option id="pcb">Bulbs</option>
+                    <option id="pcap">Artificial Plants</option>
+                    <option id="pckls">Kitchen Linean Sets</option>
+                    <option id="pccc">Cloth Clips</option>
+                    <option id="pcfem">Fire Extinguisher Mounts</option>
+                    <option id="pcgt">Gardening Tools</option>
+                    <option id="pcmsh">MensShoes</option>
+                    <option id="pcdp">Deodrants & Perfume</option>
+                    <option id="pcmsw">MensSportswear</option>
+                    <option id="pcmsa">MensAccessories</option>
+                    <option id="pcmsg">MensGrooming</option>
+                    <option id="pcdiv">Divastri</option>
+                    <option id="pclc">Legging combo</option>
+                    <option id="pcwssho">WomensShoe</option>
+                    <option id="pcwsa">WomensAccessories</option>
+                    <option id="pcwsg">WomensGrooming</option>
+                    <option id=""></option>
+                </select>
                 <label>Product Name</label>
-                <input id="" type="" title="" required="true">
+                <input id="pname" type="text" required>
                 <label>Attractive Offers/Discount</label>                  
-                <input id="" type="" title="" required="true">
+                <input id="aofdis" type="text" required>
                 <label>Brand Name</label>
-                <input id="" type="" title="" required="true"> 
+                <input id="bname" type="text" required> 
                 <label>Price</label>
-                <input id="" type="" title="" required="true"> 
+                <input id="price" type="text" required> 
                 <label>Size</label>
-                <input id="" type="" title="" required="true"> 
+                <select id="size" required>
+                <option>--Select Size--</option>
+                <option id="ss">S</option>
+                <option id="sm">M</option>
+                <option id="sl">L</option>
+                <option id="sxl">XL</option>
+                <option id="sxxl">XXL</option>
+                <option id=""></option>
+                </select>
                 <label>Quantiy</label>
-                <input id="" type="" title="" required="true"> 
-                <label>Main Image</label>
-                <input id="" type="" title="" required="true"> 
-                <label>SubImage 1</label>
-                <input id="" type="" title="" required="true"> 
-                <label>SubImage 2</label>
-                <input id="" type="" title="" required="true"> 
-                <label>SubImage 3</label>
-                <input id="" type="" title="" required="true"> 
+                <input id="qty" type="" pattern="[0-9]+" required>     </div>
+        <div>   <label>Main Image</label>
+                <input id="mimg" type="url" required> 
+                <label>Sub Image 1</label>
+                <input id="simg1" type="url" required> 
+                <label>Sub Image 2</label>
+                <input id="smig2" type="url" required> 
+                <label>Sub Image 3</label>
+                <input id="simg3" type="url" required> 
                 <label>Features</label>
-                <input id="" type="" title="" required="true"> 
+                <textarea id="fetes" title="" required> </textarea> 
                 <label>Description</label>
-                <input id="" type="" title="" required="true"> 
-
-                <button class="btn" type="submit">SUBMIT</button>           
+                <textarea id="descrion" title="" required> </textarea>      </div>    
+        </div>  
+            <div class="admformbtn">    
+               <div id="admfbtnd"><button class="btn" type="submit">SUBMIT</button></div>  
+                <div id="admfbtndc"><button class="btn" type="reset">CANCEL</button></div>  
+            </div>
             </form>
         </div>
 <!-- <script src="/js/register.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script> -->
+
+<script>
+document.getElementById("admfbtnd").addEventListener("click",
+
+function createproduct(e){
+    e.preventDefault();
+
+    let product_catagory = document.getElementById("pcate").value
+    let best_of_electronics = document.getElementById("pcboe").value
+    let cars_bikes = document.getElementById("pccb").value
+    let watches = document.getElementById("pcw").value
+    let wshoe = document.getElementById("pcwssho").value
+    let mshoe = document.getElementById("pcmsh").value
+    let jackets = document.getElementById("pcjh").value
+    let a_plants = document.getElementById("pcap").value
+    let dresses = document.getElementById("pcdre").value
+    let bulb = document.getElementById("pcb").value
+
+    let product_name = document.getElementById("pname").value
+    let attractive_offer_discount = document.getElementById("aofdis").value
+    let brand_name = document.getElementById("bname").value
+    let price = document.getElementById("price").value
+    let size = document.getElementById("size").value
+
+    let Quantiy = document.getElementById("qty").value
+    let main_img = document.getElementById("mimg").value
+    let sub_img1 = document.getElementById("simg1").value
+    let sub_img2 = document.getElementById("smig2").value
+    let sub_img3 = document.getElementById("simg3").value
+    let features = document.getElementById("fetes").value
+    let description = document.getElementById("descrion").value
+
+    let puid = crypto.randomUUID()
+
+
+
+// selecting the catogory
+if(product_catagory == best_of_electronics){
+    let boe_catagory = JSON.parse(localStorage.getItem('boe_catagory')) || [];
+    let exit = boe_catagory.some(data =>
+    data.boe_catagory == boe_catagory);
+
+    if(!exit){
+    let attractive_offer_discount = document.getElementById("aofdis").value
+        boe_catagory.push({
+            product_catagory, 
+            product_name, 
+            attractive_offer_discount, brand_name, price, size, Quantiy, main_img, sub_img1, sub_img2, sub_img3, features, description, puid});
+
+            localStorage.setItem('boe_catagory',JSON.stringify(boe_catagory));
+    }
+}   
+
+else if(product_catagory == cars_bikes){
+    let cb = JSON.parse(localStorage.getItem('cb')) || [];
+    let exit = cb.some(data =>
+    data.cb == cb);
+
+    if(!exit){
+    let attractive_offer_discount = document.getElementById("aofdis").value
+    cb.push({
+            product_catagory, 
+            product_name, 
+            attractive_offer_discount, 
+            brand_name, 
+            price, 
+            size, 
+            Quantiy, 
+            main_img, 
+            sub_img1, 
+            sub_img2, 
+            sub_img3, 
+            features, 
+            description, 
+            puid});
+
+            localStorage.setItem('cb',JSON.stringify(cb));
+
+            
+    }
+}   
+document.querySelector('form').reset();
+
+alert('product created successfully!');
+    location.href="#";
+
+}
+)
+</script>
+
+
 </body>
 </html>
-<style>
-body{
-    background-color:#fffbf2;
-    font-family: 'Philosopher',serif;
-}
-.signup-box{
-    width: 360px;
-    height: auto;
-    margin: auto;
-    background-color: #fff;
-    border-radius: 3px;
-    color: #3c3c3c;
-    margin-top: 9em;
-}
-h1{
-    text-align: center;
-    padding-top: 15px;
-    font-family: 'Philosopher',serif;
-    font-weight: 200;
-}
-form label{
-    display: flex;
-    margin-top: 20px;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: 'Philosopher',serif;
-}
-form input{
-    width: 95%;
-    padding: 7px;
-    border: none;
-    border: 1px solid grey;
-    border-radius: 6px;
-    outline: none;
-} 
-.btn{
-    width: 320px;
-    height: 35px;
-    margin-top: 20px;
-    border: none;
-    background-color: #900c19;
-    color: #fff;
-    font-size: 18px;
-    font-family: 'Philosopher',serif;
-    font-weight: 200;
-    border-radius: 6px;
-}
-.btn a{
-    text-decoration: none;
-    color: white;
-}
-input[type="button"]{
-    width: 320px;
-    height: 35px;
-    margin-top: 20px;
-    border: none;
-    background-color: #900c19;
-    color: #fff;
-    font-size: 18px;
-    
-}
-</style>
+
