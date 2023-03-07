@@ -81,7 +81,7 @@
             </div>
             <form onsubmit="eprofile_details(event)">
                 <div class="pnem-nen">
-                    <input class="cofd" type="text" id="user_name"  placeholder="NAME" readonly required="true"/ >
+                    <input class="cofd" type="text" id="user_name"  placeholder="NAME" readonly required="true"/>
                     
                 </div>
                 <div class="pnem-nen">
@@ -260,6 +260,15 @@ localStorage.setItem("user_list",JSON.stringify(user_list));
 location.href="#"
 }
 
+// enable and disable function
+function enableInput(e){
+    document.getElementById("user_name").removeAttribute("readonly");
+    document.getElementById("user_phonenumber").removeAttribute("readonly");
+}
+
+const enable = document.querySelector(".enable");
+enable.addEventListener("click",enableInput)
+
 // delete function
 function deleteaccount(e){
     if(confirm("Are You Sure on deleting?"))
@@ -280,14 +289,6 @@ location.href="../login/Signup.html";
     }
 }
 
-// enable and disable function
-function enableInput(e){
-    document.getElementById("user_name").removeAttribute("readonly");
-    document.getElementById("user_phonenumber").removeAttribute("readonly");
-}
-
-const enable = document.querySelector(".enable");
-enable.addEventListener("click",enableInput)
 </script>
 
 </body>

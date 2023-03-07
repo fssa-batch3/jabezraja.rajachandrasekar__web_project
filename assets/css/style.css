@@ -94,7 +94,12 @@ header{
     text-decoration:none;
     font-size: 16px;
 }
-
+#logout_btn{
+    border: none;
+    font-size: 14px;
+    background-color: transparent;
+    cursor: pointer;
+}
 .login_dropdown{
     position: relative;
     top: 12px;
@@ -114,12 +119,12 @@ header{
     padding: 16px 20px;
     border-bottom: 1px solid whitesmoke;
     font-size: 14px;
-    cursor: pointer;
 }
 
 .login_drop_li a{
     text-decoration: none;
     color: #000;
+    cursor: pointer;
 }
 
 .login_drop_li:hover{
@@ -932,7 +937,7 @@ font-size: 15px;
 
 }
 
-.common-row-col-deals{
+.common-row-col-deals, .common-row-col-deals1{
     display:grid;
     grid-template-columns: repeat(5, 1fr);  
 }

@@ -87,7 +87,21 @@
                 <option id="sl">L</option>
                 <option id="sxl">XL</option>
                 <option id="sxxl">XXL</option>
-                <option id=""></option>
+                <option id="s1">1</option>
+                <option id="s2">2</option>
+                <option id="s3">3</option>
+                <option id="s4">4</option>
+                <option id="s5">5</option>
+                <option id="s6">6</option>
+                <option id="s7">7</option>
+                <option id="s8">8</option>
+                <option id="s9">9</option>
+                <option id="s10">10</option>
+                <option id="s11">11</option>
+                <option id="s12">12</option>
+                <option id="s13">13</option>
+                <option id="s"></option>
+
                 </select>
                 <label>Quantiy</label>
                 <input id="qty" type="" pattern="[0-9]+" required>     </div>
@@ -110,6 +124,13 @@
             </div>
             </form>
         </div>
+        <hr>
+<section>
+    <div class="product_list_details">
+ 
+    </div>
+</section>
+
 <!-- <script src="/js/register.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script> -->
 
@@ -155,7 +176,6 @@ if(product_catagory == best_of_electronics){
     data.boe_catagory == boe_catagory);
 
     if(!exit){
-    let attractive_offer_discount = document.getElementById("aofdis").value
         boe_catagory.push({
             product_catagory, 
             product_name, 
@@ -164,14 +184,13 @@ if(product_catagory == best_of_electronics){
             localStorage.setItem('boe_catagory',JSON.stringify(boe_catagory));
     }
 }   
-
+// CARS_BIKES
 else if(product_catagory == cars_bikes){
     let cb = JSON.parse(localStorage.getItem('cb')) || [];
     let exit = cb.some(data =>
     data.cb == cb);
 
     if(!exit){
-    let attractive_offer_discount = document.getElementById("aofdis").value
     cb.push({
             product_catagory, 
             product_name, 
@@ -188,11 +207,191 @@ else if(product_catagory == cars_bikes){
             description, 
             puid});
 
-            localStorage.setItem('cb',JSON.stringify(cb));
-
-            
+            localStorage.setItem('cb',JSON.stringify(cb));            
     }
 }   
+// WATCHES
+else if(product_catagory == watches){
+    let Watc = JSON.parse(localStorage.getItem('watc')) || [];
+    let exit = watc.some(data =>
+    data.watc == watc);
+
+    if(!exit){
+        watc.push({
+            product_catagory, 
+            product_name, 
+            attractive_offer_discount, 
+            brand_name, 
+            price, 
+            size, 
+            Quantiy, 
+            main_img, 
+            sub_img1, 
+            sub_img2, 
+            sub_img3, 
+            features, 
+            description, 
+            puid});
+
+            localStorage.setItem('watc',JSON.stringify(watc));            
+    }
+}
+// WOMENSHOE(WSHOE)
+else if(product_catagory == wshoe){
+    let wsho = JSON.parse(localStorage.getItem('wsho')) || [];
+    let exit = wsho.some(data =>
+    data.wsho == wsho);
+
+    if(!exit){
+        wsho.push({
+            product_catagory, 
+            product_name, 
+            attractive_offer_discount, 
+            brand_name, 
+            price, 
+            size, 
+            Quantiy, 
+            main_img, 
+            sub_img1, 
+            sub_img2, 
+            sub_img3, 
+            features, 
+            description, 
+            puid});
+
+            localStorage.setItem('wsho',JSON.stringify(wsho));            
+    }
+}
+// MENSHOE(MSHOE)
+else if(product_catagory == mshoe){
+    let msho = JSON.parse(localStorage.getItem('msho')) || [];
+    let exit = msho.some(data =>
+    data.msho == msho);
+
+    if(!exit){
+        msho.push({
+            product_catagory, 
+            product_name, 
+            attractive_offer_discount, 
+            brand_name, 
+            price, 
+            size, 
+            Quantiy, 
+            main_img, 
+            sub_img1, 
+            sub_img2, 
+            sub_img3, 
+            features, 
+            description, 
+            puid});
+
+            localStorage.setItem('msho',JSON.stringify(msho));            
+    }
+}
+// JACKETS
+else if(product_catagory == jackets){
+    let jaket = JSON.parse(localStorage.getItem('jaket')) || [];
+    let exit = jaket.some(data =>
+    data.jaket == jaket);
+
+    if(!exit){
+        jaket.push({
+            product_catagory, 
+            product_name, 
+            attractive_offer_discount, 
+            brand_name, 
+            price, 
+            size, 
+            Quantiy, 
+            main_img, 
+            sub_img1, 
+            sub_img2, 
+            sub_img3, 
+            features, 
+            description, 
+            puid});
+
+            localStorage.setItem('jaket',JSON.stringify(jaket));            
+    }
+}
+// ARTIFICIAL PLANTS
+else if(product_catagory == a_plants){
+    let aplant = JSON.parse(localStorage.getItem('aplant')) || [];
+    let exit = aplant.some(data =>
+    data.aplant == aplant);
+
+    if(!exit){
+        aplant.push({
+            product_catagory, 
+            product_name, 
+            attractive_offer_discount, 
+            brand_name, 
+            price, 
+            size, 
+            Quantiy, 
+            main_img, 
+            sub_img1, 
+            sub_img2, 
+            sub_img3, 
+            features, 
+            description, 
+            puid});
+
+            localStorage.setItem('aplant',JSON.stringify(aplant));            
+    }
+}
+// DRESSES
+else if(product_catagory == dresses){
+    let dres = JSON.parse(localStorage.getItem('dres')) || [];
+    let exit = dres.some(data =>
+    data.dres == dres);
+
+    if(!exit){
+        dres.push({
+            product_catagory, 
+            product_name, 
+            attractive_offer_discount, 
+            brand_name, 
+            price, 
+            size, 
+            Quantiy, 
+            main_img, 
+            sub_img1, 
+            sub_img2, 
+            sub_img3, 
+            features, 
+            description, 
+            puid});
+
+            localStorage.setItem('dres',JSON.stringify(dres));            
+    }
+}
+// BULB
+else if(product_catagory == bulb){
+    let bul = JSON.parse(localStorage.getItem('bul')) || [];
+    let exit = bul.some(data =>
+    data.bul == bul);
+
+    if(!exit){
+        bul.push({
+            product_catagory, 
+            product_name, 
+            attractive_offer_discount, 
+            brand_name, 
+            price, 
+            size, 
+            Quantiy, 
+            main_img, 
+            sub_img1, 
+            sub_img2, 
+            sub_img3, 
+            features, 
+            description, 
+            puid});
+
+            localStorage.setItem('bul',JSON.stringify(bul));            
+    }
+}
 document.querySelector('form').reset();
 
 alert('product created successfully!');
