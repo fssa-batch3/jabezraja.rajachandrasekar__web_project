@@ -1270,7 +1270,7 @@ font-size: 15px;
     text-decoration: none;
     background-color: transparent;
 }
-.minusplus{
+.quantity__minus, .quantity__plus{
     color: #858585;
     font-size: 14px;
     font-weight: 700;
@@ -1279,11 +1279,6 @@ font-size: 15px;
     text-align: center;
     line-height: 32px;
     cursor: pointer;
-}
-
-.minusplus img{
-    width: 8px;
-    height: 8px;
 }
 
 .sqb{

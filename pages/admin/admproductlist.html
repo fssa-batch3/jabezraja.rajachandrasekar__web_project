@@ -36,6 +36,61 @@
                         <div class="common-row-col-dealsv">
                         </div>                    
                 </section>
+<section>
+    <div class="bx">
+    <div>
+        <p class="enable"><i class="fas fa-edit"></i></p>
+    </div>
+    <form role="form" onsubmit="createproduct(event);">
+        <div class="adm_editform">
+         <div class="inter">  <label>Product ID</label>
+                <input id="" type="text" disabled >
+                
+                <label>Product Name</label>
+                <input id="pname" type="text" readonly required>
+
+                <label>Attractive Offers/Discount</label>                  
+                <input id="aofdis" type="text" readonly required>
+
+                <label>Brand Name</label>
+                <input id="bname" type="text" readonly required> </div>
+
+        <div class="inter">   <label>Main Image</label>
+                <input id="mimg" type="url" readonly required> 
+
+                <label>Sub Image 1</label>
+                <input id="simg1" type="url" readonly required> 
+
+                <label>Sub Image 2</label>
+                <input id="smig2" type="url" readonly required> 
+
+                <label>Sub Image 3</label>
+                <input id="simg3" type="url" readonly required> </div>
+
+         <div class="inter"> <label>Price</label>
+                <input id="price" type="text" readonly required> 
+
+                <label>Size</label>
+                <input id="size" type="text" readonly required maxlength="1">
+
+                <label>Quantiy</label>
+                <input id="qty" type="" pattern="[0-9]+" readonly required>  
+                <label>Features</label>
+                <textarea id="fetes" title="" readonly required> </textarea>      </div> 
+<div class="inter">
+                <label>Description</label>
+                <textarea id="descrin" title="" readonly required> </textarea>    
+
+            <div class="adm_editformbtn">    
+               <div id="admfbtnd"><button class="ebtn" type="submit">SAVE</button></div> 
+             
+               <div id="admfbtnd"><button class="ebtn" type="button" onclick="">DELETE</button></div>  
+            </div>
+        </div>  
+    </div>
+            </form>
+        </div>
+</section>
 
 </body>
 
@@ -53,7 +108,6 @@ document.querySelector("div.common-row-col-dealsv").append(card_1)
 img_of_electronics = document.createElement("img");
 img_of_electronics.setAttribute("class", "product-img");
 img_of_electronics.setAttribute("src", boe_catagory[i]["main_img"]);
-// img_of_electronics.setAttribute("alt", boe_catagory[i]["image"]["alt"]);
 card_1.append(img_of_electronics);
 
 h3_for_product = document.createElement("h3");
@@ -80,78 +134,103 @@ document.querySelector("div.common-row-col-dealsv").append(card_1)
 </html>
 
 
+<!-- <script>
+    // Create bx div
+const bxDiv = document.createElement("div");
+bxDiv.classList.add("bx");
 
+// Create first div
+const firstDiv = document.createElement("div");
 
+// Create enable paragraph
+const enablePara = document.createElement("p");
+enablePara.classList.add("enable");
 
+// Create edit icon
+const editIcon = document.createElement("i");
+editIcon.classList.add("fas", "fa-edit");
 
-<style>
-    *{
-  box-sizing: border-box;
-}
-body{
-  margin: 0px;
-  padding: 0px;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Lato' !important;
-}
-.sbox{
-    display: flex;
-    justify-content: center;
-}
-.search-box{
-  /* width: fit-content;
-  height: fit-content; */
-  position: relative;
-  
-}
-.input-search{
-  height: 50px;
-  width: 50px;
-  border-style: none;
-  padding: 10px;
-  font-size: 18px;
-  letter-spacing: 2px;
-  outline: none;
-  border-radius: 25px;
-  transition: all .5s ease-in-out;
-  background-color: #900c19;
-  padding-right: 40px;
-  color:#900c19;
-}
-.input-search::placeholder{
-  color:#900c19;
-  font-size: 18px;
-  letter-spacing: 2px;
-  font-weight: 100;
-}
-.btn-search{
-  width: 50px;
-  height: 50px;
-  border-style: none;
-  font-size: 20px;
-  font-weight: bold;
-  outline: none;
-  cursor: pointer;
-  border-radius: 50%;
-  position: absolute;
-  right: 0px;
-  color:#d2ae5a ;
-  background-color:#900c19;
-  pointer-events: painted;  
-}
-.btn-search:focus ~ .input-search{
-  width: 300px;
-  border-radius: 0px;
-  background-color: transparent;
-  border-bottom:1px solid rgba(255,255,255,.5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
-}
-.input-search:focus{
-  width: 300px;
-  border-radius: 0px;
-  background-color: transparent;
-  border-bottom:1px solid rgba(255,255,255,.5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
-}
-</style>
+// Append edit icon to enable paragraph
+enablePara.appendChild(editIcon);
+
+// Append enable paragraph to first div
+firstDiv.appendChild(enablePara);
+
+// Create form
+const form = document.createElement("form");
+form.setAttribute("role", "form");
+form.setAttribute("onsubmit", "createproduct(event);");
+
+// Create adm_editform div
+const admEditFormDiv = document.createElement("div");
+admEditFormDiv.classList.add("adm_editform");
+
+// Create inter divs
+const interDiv1 = document.createElement("div");
+interDiv1.classList.add("inter");
+const interDiv2 = document.createElement("div");
+interDiv2.classList.add("inter");
+const interDiv3 = document.createElement("div");
+interDiv3.classList.add("inter");
+
+// Create labels and inputs
+const productIDLabel = document.createElement("label");
+productIDLabel.textContent = "Product ID";
+const productIDInput = document.createElement("input");
+productIDInput.setAttribute("type", "text");
+productIDInput.setAttribute("disabled", "");
+
+const productNameLabel = document.createElement("label");
+productNameLabel.textContent = "Product Name";
+const productNameInput = document.createElement("input");
+productNameInput.setAttribute("type", "text");
+productNameInput.setAttribute("readonly", "");
+productNameInput.setAttribute("required", "");
+productNameInput.setAttribute("id", "pname");
+
+const attractiveOffersDiscountLabel = document.createElement("label");
+attractiveOffersDiscountLabel.textContent = "Attractive Offers/Discount";
+const attractiveOffersDiscountInput = document.createElement("input");
+attractiveOffersDiscountInput.setAttribute("type", "text");
+attractiveOffersDiscountInput.setAttribute("readonly", "");
+attractiveOffersDiscountInput.setAttribute("required", "");
+attractiveOffersDiscountInput.setAttribute("id", "aofdis");
+
+const brandNameLabel = document.createElement("label");
+brandNameLabel.textContent = "Brand Name";
+const brandNameInput = document.createElement("input");
+brandNameInput.setAttribute("type", "text");
+brandNameInput.setAttribute("readonly", "");
+brandNameInput.setAttribute("required", "");
+brandNameInput.setAttribute("id", "bname");
+
+const mainImageLabel = document.createElement("label");
+mainImageLabel.textContent = "Main Image";
+const mainImageInput = document.createElement("input");
+mainImageInput.setAttribute("type", "url");
+mainImageInput.setAttribute("readonly", "");
+mainImageInput.setAttribute("required", "");
+mainImageInput.setAttribute("id", "mimg");
+
+const subImage1Label = document.createElement("label");
+subImage1Label.textContent = "Sub Image 1";
+const subImage1Input = document.createElement("input");
+subImage1Input.setAttribute("type", "url");
+subImage1Input.setAttribute("readonly", "");
+subImage1Input.setAttribute("required", "");
+subImage1Input.setAttribute("id", "simg1");
+
+const subImage2Label = document.createElement("label");
+subImage2Label.textContent = "Sub Image 2";
+const subImage2Input = document.createElement("input");
+subImage2Input.setAttribute("type", "url");
+subImage2Input.setAttribute("readonly", "");
+subImage2Input.setAttribute("required", "");
+subImage2Input.setAttribute("id", "smig2");
+
+const subImage3Label = document.createElement("label");
+subImage3Label.textContent = "Sub Image 3";
+const subImage3Input = document.createElement("input");
+subImage3Input.setAttribute("type",
+
+</script> -->

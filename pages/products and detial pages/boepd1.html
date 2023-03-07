@@ -9,6 +9,7 @@
     <link href="../../assets/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family-Roboto&display-swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body id="mainco">
 
@@ -59,13 +60,11 @@
 
                  <p>SELECT QUANITY</p>
              <div id="sq">
-                 <a href="" class="minusplus">
-                    <img src="../../assets/images/products/minus.svg" alt="">
-                 </a>
-                 <input type="text" class="sqb">
-                 <a href="" class="minusplus">
-                    <img src="../../assets/images/products/plus.svg" alt="">
-                 </a>
+                 <a href="" class="quantity__minus">
+                    <span>-</span>                 </a>
+                 <input type="text" class="sqb" value="1">
+                 <a href="" class="quantity__plus">
+                    <span>+</span>                 </a>
             </div>
 
             <div class="addbuy">
@@ -230,7 +229,7 @@
   
   </div>
 </footer>
-
+<!-----Footer End----->
 <script>
 
     const images=[
@@ -295,7 +294,6 @@
     
 
 </script>
-
+<script src="../../js/main.js"></script>
 </body>
-<!-----Footer End----->
 </html>
