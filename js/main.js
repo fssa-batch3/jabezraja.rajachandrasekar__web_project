@@ -4,26 +4,27 @@ function logout(){
     location.href="./pages/login/Login.html"
 }
 // Increment/decrement counter
-$(document).ready(function() {
-    const minus = $('.quantity__minus');
-    const plus = $('.quantity__plus');
-    const input = $('.sqb');
-    minus.click(function(e) {
-      e.preventDefault();
-      let value = input.val();
-      if (value > 1) {
-        value--;
-      }
-      input.val(value);
-    });
+
+// $(document).ready(function() {
+//     const minus = $('.quantity__minus');
+//     const plus = $('.quantity__plus');
+//     const input = $('.sqb');
+//     minus.click(function(e) {
+//       e.preventDefault();
+//       let value = input.val();
+//       if (value > 1) {
+//         value--;
+//       }
+//       input.val(value);
+//     });
     
-    plus.click(function(e) {
-      e.preventDefault();
-      var value = input.val();
-      value++;
-      input.val(value);
-    })
-  });
+//     plus.click(function(e) {
+//       e.preventDefault();
+//       var value = input.val();
+//       value++;
+//       input.val(value);
+//     })
+//   });
   
 // JSON FOR DEALS OF THE DAY
 const deals_of_the_day = [

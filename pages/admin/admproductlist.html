@@ -132,105 +132,370 @@ document.querySelector("div.common-row-col-dealsv").append(card_1)
 </script>
 
 </html>
+<!-- <script>
+    // Create the main container
+const admEditForm = document.createElement("div");
+admEditForm.classList.add("adm_editform");
+
+// Create the first div for inputs
+const inter1 = document.createElement("div");
+inter1.classList.add("inter");
+
+// Create Product ID label and input
+const pidLabel = document.createElement("label");
+pidLabel.textContent = "Product ID";
+const pidInput = document.createElement("input");
+pidInput.id = "pid";
+pidInput.type = "text";
+pidInput.disabled = true;
+inter1.appendChild(pidLabel);
+inter1.appendChild(pidInput);
+
+// Create Product Name label and input
+const pnameLabel = document.createElement("label");
+pnameLabel.textContent = "Product Name";
+const pnameInput = document.createElement("input");
+pnameInput.id = "pname";
+pnameInput.type = "text";
+pnameInput.readOnly = true;
+pnameInput.required = true;
+inter1.appendChild(pnameLabel);
+inter1.appendChild(pnameInput);
+
+// Create Attractive Offers/Discount label and input
+const aofdisLabel = document.createElement("label");
+aofdisLabel.textContent = "Attractive Offers/Discount";
+const aofdisInput = document.createElement("input");
+aofdisInput.id = "aofdis";
+aofdisInput.type = "text";
+aofdisInput.readOnly = true;
+aofdisInput.required = true;
+inter1.appendChild(aofdisLabel);
+inter1.appendChild(aofdisInput);
+
+// Create Brand Name label and input
+const bnameLabel = document.createElement("label");
+bnameLabel.textContent = "Brand Name";
+const bnameInput = document.createElement("input");
+bnameInput.id = "bname";
+bnameInput.type = "text";
+bnameInput.readOnly = true;
+bnameInput.required = true;
+inter1.appendChild(bnameLabel);
+inter1.appendChild(bnameInput);
+
+// Append inter1 to admEditForm
+admEditForm.appendChild(inter1);
+
+// Create the second div for image inputs
+const inter2 = document.createElement("div");
+inter2.classList.add("inter");
+
+// Create Main Image label and input
+const mimgLabel = document.createElement("label");
+mimgLabel.textContent = "Main Image";
+const mimgInput = document.createElement("input");
+mimgInput.id = "mimg";
+mimgInput.type = "url";
+mimgInput.readOnly = true;
+mimgInput.required = true;
+inter2.appendChild(mimgLabel);
+inter2.appendChild(mimgInput);
+
+// Create Sub Image 1 label and input
+const simg1Label = document.createElement("label");
+simg1Label.textContent = "Sub Image 1";
+const simg1Input = document.createElement("input");
+simg1Input.id = "simg1";
+simg1Input.type = "url";
+simg1Input.readOnly = true;
+simg1Input.required = true;
+inter2.appendChild(simg1Label);
+inter2.appendChild(simg1Input);
+
+// Create Sub Image 2 label and input
+const simg2Label = document.createElement("label");
+simg2Label.textContent = "Sub Image 2";
+const simg2Input = document.createElement("input");
+simg2Input.id = "simg2";
+simg2Input.type = "url";
+simg2Input.readOnly = true;
+simg2Input.required = true;
+inter2.appendChild(simg2Label);
+inter2.appendChild(simg2Input);
+
+// Create Sub Image 3 label and input
+const simg3Label = document.createElement("label");
+simg3Label.textContent = "Sub Image 3";
+const simg3Input = document.createElement("input");
+simg3Input.id = "simg3";
+simg3Input.type = "url";
+simg3Input.readOnly = true;
+simg3Input.required = true;
+inter3.appendChild(simg3Label);
+inter3.appendChild(simg3Input);
+
+</script> -->
+
 
 
 <!-- <script>
-    // Create bx div
-const bxDiv = document.createElement("div");
-bxDiv.classList.add("bx");
+    // create the outer div element
+const adm_editform = document.createElement("div");
+adm_editform.classList.add("adm_editform");
 
-// Create first div
-const firstDiv = document.createElement("div");
+// create the first inner div element
+const inter1 = document.createElement("div");
+inter1.classList.add("inter");
 
-// Create enable paragraph
-const enablePara = document.createElement("p");
-enablePara.classList.add("enable");
+// create the Product ID label
+const pidLabel = document.createElement("label");
+pidLabel.textContent = "Product ID";
 
-// Create edit icon
-const editIcon = document.createElement("i");
-editIcon.classList.add("fas", "fa-edit");
+// create the Product ID input element
+const pidInput = document.createElement("input");
+pidInput.setAttribute("id", "pid");
+pidInput.setAttribute("type", "text");
+pidInput.setAttribute("disabled", "");
 
-// Append edit icon to enable paragraph
-enablePara.appendChild(editIcon);
+// create the Product Name label
+const pnameLabel = document.createElement("label");
+pnameLabel.textContent = "Product Name";
 
-// Append enable paragraph to first div
-firstDiv.appendChild(enablePara);
+// create the Product Name input element
+const pnameInput = document.createElement("input");
+pnameInput.setAttribute("id", "pname");
+pnameInput.setAttribute("type", "text");
+pnameInput.setAttribute("readonly", "");
+pnameInput.setAttribute("required", "");
 
-// Create form
-const form = document.createElement("form");
-form.setAttribute("role", "form");
-form.setAttribute("onsubmit", "createproduct(event);");
+// create the Attractive Offers/Discount label
+const aofdisLabel = document.createElement("label");
+aofdisLabel.textContent = "Attractive Offers/Discount";
 
-// Create adm_editform div
-const admEditFormDiv = document.createElement("div");
-admEditFormDiv.classList.add("adm_editform");
+// create the Attractive Offers/Discount input element
+const aofdisInput = document.createElement("input");
+aofdisInput.setAttribute("id", "aofdis");
+aofdisInput.setAttribute("type", "text");
+aofdisInput.setAttribute("readonly", "");
+aofdisInput.setAttribute("required", "");
 
-// Create inter divs
-const interDiv1 = document.createElement("div");
-interDiv1.classList.add("inter");
-const interDiv2 = document.createElement("div");
-interDiv2.classList.add("inter");
-const interDiv3 = document.createElement("div");
-interDiv3.classList.add("inter");
+// create the Brand Name label
+const bnameLabel = document.createElement("label");
+bnameLabel.textContent = "Brand Name";
 
-// Create labels and inputs
-const productIDLabel = document.createElement("label");
-productIDLabel.textContent = "Product ID";
-const productIDInput = document.createElement("input");
-productIDInput.setAttribute("type", "text");
-productIDInput.setAttribute("disabled", "");
+// create the Brand Name input element
+const bnameInput = document.createElement("input");
+bnameInput.setAttribute("id", "bname");
+bnameInput.setAttribute("type", "text");
+bnameInput.setAttribute("readonly", "");
+bnameInput.setAttribute("required", "");
 
-const productNameLabel = document.createElement("label");
-productNameLabel.textContent = "Product Name";
-const productNameInput = document.createElement("input");
-productNameInput.setAttribute("type", "text");
-productNameInput.setAttribute("readonly", "");
-productNameInput.setAttribute("required", "");
-productNameInput.setAttribute("id", "pname");
+// add the elements to the first inner div
+inter1.appendChild(pidLabel);
+inter1.appendChild(pidInput);
+inter1.appendChild(pnameLabel);
+inter1.appendChild(pnameInput);
+inter1.appendChild(aofdisLabel);
+inter1.appendChild(aofdisInput);
+inter1.appendChild(bnameLabel);
+inter1.appendChild(bnameInput);
 
-const attractiveOffersDiscountLabel = document.createElement("label");
-attractiveOffersDiscountLabel.textContent = "Attractive Offers/Discount";
-const attractiveOffersDiscountInput = document.createElement("input");
-attractiveOffersDiscountInput.setAttribute("type", "text");
-attractiveOffersDiscountInput.setAttribute("readonly", "");
-attractiveOffersDiscountInput.setAttribute("required", "");
-attractiveOffersDiscountInput.setAttribute("id", "aofdis");
+// create the second inner div element
+const inter2 = document.createElement("div");
+inter2.classList.add("inter");
 
-const brandNameLabel = document.createElement("label");
-brandNameLabel.textContent = "Brand Name";
-const brandNameInput = document.createElement("input");
-brandNameInput.setAttribute("type", "text");
-brandNameInput.setAttribute("readonly", "");
-brandNameInput.setAttribute("required", "");
-brandNameInput.setAttribute("id", "bname");
+// create the Main Image label
+const mimgLabel = document.createElement("label");
+mimgLabel.textContent = "Main Image";
 
-const mainImageLabel = document.createElement("label");
-mainImageLabel.textContent = "Main Image";
-const mainImageInput = document.createElement("input");
-mainImageInput.setAttribute("type", "url");
-mainImageInput.setAttribute("readonly", "");
-mainImageInput.setAttribute("required", "");
-mainImageInput.setAttribute("id", "mimg");
+// create the Main Image input element
+const mimgInput = document.createElement("input");
+mimgInput.setAttribute("id", "mimg");
+mimgInput.setAttribute("type", "url");
+mimgInput.setAttribute("readonly", "");
+mimgInput.setAttribute("required", "");
 
-const subImage1Label = document.createElement("label");
-subImage1Label.textContent = "Sub Image 1";
-const subImage1Input = document.createElement("input");
-subImage1Input.setAttribute("type", "url");
-subImage1Input.setAttribute("readonly", "");
-subImage1Input.setAttribute("required", "");
-subImage1Input.setAttribute("id", "simg1");
+// create the Sub Image 1 label
+const simg1Label = document.createElement("label");
+simg1Label.textContent = "Sub Image 1";
 
-const subImage2Label = document.createElement("label");
-subImage2Label.textContent = "Sub Image 2";
-const subImage2Input = document.createElement("input");
-subImage2Input.setAttribute("type", "url");
-subImage2Input.setAttribute("readonly", "");
-subImage2Input.setAttribute("required", "");
-subImage2Input.setAttribute("id", "smig2");
+// create the Sub Image 1 input element
+const simg1Input = document.createElement("input");
+simg1Input.setAttribute("id", "simg1");
+simg1Input.setAttribute("type", "url");
+simg1Input.setAttribute("readonly", "");
+simg1Input.setAttribute("required", "");
 
-const subImage3Label = document.createElement("label");
-subImage3Label.textContent = "Sub Image 3";
-const subImage3Input = document.createElement("input");
-subImage3Input.setAttribute("type",
+// create the Sub Image 2 label
+const simg2Label = document.createElement("label");
+simg2Label.textContent = "Sub Image 2";
+
+// create the Sub Image 2 input element
+const simg2Input = document.createElement("input");
+simg2Input.setAttribute("id", "simg2");
+simg2Input.setAttribute("type", "url");
+simg2Input.setAttribute("readonly", "");
+simg2Input.setAttribute("required", "");
+
+// create the Sub Image 3 label
+const simg3Label = document.createElement("label");
+simg3Label.textContent = "Sub Image 2";
+
+// create the Sub Image 3 input element
+const simg3Input = document.createElement("input");
+simg3Input.setAttribute("id", "simg3");
+simg3Input.setAttribute("type", "url");
+simg3Input.setAttribute("readonly", "");
+simg3Input.setAttribute("required", "");
+
+// Append the first inner div to the adm_editform div
+admEditformDiv.appendChild(interDiv1);
+
+// Repeat the process for the remaining inner divs and elements
+
+// Append the adm_editform div to the form
+form.appendChild(admEditformDiv);
+
+// Create the div element with class "adm_editformbtn"
+const admEditformbtnDiv = document.createElement('div');
+admEditformbtnDiv.classList.add('adm_editformbtn');
+
+// Create the inner div elements and buttons
+const admfbtndDiv1 = document.createElement('div');
+const saveButton = document.createElement('button');
+saveButton.classList.add('ebtn');
+saveButton.setAttribute('type', 'submit');
+saveButton.textContent = 'SAVE';
+admfbtndDiv1.appendChild(saveButton);
+
+const admfbtndDiv2 = document.createElement('div');
+const deleteButton = document.createElement('button');
+deleteButton.classList.add('ebtn');
+deleteButton.setAttribute('type', 'button');
+deleteButton.setAttribute('onclick', '');
+deleteButton.textContent = 'DELETE';
+admfbtndDiv2.appendChild(deleteButton);
+
+// Append the inner divs and buttons to the adm_editformbtn div
+admEditformbtnDiv.appendChild(admfbtndDiv1);
+admEditformbtnDiv.appendChild(admfbtndDiv2);
+
+// Append the adm_editformbtn div to the form
+form.appendChild(admEditformbtnDiv);
+
+// Append the inner div to the bx div
+bxDiv.appendChild(innerDiv);
+
+// Append the form to the bx div
+bxDiv.appendChild(form);
+
+// Append the bx div to the section
+section.appendChild(bxDiv);
+
+</script> -->
+
+
+
+
+<!-- <script>
+    // Create the section element
+const section = document.createElement('section');
+
+// Create the div element with class "bx"
+const bxDiv = document.createElement('div');
+bxDiv.classList.add('bx');
+
+// Create the inner div element
+const innerDiv = document.createElement('div');
+
+// Create the p element with class "enable" and the i element with class "fas fa-edit" inside
+const pElement = document.createElement('p');
+pElement.classList.add('enable');
+const iElement = document.createElement('i');
+iElement.classList.add('fas', 'fa-edit');
+pElement.appendChild(iElement);
+
+// Append the p element to the inner div
+innerDiv.appendChild(pElement);
+
+// Create the form element with the "createproduct" function attached to the onsubmit event
+const form = document.createElement('form');
+form.setAttribute('role', 'form');
+form.addEventListener('submit', createproduct);
+
+// Create the div element with class "adm_editform"
+const admEditformDiv = document.createElement('div');
+admEditformDiv.classList.add('adm_editform');
+
+// Create the first inner div element with class "inter"
+const interDiv1 = document.createElement('div');
+interDiv1.classList.add('inter');
+
+// Create the labels and input elements
+const productIDLabel = document.createElement('label');
+productIDLabel.textContent = 'Product ID';
+const productIDInput = document.createElement('input');
+productIDInput.setAttribute('id', '');
+productIDInput.setAttribute('type', 'text');
+productIDInput.setAttribute('disabled', '');
+interDiv1.appendChild(productIDLabel);
+interDiv1.appendChild(productIDInput);
+
+const productNameLabel = document.createElement('label');
+productNameLabel.textContent = 'Product Name';
+const productNameInput = document.createElement('input');
+productNameInput.setAttribute('id', 'pname');
+productNameInput.setAttribute('type', 'text');
+productNameInput.setAttribute('readonly', '');
+productNameInput.setAttribute('required', '');
+interDiv1.appendChild(productNameLabel);
+interDiv1.appendChild(productNameInput);
+
+// Repeat the process for the remaining labels and inputs
+
+// Append the first inner div to the adm_editform div
+admEditformDiv.appendChild(interDiv1);
+
+// Repeat the process for the remaining inner divs and elements
+
+// Append the adm_editform div to the form
+form.appendChild(admEditformDiv);
+
+// Create the div element with class "adm_editformbtn"
+const admEditformbtnDiv = document.createElement('div');
+admEditformbtnDiv.classList.add('adm_editformbtn');
+
+// Create the inner div elements and buttons
+const admfbtndDiv1 = document.createElement('div');
+const saveButton = document.createElement('button');
+saveButton.classList.add('ebtn');
+saveButton.setAttribute('type', 'submit');
+saveButton.textContent = 'SAVE';
+admfbtndDiv1.appendChild(saveButton);
+
+const admfbtndDiv2 = document.createElement('div');
+const deleteButton = document.createElement('button');
+deleteButton.classList.add('ebtn');
+deleteButton.setAttribute('type', 'button');
+deleteButton.setAttribute('onclick', '');
+deleteButton.textContent = 'DELETE';
+admfbtndDiv2.appendChild(deleteButton);
+
+// Append the inner divs and buttons to the adm_editformbtn div
+admEditformbtnDiv.appendChild(admfbtndDiv1);
+admEditformbtnDiv.appendChild(admfbtndDiv2);
+
+// Append the adm_editformbtn div to the form
+form.appendChild(admEditformbtnDiv);
+
+// Append the inner div to the bx div
+bxDiv.appendChild(innerDiv);
+
+// Append the form to the bx div
+bxDiv.appendChild(form);
+
+// Append the bx div to the section
+section.appendChild(bxDiv);
 
 </script> -->
