@@ -4,28 +4,29 @@ function logout(){
     location.href="./pages/login/Login.html"
 }
 // Increment/decrement counter
-
-// $(document).ready(function() {
-//     const minus = $('.quantity__minus');
-//     const plus = $('.quantity__plus');
-//     const input = $('.sqb');
-//     minus.click(function(e) {
-//       e.preventDefault();
-//       let value = input.val();
-//       if (value > 1) {
-//         value--;
-//       }
-//       input.val(value);
-//     });
-    
-//     plus.click(function(e) {
-//       e.preventDefault();
-//       var value = input.val();
-//       value++;
-//       input.val(value);
-//     })
-//   });
   
+// $(document).ready(function() {
+//    const minus = $('.quantity__minus');
+//    const plus = $('.quantity__plus');
+//    const input = $('.sqb');
+//    minus.click(function(e) {
+//      e.preventDefault();
+//      let value = input.val();
+//      if (value > 1) {
+//        value--;
+//      }
+//      input.val(value);
+//    });
+   
+//    plus.click(function(e) {
+//      e.preventDefault();
+//      let value = input.val();
+//      value++;
+//      input.val(value);
+//    })
+//  });
+ 
+
 // JSON FOR DEALS OF THE DAY
 const deals_of_the_day = [
     {
@@ -83,40 +84,45 @@ const deals_of_the_day = [
        "path":"",
     }
 ]
+// declare and initialize the variable outside the loop
+let card_1;
 
-    for(let i = 0; i<=4; i++){
+for(let i = 0; i<=4; i++){
 
-card_1 = document.createElement("div");
-card_1.setAttribute("class", "common-col");
-document.querySelector("div.common-row-col-deals").append(card_1)
+  // remove the re-declaration and re-initialization
+  card_1 = document.createElement("div");
+  card_1.setAttribute("class", "common-col");
 
-a = document.createElement("a");
-a.setAttribute("href", deals_of_the_day[i]["path"] );
-card_1.append(a);
+  a = document.createElement("a");
+  a.setAttribute("href", deals_of_the_day[i]["path"] );
+  card_1.append(a);
 
-img_of_electronics = document.createElement("img");
-img_of_electronics.setAttribute("class", "product-img");
-img_of_electronics.setAttribute("src", deals_of_the_day[i]["image"]["source"]);
-img_of_electronics.setAttribute("alt", deals_of_the_day[i]["image"]["alt"]);
-a.append(img_of_electronics);
+  img_of_electronics = document.createElement("img");
+  img_of_electronics.setAttribute("class", "product-img");
+  img_of_electronics.setAttribute("src", deals_of_the_day[i]["image"]["source"]);
+  img_of_electronics.setAttribute("alt", deals_of_the_day[i]["image"]["alt"]);
+  a.append(img_of_electronics);
 
-h3_for_product = document.createElement("h3");
-h3_for_product.setAttribute("class", "product-title");
-h3_for_product.innerText=(deals_of_the_day[i]["title"]);
-card_1.append(h3_for_product);
+  h3_for_product = document.createElement("h3");
+  h3_for_product.setAttribute("class", "product-title");
+  h3_for_product.innerText=(deals_of_the_day[i]["title"]);
+  card_1.append(h3_for_product);
 
-h4_for_product = document.createElement("h4");
-h4_for_product.setAttribute("class", "-title");
-h4_for_product.innerText=(deals_of_the_day[i]["price-offers"]);
-card_1.append(h4_for_product);
+  h4_for_product = document.createElement("h4");
+  h4_for_product.setAttribute("class", "price-title"); // add the missing prefix
+  h4_for_product.innerText=(deals_of_the_day[i]["price-offers"]);
+  card_1.append(h4_for_product);
 
-h6_for_product = document.createElement("h6");
-h6_for_product.setAttribute("class", "price");
-h6_for_product.innerText=(deals_of_the_day[i]["sub"]);
-card_1.append(h6_for_product);
+  h6_for_product = document.createElement("h6");
+  h6_for_product.setAttribute("class", "price");
+  h6_for_product.innerText=(deals_of_the_day[i]["sub"]);
+  card_1.append(h6_for_product);
 
-document.querySelector("div.common-row-col-deals").append(card_1)
+  // append the card to the container outside the loop
+  document.querySelector("div.common-row-col-deals").append(card_1);
 }
+
+
 // JSON FOR Furniture Bestseller
 const furniture_bestseller =[
     {
@@ -175,38 +181,41 @@ const furniture_bestseller =[
     }
 ]
 
+// declare and initialize the variable outside the loop
+let card_2;
+
 for(let i = 0; i<=4; i++){
 
-card_1 = document.createElement("div");
-card_1.setAttribute("class", "common-col");
-document.querySelector("div.common-row-col-deals1").append(card_1)
+  // remove the re-declaration and re-initialization
+  card_2 = document.createElement("div");
+  card_2.setAttribute("class", "common-col");
 
-a = document.createElement("a");
-a.setAttribute("href", furniture_bestseller[i]["path"] );
-card_1.append(a);
+  a = document.createElement("a");
+  a.setAttribute("href", furniture_bestseller[i]["path"] );
+  card_2.append(a);
 
-img_of_electronics = document.createElement("img");
-img_of_electronics.setAttribute("class", "product-img");
-img_of_electronics.setAttribute("src", furniture_bestseller[i]["image"]["source"]);
-img_of_electronics.setAttribute("alt", furniture_bestseller[i]["image"]["alt"]);
-a.append(img_of_electronics);
+  img_of_electronics = document.createElement("img");
+  img_of_electronics.setAttribute("class", "product-img");
+  img_of_electronics.setAttribute("src", furniture_bestseller[i]["image"]["source"]);
+  img_of_electronics.setAttribute("alt", furniture_bestseller[i]["image"]["alt"]);
+  a.append(img_of_electronics);
 
-h3_for_product = document.createElement("h3");
-h3_for_product.setAttribute("class", "product-title");
-h3_for_product.innerText=(furniture_bestseller[i]["title"]);
-card_1.append(h3_for_product);
+  h3_for_product = document.createElement("h3");
+  h3_for_product.setAttribute("class", "product-title");
+  h3_for_product.innerText=(furniture_bestseller[i]["title"]);
+  card_2.append(h3_for_product);
 
-h4_for_product = document.createElement("h4");
-h4_for_product.setAttribute("class", "-title");
-h4_for_product.innerText=(furniture_bestseller[i]["price-offers"]);
-card_1.append(h4_for_product);
+  h4_for_product = document.createElement("h4");
+  h4_for_product.setAttribute("class", "price-title"); // add the missing prefix
+  h4_for_product.innerText=(furniture_bestseller[i]["price-offers"]);
+  card_2.append(h4_for_product);
 
-h6_for_product = document.createElement("h6");
-h6_for_product.setAttribute("class", "price");
-h6_for_product.innerText=(furniture_bestseller[i]["sub"]);
-card_1.append(h6_for_product);
+  h6_for_product = document.createElement("h6");
+  h6_for_product.setAttribute("class", "price");
+  h6_for_product.innerText=(furniture_bestseller[i]["sub"]);
+  card_2.append(h6_for_product);
 
-document.querySelector("div.common-row-col-deals1").append(card_1)
-console.log(card_1);
+  // append the card to the container outside the loop
+  document.querySelector("div.common-row-col-deals1").append(card_2);
 }
 
