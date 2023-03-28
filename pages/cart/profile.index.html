@@ -7,7 +7,7 @@
     <title>Online Shopping Site</title>
     <link rel="icon" href="../../assets/images/logo.jpg" type="image/x-icon">
     <link href="../../assets/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">    <link href="https://fonts.googleapis.com/css2?family-Roboto&display-swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
     <!-----Header Section----->
     <header>
@@ -246,6 +246,7 @@ function profile_details(e){
     return e.email == user_data;
 }
 customer_data = user_list.find(profile_details);
+
 document.getElementById("user_name").value = customer_data["name"];
 document.getElementById("user_phonenumber").value = customer_data["phonenumber"];
 document.getElementById("user_email").value = customer_data["email"];

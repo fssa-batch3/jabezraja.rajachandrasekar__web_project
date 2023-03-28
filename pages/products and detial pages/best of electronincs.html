@@ -7,7 +7,6 @@
     <title>Online Shopping Site</title>
     <link rel="icon" href="../../assets/images/logo.jpg" type="image/x-icon">
     <link href="../../assets/css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family-Roboto&display-swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
     <!-----Header Section----->
@@ -238,7 +237,7 @@
             </div>
         
         </div>
-    </footer>
+    </footer> <a href=""></a>
     <!-----Footer End----->
 
     <script>
@@ -252,7 +251,7 @@ const deals_of_the_day =[
              },
            "price-offers":"₹777.00",
            "sub":"top selling",
-           "path":"",
+           "path":"./boepd1.html",
         },
             
         {
@@ -326,11 +325,15 @@ const deals_of_the_day =[
     card_1.setAttribute("class", "common-col");
     document.querySelector("div.common-row-col-dealsv").append(card_1)
 
+    a = document.createElement("a");
+    a.setAttribute("href", "./boepd1.html" );
+    card_1.append(a);
+
     img_of_electronics = document.createElement("img");
     img_of_electronics.setAttribute("class", "product-img");
     img_of_electronics.setAttribute("src", deals_of_the_day[i]["image"]["source"]);
     img_of_electronics.setAttribute("alt", deals_of_the_day[i]["image"]["alt"]);
-    card_1.append(img_of_electronics);
+    a.append(img_of_electronics);
 
     h3_for_product = document.createElement("h3");
     h3_for_product.setAttribute("class", "product-title");
@@ -349,6 +352,46 @@ const deals_of_the_day =[
 
     document.querySelector("div.common-row-col-dealsv").append(card_1)
 }
+    </script>
+    <script>
+
+        let boe_catagory = JSON.parse(localStorage.getItem('boe_catagory'));
+        console.log(boe_catagory);
+    
+    for(let i=0; i<boe_catagory.length; i++){
+    
+    card_1 = document.createElement("div");
+    card_1.setAttribute("class", "common-col");
+    document.querySelector("div.common-row-col-dealsv").append(card_1)
+
+    a = document.createElement("a");
+    a.setAttribute("href","./boepd1.html?puid="+boe_catagory[i].puid);
+    card_1.append(a);
+    
+    img_of_electronics = document.createElement("img");
+    img_of_electronics.setAttribute("class", "product-img");
+    img_of_electronics.setAttribute("src", boe_catagory[i].image["main_img"]);
+    a.append(img_of_electronics);
+    
+    h3_for_product = document.createElement("h3");
+    h3_for_product.setAttribute("class", "product-title");
+    h3_for_product.innerText=(boe_catagory[i]["product_name"]);
+    card_1.append(h3_for_product);
+    
+    h4_for_product = document.createElement("h4");
+    h4_for_product.setAttribute("class", "-title");
+    h4_for_product.innerText=(boe_catagory[i]["attractive_offer_discount"]);
+    card_1.append(h4_for_product);
+    
+    h6_for_product = document.createElement("h6");
+    h6_for_product.setAttribute("class", "price");
+    h6_for_product.innerText=(boe_catagory[i]["brand_name"]);
+    card_1.append(h6_for_product);
+    
+    document.querySelector("div.common-row-col-dealsv").append(card_1)
+    
+    }
+    
     </script>
 </body>
 </html>

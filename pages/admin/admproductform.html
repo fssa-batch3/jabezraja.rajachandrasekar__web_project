@@ -11,7 +11,25 @@
             <h1 id="admh1">Add Products</h1>
             <form role="form" onsubmit="createproduct(event);">
         <div class="admform">
-         <div>  <label>Product Category</label>
+         <div>  
+            <label>Category</label>
+            <select name="" id="cato" required>
+                <option id="">Deals of the Day</option>
+                <option id="">Furniture Bestseller</option>
+                <option id="">Best of Electronics</option>
+                <option id="">Beauty, Food & Toys</option>
+                <option id="">Sports, Healthcare & More</option>
+                <option id="">Home Kitchen Essentials</option>
+                <option id="">Mens Fashion</option>
+                <option id="">Women Fashion</option>
+                <option id="">Grocery</option>
+                <option id="">Mobile</option>
+                <option id="">Electronics</option>
+                <option id="">Appliances</option>
+                <option id=""></option>
+
+            </select>
+            <label>Product Category</label>
                 <select name="" id="pcate" required>
                     <option>--Select Product Category--</option>
                     <option id="pcboe">Best of Electronics</option>
@@ -101,11 +119,10 @@
                 <option id="s12">12</option>
                 <option id="s13">13</option>
                 <option id="s"></option>
-
-                </select>
-                <label>Quantiy</label>
-                <input id="qty" type="" pattern="[0-9]+" required>     </div>
-        <div>   <label>Main Image</label>
+                </select>                            </div>
+     <div>      <label>Quantiy</label>
+                <input id="qty" type="" pattern="[0-9]+" required>
+                <label>Main Image</label>
                 <input id="mimg" type="url" required> 
                 <label>Sub Image 1</label>
                 <input id="simg1" type="url" required> 
@@ -173,7 +190,14 @@ if(product_catagory == best_of_electronics){
         boe_catagory.push({
             product_catagory, 
             product_name, 
-            attractive_offer_discount, brand_name, price, size, Quantiy, main_img, sub_img1, sub_img2, sub_img3, features, description, puid});
+            attractive_offer_discount, brand_name, price, size, Quantiy,
+             features, description, puid,
+            image:{
+                main_img,
+                 sub_img1, 
+                 sub_img2, 
+                 sub_img3,
+            }});
 
             localStorage.setItem('boe_catagory',JSON.stringify(boe_catagory));
     }

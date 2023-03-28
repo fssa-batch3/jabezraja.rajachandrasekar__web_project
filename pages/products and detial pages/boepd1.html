@@ -7,7 +7,6 @@
     <title>Online Shopping Site</title>
     <link rel="icon" href="../../assets/images/logo.jpg" type="image/x-icon">
     <link href="../../assets/css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family-Roboto&display-swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -77,16 +76,15 @@
                 <div class="febox">
                     <ul class="feboxul">
                         <li id="feboxli">40mm Audio Drivers</li>
-                        <li id="feboxli">Soft Ear-Cushion</li>
+                        <!-- <li id="feboxli">Soft Ear-Cushion</li>
                         <li id="feboxli">Lightweight</li>
                         <li id="feboxli">3.5mm Jack</li>
-                        <li id="feboxli">Inbuild mic</li>
+                        <li id="feboxli">Inbuild mic</li> -->
                     </ul>
                 </div>
                 <div class="des">DESCRIPTION</div>
                 <div class="desbox">
-                    <p>boAt BassHeads 950v2 wired Over Ear Headphones (Warm Grey) model bassheads 950v2, get ready to immense yourself in pure audio bliss with basshead 950v2. It comes with equipped with 40mm audio. You can control the playback and calls simply via the easy to access intergrated controls and it is free size.</p>
-                    <P>WARRANTY DISCRIPTION : 1 Year Warranty From the Date of purchase.</P>
+                    <p id="dis">boAt BassHeads 950v2 wired Over Ear Headphones (Warm Grey) model bassheads 950v2, get ready to immense yourself in pure audio bliss with basshead 950v2. It comes with equipped with 40mm audio. You can control the playback and calls simply via the easy to access intergrated controls and it is free size.</p>
                 </div>
             </div>
 
@@ -143,19 +141,19 @@
               <a href="#">JR Wholesales</a>
           </div>
       </div>
-      <div >
-      <div class="footer-col-2">
-          <div class="footer-heading">
-              <p>HELP</p>
-      </div>
-      <div class="footer-list">
-          <a href="#">Payment</a>
-          <a href="#">Shipping</a>
-          <a href="#">Cancellation & Return</a>
-          <a href="#">FAQ</a>
-          <a href="#">Report Infringement</a>
-      </div>
-      </div>
+      <div>
+          <div class="footer-col-2">
+                <div class="footer-heading">
+                  <p>HELP</p>
+                </div>
+             <div class="footer-list">
+                  <a href="#">Payment</a>
+                  <a href="#">Shipping</a>
+                  <a href="#">Cancellation & Return</a>
+                  <a href="#">FAQ</a>
+                  <a href="#">Report Infringement</a>
+             </div>
+         </div>
       </div>
       <div class="footer-col-3">
           <div class="footer-heading">
@@ -232,44 +230,66 @@
 <!-----Footer End----->
 <script>
 
-    const images=[
-        {
-            "images": {
-                source: "../../assets/images/products/cr1boe1.jpg",
-                alt: "boAt BassHeads 950v2 wired Over Ear Headphones (Warm Grey)",
-            }
-        },
-        {
-            "images": {
-                source: "../../assets/images/products/cr1boe1.1.jpg",
-                alt: "40mm driver",
-            }
-        },
-        {
-            "images": {
-                source: "../../assets/images/products/cr1boe1.2.jpg",
-                alt: "lightweight",
-            }
-        },
-        {
-            "images": {
-                source: "../../assets/images/products/cr1boe1.4.jpg",
-                alt: "3.5mm gold plated jack",
-            }
-        },
-    ]
+    const params = new URLSearchParams(window.location.search);
+    const pid = params.get("puid");
+
+    console.log(pid);
+    let p_data = JSON.parse(localStorage.getItem("boe_catagory"));
+    console.log(p_data);
+
+    function find_product(e){
+       return e.puid == pid;
+    }
+
+    let p_detail = p_data.find(find_product);
+
+    document.getElementById("ph").innerText=p_detail.product_name;
+    document.getElementById("rupee").innerText="₹"+p_detail.price;
+    document.getElementById("feboxli").innerText=p_detail.features;
+    document.getElementById("dis").innerText=p_detail.description;
+
+
+    console.log(p_detail);
+
+
+    // const images=[
+    //     {
+    //         "images": {
+    //             source: "../../assets/images/products/cr1boe1.jpg",
+    //             alt: "boAt BassHeads 950v2 wired Over Ear Headphones (Warm Grey)",
+    //         }
+    //     },
+    //     {
+    //         "images": {
+    //             source: "../../assets/images/products/cr1boe1.1.jpg",
+    //             alt: "40mm driver",
+    //         }
+    //     },
+    //     {
+    //         "images": {
+    //             source: "../../assets/images/products/cr1boe1.2.jpg",
+    //             alt: "lightweight",
+    //         }
+    //     },
+    //     {
+    //         "images": {
+    //             source: "../../assets/images/products/cr1boe1.4.jpg",
+    //             alt: "3.5mm gold plated jack",
+    //         }
+    //     },
+    // ]
 
     left_div = document.createElement("div");
     left_div.setAttribute("class","left");
     document.querySelector("div.detail").prepend(left_div);
-    console.log(left_div);
+    // console.log(left_div);
 
     img_div = document.createElement("div");
     img_div.setAttribute("class","image");
     left_div.append(img_div)
 
     img_of_product = document.createElement("img");
-    img_of_product.setAttribute("src","../../assets/images/products/cr1boe1.jpg");
+    img_of_product.setAttribute("src",p_detail.image.main_img);
     img_of_product.setAttribute("height", "450px");
     img_of_product.setAttribute("width", "400px");
     img_of_product.setAttribute("class", "image");
@@ -279,21 +299,71 @@
     img_of_subi.setAttribute("class", "subi");
     left_div.append(img_of_subi);
 
-    for(i=0; i<4; i++){
+    /// SUB IMAGE 1
     img_of_sub = document.createElement("div");
     img_of_sub.setAttribute("class", "sub-images");
     img_of_subi.append(img_of_sub);
     
     down_images = document.createElement("img");
-    down_images.setAttribute("src", images[i]["images"]["source"]);
-    down_images.setAttribute("alt", images[i]["images"]["alt"])
+    down_images.setAttribute("src", p_detail.image.main_img);
+    // down_images.setAttribute("alt", images[i]["images"]["alt"])
     img_of_sub.prepend(down_images);
-    }
-
-    document.querySelector("div.details").prepend(left_div);
     
+    /// SUB IMAGE 2
+    img_of_sub = document.createElement("div");
+    img_of_sub.setAttribute("class", "sub-images");
+    img_of_subi.append(img_of_sub);
+    
+    down_images = document.createElement("img");
+    down_images.setAttribute("src", p_detail.image.sub_img3);
+    img_of_sub.prepend(down_images);
 
+    /// SUB IMAGE 3
+    img_of_sub = document.createElement("div");
+    img_of_sub.setAttribute("class", "sub-images");
+    img_of_subi.append(img_of_sub);
+    
+    down_images = document.createElement("img");
+    down_images.setAttribute("src", p_detail.image.sub_img2);
+    img_of_sub.prepend(down_images);
+
+    /// SUB IMAGE 4
+    img_of_sub = document.createElement("div");
+    img_of_sub.setAttribute("class", "sub-images");
+    img_of_subi.append(img_of_sub);
+    
+    down_images = document.createElement("img");
+    down_images.setAttribute("src", p_detail.image.sub_img3);
+    img_of_sub.prepend(down_images);
+
+    // document.querySelector("div.details").prepend(left_div);
+    
 </script>
-<script src="../../js/main.js"></script>
+<script>
+
+    // Increment/decrement counter
+  
+$(document).ready(function() {
+   const minus = $('.quantity__minus');
+   const plus = $('.quantity__plus');
+   const input = $('.sqb');
+   minus.click(function(e) {
+     e.preventDefault();
+     let value = input.val();
+     if (value > 1) {
+       value--;
+     }
+     input.val(value);
+   });
+   
+   plus.click(function(e) {
+     e.preventDefault();
+     let value = input.val();
+     value++;
+     input.val(value);
+   })
+ });
+ 
+</script>
 </body>
 </html>

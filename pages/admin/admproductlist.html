@@ -1,96 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Shopping Site</title>
-    <link rel="icon" href="assets/images/logo.jpg" type="image/x-icon">
-    <link href="/assets/css/admstyle.css" rel="stylesheet">
-    <link href="/assets/css/style.css" rel="stylesheet" >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">    <link href="https://fonts.googleapis.com/css2?family-Roboto&display-swap" rel="stylesheet">
+    <link rel="icon" href="../../assets/images/logo.jpg" type="image/x-icon">
+    <link href="../../assets/css/admstyle.css" rel="stylesheet">
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
+
 <body class="manico">
-        <!-----Header Section----->
-        <header>
-            <div class="admnav">
-                <a href="#">JAUNTY</a>  
-                <div class="admnav-p">
-                    <p><a href="#">RIALTO</a></p>
+    <!-----Header Section----->
+    <header>
+        <div class="admnav">
+            <a href="#">JAUNTY</a>
+            <div class="admnav-p">
+                <p><a href="#">RIALTO</a></p>
+            </div>
+        </div>
+    </header>
+    <div class="sbox">
+        <div class="search-box">
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+            <input type="text" class="input-search" placeholder="Type to Search...">
+        </div>
+    </div>
+    <section>
+        <div class="cardvd">
+            <div class="common-headingv">
+                <div class="common-heading-leftv">
+                    <h1>Best of Electronics</h1><i class="fa-solid fa-timer"></i>
                 </div>
             </div>
-        </header>
-            <div class="sbox">
-                <div class="search-box">
-                    <button class="btn-search"><i class="fas fa-search"></i></button>
-                    <input type="text" class="input-search" placeholder="Type to Search...">
-                  </div>
-                </div>
-                <section>
-                    <div class="cardvd">
-                        <div class="common-headingv">
-                            <div class="common-heading-leftv">
-                                <h1>Best of Electronics</h1><i class="fa-solid fa-timer"></i>
-                            </div>
+            <div class="common-row-col-dealsv">
+            </div>
+    </section>
+    <section>
+        <div class="bx">
+            <div>
+                <p class="enable"><i class="fas fa-edit"></i></p>
+            </div>
+            <form role="form" onsubmit="epro_details(event);">
+                <div class="adm_editform">
+                    <div class="inter"> <label>Product ID</label>
+                        <input id="pro_id" type="text" disabled>
+
+                        <label>Product Name</label>
+                        <input id="pname" type="text" readonly required>
+
+                        <label>Attractive Offers/Discount</label>
+                        <input id="aofdis" type="text" readonly required>
+
+                        <label>Brand Name</label>
+                        <input id="bname" type="text" readonly required>
+                    </div>
+
+                    <div class="inter"> <label>Main Image</label>
+                        <input id="mimg" type="url" readonly required>
+
+                        <label>Sub Image 1</label>
+                        <input id="simg1" type="url" readonly required>
+
+                        <label>Sub Image 2</label>
+                        <input id="smig2" type="url" readonly required>
+
+                        <label>Sub Image 3</label>
+                        <input id="simg3" type="url" readonly required>
+                    </div>
+
+                    <div class="inter"> <label>Price</label>
+                        <input id="price" type="text" readonly required>
+
+                        <label>Size</label>
+                        <input id="size" type="text" readonly required maxlength="1">
+
+                        <label>Quantiy</label>
+                        <input id="qty" type="" pattern="[0-9]+" readonly required>
+                        <label>Features</label>
+                        <textarea id="fetes" title="" readonly required> </textarea>
+                    </div>
+                    <div class="inter">
+                        <label>Description</label>
+                        <textarea id="descrin" title="" readonly required> </textarea>
+
+                        <div class="adm_editformbtn">
+                            <div id="admfbtnd"><button class="ebtn" id = "save" type="submit">SAVE</button></div>
+
+                            <div id="admfbtnd"><button class="ebtn" type="button"
+                                    onclick="deleteaccount()">DELETE</button></div>
                         </div>
-                        <div class="common-row-col-dealsv">
-                        </div>                    
-                </section>
-<section>
-    <div class="bx">
-    <div>
-        <p class="enable"><i class="fas fa-edit"></i></p>
-    </div>
-    <form role="form" onsubmit="createproduct(event);">
-        <div class="adm_editform">
-         <div class="inter">  <label>Product ID</label>
-                <input id="" type="text" disabled >
-                
-                <label>Product Name</label>
-                <input id="pname" type="text" readonly required>
-
-                <label>Attractive Offers/Discount</label>                  
-                <input id="aofdis" type="text" readonly required>
-
-                <label>Brand Name</label>
-                <input id="bname" type="text" readonly required> </div>
-
-        <div class="inter">   <label>Main Image</label>
-                <input id="mimg" type="url" readonly required> 
-
-                <label>Sub Image 1</label>
-                <input id="simg1" type="url" readonly required> 
-
-                <label>Sub Image 2</label>
-                <input id="smig2" type="url" readonly required> 
-
-                <label>Sub Image 3</label>
-                <input id="simg3" type="url" readonly required> </div>
-
-         <div class="inter"> <label>Price</label>
-                <input id="price" type="text" readonly required> 
-
-                <label>Size</label>
-                <input id="size" type="text" readonly required maxlength="1">
-
-                <label>Quantiy</label>
-                <input id="qty" type="" pattern="[0-9]+" readonly required>  
-                <label>Features</label>
-                <textarea id="fetes" title="" readonly required> </textarea>      </div> 
-<div class="inter">
-                <label>Description</label>
-                <textarea id="descrin" title="" readonly required> </textarea>    
-
-            <div class="adm_editformbtn">    
-               <div id="admfbtnd"><button class="ebtn" type="submit">SAVE</button></div> 
-             
-               <div id="admfbtnd"><button class="ebtn" type="button" onclick="">DELETE</button></div>  
-            </div>
-        </div>  
-    </div>
+                    </div>
+                </div>
             </form>
         </div>
-</section>
+    </section>
 
 </body>
 
@@ -99,35 +105,138 @@
     let boe_catagory = JSON.parse(localStorage.getItem('boe_catagory'));
     console.log(boe_catagory);
 
-for(let i=0; i<boe_catagory.length; i++){
+    for (let i = 0; i < boe_catagory.length; i++) {
 
-card_1 = document.createElement("div");
-card_1.setAttribute("class", "common-col");
-document.querySelector("div.common-row-col-dealsv").append(card_1)
+        card_1 = document.createElement("div");
+        card_1.setAttribute("class", "common-col");
+        document.querySelector("div.common-row-col-dealsv").append(card_1)
 
-img_of_electronics = document.createElement("img");
-img_of_electronics.setAttribute("class", "product-img");
-img_of_electronics.setAttribute("src", boe_catagory[i]["main_img"]);
-card_1.append(img_of_electronics);
+        a = document.createElement("a");
+        a.setAttribute("class", "anchor");
+        // a.setAttribute("href","./boepd1.html?puid="+boe_catagory[i].puid);
+        card_1.append(a);
 
-h3_for_product = document.createElement("h3");
-h3_for_product.setAttribute("class", "product-title");
-h3_for_product.innerText=(boe_catagory[i]["product_name"]);
-card_1.append(h3_for_product);
+        img_of_electronics = document.createElement("img");
+        img_of_electronics.setAttribute("class", "product-img");
+        img_of_electronics.setAttribute("src", boe_catagory[i].image["main_img"]);
+        // img_of_electronics.setAttribute("data-id",boe_catagory[i]["puid"]);
+        card_1.append(img_of_electronics);
 
-h4_for_product = document.createElement("h4");
-h4_for_product.setAttribute("class", "-title");
-h4_for_product.innerText=(boe_catagory[i]["attractive_offer_discount"]);
-card_1.append(h4_for_product);
+        h3_for_product = document.createElement("h3");
+        h3_for_product.setAttribute("class", "product-title");
+        h3_for_product.innerText = (boe_catagory[i]["product_name"]);
+        card_1.append(h3_for_product);
 
-h6_for_product = document.createElement("h6");
-h6_for_product.setAttribute("class", "price");
-h6_for_product.innerText=(boe_catagory[i]["brand_name"]);
-card_1.append(h6_for_product);
+        h4_for_product = document.createElement("h4");
+        h4_for_product.setAttribute("class", "-title");
+        h4_for_product.innerText = (boe_catagory[i]["attractive_offer_discount"]);
+        card_1.append(h4_for_product);
 
-document.querySelector("div.common-row-col-dealsv").append(card_1)
+        h6_for_product = document.createElement("h6");
+        h6_for_product.setAttribute("class", "price");
+        h6_for_product.innerText = (boe_catagory[i]["brand_name"]);
+        card_1.append(h6_for_product);
 
-}
+        button = document.createElement("button");
+        button.setAttribute("class", "edit");
+        button.innerText = "Edit";
+        button.setAttribute("data-id", boe_catagory[i]["puid"]);
+        card_1.append(button);
+
+
+        document.querySelector("div.common-row-col-dealsv").append(card_1)
+
+    }
+
+    const edit = document.querySelectorAll(".edit");
+    edit.forEach(function (findId) {
+        findId.addEventListener("click", function () {
+            const id = this.dataset.id;
+
+            let item = JSON.parse(localStorage.getItem("boe_catagory"));
+
+            function createproduct(e) {
+                return e.puid == id;
+            }
+            product_data = item.find(createproduct);
+
+            document.getElementById("pro_id").value = product_data["puid"];
+            document.getElementById("descrin").value = product_data.description;
+            document.getElementById("fetes").value = product_data.features;
+            document.getElementById("qty").value = product_data.Quantiy;
+            document.getElementById("size").value = product_data.size;
+            document.getElementById("price").value = product_data.price;
+            document.getElementById("simg3").value = product_data.image.sub_img3;
+            document.getElementById("smig2").value = product_data.image.sub_img2;
+            document.getElementById("simg1").value = product_data.image.sub_img1;
+            document.getElementById("mimg").value = product_data.image.main_img;
+            document.getElementById("bname").value = product_data.brand_name;
+            document.getElementById("aofdis").value = product_data.attractive_offer_discount;
+            document.getElementById("pname").value = product_data.product_name;
+
+        })
+    })
+
+    // enable and disable function
+    function enableInput() {
+        document.getElementById("pname").removeAttribute("readonly");
+        document.getElementById("aofdis").removeAttribute("readonly");
+        document.getElementById("bname").removeAttribute("readonly");
+        document.getElementById("mimg").removeAttribute("readonly");
+        document.getElementById("simg1").removeAttribute("readonly");
+        document.getElementById("smig2").removeAttribute("readonly");
+        document.getElementById("simg3").removeAttribute("readonly");
+        document.getElementById("price").removeAttribute("readonly");
+        document.getElementById("size").removeAttribute("readonly");
+        document.getElementById("qty").removeAttribute("readonly");
+        document.getElementById("fetes").removeAttribute("readonly");
+        document.getElementById("descrin").removeAttribute("readonly");
+    }
+
+    const enable = document.querySelector(".enable");
+    enable.addEventListener("click", enableInput)
+
+    // edit function
+
+    function epro_details() {
+
+        product_data["description"] = document.getElementById("descrin").value;
+        product_data.features = document.getElementById("fetes").value;
+        product_data.Quantiy = document.getElementById("qty").value;
+        product_data.size = document.getElementById("size").value;
+        product_data.price = document.getElementById("price").value;
+        product_data.image.sub_img3 = document.getElementById("simg3").value;
+        product_data.image.sub_img2 = document.getElementById("smig2").value;
+        product_data.image.sub_img1 = document.getElementById("simg1").value;
+        product_data.image.main_img = document.getElementById("mimg").value;
+        product_data.brand_name = document.getElementById("bname").value;
+        product_data.attractive_offer_discount = document.getElementById("aofdis").value;
+        product_data.product_name = document.getElementById("pname").value;
+
+        localStorage.setItem("boe_catagory", JSON.stringify(item));
+        
+    }
+
+    document.getElementById("save").addEventListener("click", epro_details)
+
+    // delete function
+    function deleteaccount(e) {
+        if (confirm("Are You Sure on deleting?")) {
+            let item = JSON.parse(localStorage.getItem("boe_catagory"));
+
+            function createproduct(e) {
+                return e.puid == id;
+            }
+            product_data = item.find(createproduct);
+
+            const removedata = item.indexOf(product_data);
+
+            user_list.splice(removedata, 1);
+            localStorage.setItem("boe_catagory", JSON.stringify(item));
+            location.href = "#";
+        }
+    }
+
 
 </script>
 

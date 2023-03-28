@@ -68,7 +68,7 @@ header{
 .fa-magnifying-glass{
     position: absolute;
     top: 36%;
-    left: 64%;
+    left: 66%;
     font-size: 18px;
     color:#aa8531;
 }
@@ -934,7 +934,7 @@ font-size: 15px;
     width: 200px;
     height: 220px;
     transform: 300ms;
-
+    cursor: pointer;
 }
 
 .common-row-col-deals, .common-row-col-deals1{
