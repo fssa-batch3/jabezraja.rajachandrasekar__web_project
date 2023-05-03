@@ -18,6 +18,12 @@ header{
     top: 0px;
     z-index: 1;
 }
+#hed{
+    justify-content: space-around;
+    background-color: white;
+    box-shadow: 1px 0px 3px rgb(145 145 145);
+    margin-top: 2px;
+}
 ::-webkit-scrollbar{
     width: 0px;
 }
@@ -26,7 +32,10 @@ header{
     width: 20%;
     text-align: right;
     margin: 5px 0px;
-    cursor: pointer;
+}
+
+#hf{
+    width: 0;
 }
 
 .header-left a{
@@ -67,8 +76,8 @@ header{
 
 .fa-magnifying-glass{
     position: absolute;
-    top: 36%;
-    left: 66%;
+    top: 33%;
+    left: 65%;
     font-size: 18px;
     color:#aa8531;
 }
@@ -102,7 +111,7 @@ header{
 }
 .login_dropdown{
     position: relative;
-    top: 12px;
+    top: 0px;
 }
 
 .login_dropdown_list{
@@ -196,6 +205,8 @@ header{
 }
 
 .pnem{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     width: 75%;
     float: left;
     border-left: 1px solid #e3d1a9;
@@ -267,6 +278,7 @@ header{
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .pointer{
@@ -314,6 +326,12 @@ header{
     border-collapse:collapse;
 }
 
+.cont_tab{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+}
+
 .product-table th, .codproduct-table th{
     background-color:#f5f1e9 ;
     color: #886619;
@@ -325,7 +343,6 @@ header{
 }
 
 .product-table td{
-    padding-left: 40px;
     font-family: 'Philosopher',serif;
     border-bottom: 1px solid #eee;
 }
@@ -337,10 +354,18 @@ header{
 .product-table td input{
       width: 30px;
 }
-#re a{
+.product-table td a{
     color: black;
     font-family: 'Philosopher',serif;
     text-decoration: none;
+}
+
+.fa-sm, .trex{
+    text-align: center;
+}
+
+.fa-sm{
+    cursor: pointer;
 }
 
 .details td{
@@ -351,11 +376,12 @@ header{
 }
 
 .details{
+    display: inline-table;
     width: 20pc;
     border-collapse:collapse;
 }
 
-#rf{
+.rf{
     text-align: end;
 }
 
@@ -383,8 +409,8 @@ header{
 }
 .content{
     display:flex;
-    flex-direction: row;
-    justify-content: space-around; 
+    /* flex-direction: row; */
+    justify-content: space-evenly; 
     width: 100%;
 }
 
@@ -392,11 +418,16 @@ header{
     width: 40px;
 }
 
+.rightside{
+    width: 20pc;
+    
+}
+
 .rightside h4{
     color: #9b7c35;
     font-size: 18px;
     letter-spacing: 2.25px;
-    margin: 0 0 18px;
+    margin: 0 0 7px;
     font-family: 'Philosopher',serif;
 
 }
@@ -429,8 +460,8 @@ header{
 .cartfoot{
     padding: 0px 5px 0px;
     width: 100%;
-    position: absolute;
-    bottom: -0px;
+    position: fixed;
+    bottom: 0px;
     background-color:#fffbf2;
 }
 
@@ -846,38 +877,43 @@ font-size: 15px;
     display: block;
 }
 
-/*--55---Banner Begin----56-*/
+/*-----Banner Begin-----*/
 .mbody{
     padding-left: 60px;
     padding-right: 60px;
 }
 
-.banner{
-    width: 100%;
-    overflow: hidden;
-}
 .slider{
-    overflow: hidden;
-    overflow-x: scroll;
-    display: flex;
-    flex-direction: row; 
-}
-
-.slider::-webkit-scrollbar{
-    display: none;
-}
-
-.slider img{
-    position: relative;
     height: 400px;
-    min-width: 1400px;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-left: 5px;
-    padding-right: 5px;    
+    overflow: hidden;
 }
- 
+
+.slider figure img{
+    float: left;
+    width: 20%;
+}
+
+.slider figure{
+    position: relative;
+    width:500%;
+    animation-name:slide;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slide{
+    0%  {left: 0%;}
+    15% {left: 0%;}
+    20% {left: -100%;}
+    35% {left: -100%;}
+    40% {left: -200%;}
+    60% {left: -200%;}
+    65% {left: -300%;}
+    70% {left: -300%;}
+}
+
 /*-----Common Things-----*/
 
 .card{
@@ -895,7 +931,7 @@ font-size: 15px;
     box-shadow: 0 1px 1px 0 rgb(0 0 0 /16%);
 }
 
-.common-heading-left h1{
+.common-heading-left h2{
     font-size: 20px;
     font-weight: 400;
     padding: auto;
@@ -1038,7 +1074,7 @@ font-size: 15px;
     padding: 5px 20px ;
 }
 
-#offdetial{
+.offdetial{
     text-align: center;
 }
 /*-----Footer-----*/
@@ -1326,6 +1362,7 @@ font-size: 15px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     margin-top: 2pc;
+    margin-left: 15px;
 }
 
 .sub-images img{

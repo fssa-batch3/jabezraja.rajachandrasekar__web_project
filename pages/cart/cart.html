@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online Shopping Site</title>
+        <link rel="icon" href="../../assets/images/logo.jpg" type="image/x-icon">
+        <link href="../../assets/css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
+    <header id="hed"></header>
+
+    <body class="body">
+        <div class="headpic">
+            <img src="../../assets/images/banner/cart.png" alt="header img">
+        </div>
+        <div class="head1">Cart</div>
+        <div class="head2">YOUR ITEMS</div>
+        <main>
+            <div class="content">
+                <div class="cont_tab">
+                    <table class="product-table">
+                        <tr>
+                            <th>ITEMS</th>
+                            <th>DESCRIPTION</th>
+                            <th>PRICE</th>
+                            <th>QTY</th>
+                            <th>SUBTOTAL</th>
+                            <th>
+                                <i class="fa-sharp fa-solid fa-trash" style="color: #886619;"></i>
+                            </th>
+                        </tr>
+                        <!-- <tr id="carit">
+                            <td class="trex">
+                            <img src="../../assets/images/products/img (32).jpg" width="150px" height="130px" alt="White-T-Shirt">
+                            </td>
+                            <td class="trex">
+                            <p>Navy Blue Kurta</p>
+                            <p>Color: Navy Blue</p>
+                            <p>Size: L</p>
+                            </td>          
+                            <td class="trex">
+                            <p>&#8377 1,777.00</p>
+                            </td>
+                            <td class="trex">
+                            <input type="number" 
+                            placeholder="2">               
+                            </td>
+                            <td class="trex">
+                            <p>&#8377 3,554.00</p>
+                            </td>
+                            <td>
+                            <p class="fa-sm">
+                            <i class="fa-solid fa-xmark fa-sm" style="color: #900c19;"></i>
+                            </p>
+                            </td>
+                            </tr> -->
+                    </table>
+
+                </div>
+                <div class="rightside">
+                    <h4>ORDER SUMMARY</h4>
+                    <table class="details">
+                        <caption></caption>
+                        <th scope="col"></th>
+                        <tr>
+                            <td>SUBTOTAL</td>
+                            <td class="rf">&#8377 3,554.00</td>
+                        </tr>
+                        <tr>
+                            <td>SHIPPING</td>
+                            <td class="rf">Free</td>
+                        </tr>
+                        <tr>
+                            <td>SECURE PACK</td>
+                            <td class="rf">&#8377 17.00</td>
+                        </tr>
+                        <tr>
+                            <td>DISCOUNT</td>
+                            <td class="rf">&#8377 -554.00</td>
+                        </tr>
+                        <tr>
+                            <td>ORDER TOTAL</td>
+                            <td class="rf">&#8377 3,017.00</td>
+                        </tr>
+                    </table>
+                    <div id="inc">Inclusive of all taxes
+                    </div>
+                    <button class="cbtn">
+                        <a href="./checkout.html">CHECKOUT</a>
+                    </button>
+                </div>
+            </div>
+        </main>
+        <script src="/js/header.js"> </script>
+
+        <script>
+        const cart = JSON.parse(localStorage.getItem("cart_details"));
+        const pro_data = JSON.parse(localStorage.getItem("products_details"));
+        const cart_products = [];
+
+        for (let i = 0; i < cart.length; i++) {
+                const cartpro = pro_data.find(e => e.puid === cart[i].product_id);
+                cart_products.push(cartpro);
+        }
+
+        for (let i = 0; i < cart_products.length; i++) {
+                const tr_table = document.createElement("tr");
+                tr_table.setAttribute("id", "carit");
+
+                const td = document.createElement("td");
+                td.setAttribute("id", "trex");
+                tr_table.append(td);
+
+                const image = document.createElement("img");
+                image.setAttribute("src", cart_products[i].image.main_img);
+                td.append(image);
+
+                const td1 = document.createElement("td");
+                td1.setAttribute("id", "trex");
+                tr_table.append(td1);
+
+                const name = document.createElement("p");
+                name.innerText = cart_products[i].product_name;
+                td1.append(name);
+
+                const td2 = document.createElement("td");
+                td2.setAttribute("id", "trex");
+                tr_table.append(td2);
+
+                const price = document.createElement("p");
+                price.innerText = cart_products[i].price;
+
+                const td3 = document.createElement("td");
+                td3.setAttribute("id", "trex");
+                tr_table.append(td3);
+
+                const quantity = document.createElement("input");
+                tr_table.append(quantity);
+
+                const td4 = document.createElement("td");
+                td4.setAttribute("id", "trex");
+                tr_table.append(td4);
+
+                const total_price = document.createElement("p");
+                total_price.innerText = "10000";
+                td4.append(total_price);
+
+                const td5 = document.createElement("td");
+                td5.setAttribute("id", "trex");
+                tr_table.append(td5);
+
+                const icon_con = document.createElement("p");
+                icon_con.setAttribute("class", "fa-sm");
+                tr_table.append(icon_con);
+
+                const icon = document.createElement("icon");
+                icon.setAttribute("class", "fa-solid fa-xmark");
+                icon_con.append(icon);
+
+                document.querySelector("div.product-table").append(tr_table);
+        }
+    </script> 
+    </body>
+    <footer>
+        <div class="cartfoot">
+            <div class="cfl">
+                <p>
+                    <a href="">Terms of Use</a>
+                </p>
+                <p>© 2022-present JAUNTY RIALTO.com</p>
+                <p>All rights reserved.</p>
+            </div>
+            <div class="cfr">
+                <img src="../../assets/images/footer/payment.png" alt="">
+            </div>
+        </div>
+    </footer>
+
+</html>
