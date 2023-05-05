@@ -368,6 +368,11 @@ header{
     cursor: pointer;
 }
 
+/* .trex img{
+    height: 130px;
+    width: 150px;
+} */
+
 .details td{
     padding: 12px 0px 11px;
     border-bottom: 1px solid #e5decf;

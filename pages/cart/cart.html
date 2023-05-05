@@ -106,63 +106,133 @@
                 cart_products.push(cartpro);
         }
 
-        for (let i = 0; i < cart_products.length; i++) {
-                const tr_table = document.createElement("tr");
-                tr_table.setAttribute("id", "carit");
+for (let i = 0; i < cart_products.length; i++) {
+                // Create the <tr> element
 
-                const td = document.createElement("td");
-                td.setAttribute("id", "trex");
-                tr_table.append(td);
+                const trElement = document.createElement("tr");
+                trElement.id = "carit";
 
-                const image = document.createElement("img");
-                image.setAttribute("src", cart_products[i].image.main_img);
-                td.append(image);
+                // Create the first <td> element
+                const tdElement1 = document.createElement("td");
+                tdElement1.className = "trex";
 
-                const td1 = document.createElement("td");
-                td1.setAttribute("id", "trex");
-                tr_table.append(td1);
+                // Create the <img> element
+                const imgElement = document.createElement("img");
+                imgElement.setAttribute("src", cart_products[i].image.main_img);
+                imgElement.setAttribute("class", "cart_img");
+                imgElement.setAttribute("data-id", cart_products[i].puid);
+                imgElement.width = "150";
+                imgElement.height = "130";
 
-                const name = document.createElement("p");
-                name.innerText = cart_products[i].product_name;
-                td1.append(name);
+                // Append the <img> element to the first <td> element
+                tdElement1.appendChild(imgElement);
 
-                const td2 = document.createElement("td");
-                td2.setAttribute("id", "trex");
-                tr_table.append(td2);
+                // Append the first <td> element to the <tr> element
+                trElement.appendChild(tdElement1);
 
-                const price = document.createElement("p");
-                price.innerText = cart_products[i].price;
+                // Create the second <td> element
+                const tdElement2 = document.createElement("td");
+                tdElement2.className = "trex";
 
-                const td3 = document.createElement("td");
-                td3.setAttribute("id", "trex");
-                tr_table.append(td3);
+                // Create the first <p> element
+                const pElement1 = document.createElement("p");
+                pElement1.textContent = cart_products[i].product_name;
 
-                const quantity = document.createElement("input");
-                tr_table.append(quantity);
+                // Create the second <p> element
+        
+                // const pElement2 = document.createElement("p");
+                // pElement2.textContent = cart_products[i].brand_name;
 
-                const td4 = document.createElement("td");
-                td4.setAttribute("id", "trex");
-                tr_table.append(td4);
+                // // Create the third <p> element
+                // const pElement3 = document.createElement("p");
+                // pElement3.textContent = "Size: L";
 
-                const total_price = document.createElement("p");
-                total_price.innerText = "10000";
-                td4.append(total_price);
+                // Append the <p> elements to the second <td> element
+                tdElement2.appendChild(pElement1);
+                // tdElement2.appendChild(pElement2);
 
-                const td5 = document.createElement("td");
-                td5.setAttribute("id", "trex");
-                tr_table.append(td5);
+                // tdElement2.appendChild(pElement3);
 
-                const icon_con = document.createElement("p");
-                icon_con.setAttribute("class", "fa-sm");
-                tr_table.append(icon_con);
+                // Append the second <td> element to the <tr> element
+                trElement.appendChild(tdElement2);
 
-                const icon = document.createElement("icon");
-                icon.setAttribute("class", "fa-solid fa-xmark");
-                icon_con.append(icon);
+                // Create the third <td> element
+                const tdElement3 = document.createElement("td");
+                tdElement3.className = "trex";
 
-                document.querySelector("div.product-table").append(tr_table);
-        }
-    </script> 
+                // Create the <p> element with the price
+                const pElement4 = document.createElement("p");
+                pElement4.innerHTML = `₹${cart_products[i].price}`;
+
+                // Append the <p> element to the third <td> element
+                tdElement3.appendChild(pElement4);
+
+                // Append the third <td> element to the <tr> element
+                trElement.appendChild(tdElement3);
+
+                // Create the fourth <td> element
+                const tdElement4 = document.createElement("td");
+                tdElement4.className = "trex";
+
+                // Create the <input> element
+                const inputElement = document.createElement("input");
+                inputElement.type = "number";
+                inputElement.placeholder = "2";
+
+                // Append the <input> element to the fourth <td> element
+                tdElement4.appendChild(inputElement);
+
+                // Append the fourth <td> element to the <tr> element
+                trElement.appendChild(tdElement4);
+
+                // Create the fifth <td> element
+                const tdElement5 = document.createElement("td");
+                tdElement5.className = "trex";
+
+                // Create the <p> element with the total price
+                const pElement5 = document.createElement("p");
+                pElement5.innerHTML = "&#8377 3,554.00";
+
+                // Append the <p> element to the fifth <td> element
+                tdElement5.appendChild(pElement5);
+
+                // Append the fifth <td> element to the <tr> element
+                trElement.appendChild(tdElement5);
+
+                // Create the sixth <td> element
+                const tdElement6 = document.createElement("td");
+                tdElement6.className = "trex";
+
+                // Create the <i> element for the delete icon
+                const iElement = document.createElement("i");
+                iElement.className = "fa-solid fa-xmark fa-sm";
+                iElement.id = "remove_icon";
+                iElement.style.color = "#900c";
+                tdElement6.appendChild(iElement);
+
+                // Append the sixth <td> element to the <tr> element
+                trElement.appendChild(tdElement6);
+
+                document.querySelector(".product-table").append(trElement);
+}
+// delete function
+const cart_remove = document.querySelectorAll("#remove_icon");
+cart_remove.forEach(function (remove_item) {
+                remove_item.addEventListener("click", function () {
+                        if (confirm("Are you Sure?")) {
+                                const parent = this.parentNode.parentNode;
+                                const id = parent.querySelector(".cart_img").getAttribute("data-id");
+        
+                                const tot_cartpro = JSON.parse(localStorage.getItem("cart_details"));
+                                const find_products = tot_cartpro.find(e => e.product_id === id);
+                                const find_index = tot_cartpro.indexOf(find_products);
+                                tot_cartpro.splice(find_index, 1);
+                                localStorage.setItem("cart_details", JSON.stringify(tot_cartpro));
+                                window.location.reload();
+                        }
+                });
+});
+</script> 
     </body>
     <footer>
         <div class="cartfoot">
