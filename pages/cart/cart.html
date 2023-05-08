@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Online Shopping Site</title>
-        <link rel="icon" href="../../assets/images/logo.jpg" type="image/x-icon">
-        <link href="../../assets/css/style.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    </head>
-    <header id="hed"></header>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Site</title>
+    <link rel="icon" href="../../assets/images/logo.jpg" type="image/x-icon">
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<header id="hed"></header>
 
-    <body class="body">
-        <div class="headpic">
-            <img src="../../assets/images/banner/cart.png" alt="header img">
-        </div>
-        <div class="head1">Cart</div>
-        <div class="head2">YOUR ITEMS</div>
-        <main>
-            <div class="content">
-                <div class="cont_tab">
-                    <table class="product-table">
-                        <tr>
-                            <th>ITEMS</th>
-                            <th>DESCRIPTION</th>
-                            <th>PRICE</th>
-                            <th>QTY</th>
-                            <th>SUBTOTAL</th>
-                            <th>
-                                <i class="fa-sharp fa-solid fa-trash" style="color: #886619;"></i>
-                            </th>
-                        </tr>
-                        <!-- <tr id="carit">
+<body class="body">
+    <div class="headpic">
+        <img src="../../assets/images/banner/cart.png" alt="header img">
+    </div>
+    <div class="head1">Cart</div>
+    <div class="head2">YOUR ITEMS</div>
+    <main>
+        <div class="content">
+            <div class="cont_tab">
+                <table class="product-table">
+                    <tr>
+                        <th>ITEMS</th>
+                        <th>DESCRIPTION</th>
+                        <th>PRICE</th>
+                        <th>QTY</th>
+                        <th>SUBTOTAL</th>
+                        <th>
+                            <i class="fa-sharp fa-solid fa-trash" style="color: #886619;"></i>
+                        </th>
+                    </tr>
+                    <!-- <tr id="carit">
                             <td class="trex">
                             <img src="../../assets/images/products/img (32).jpg" width="150px" height="130px" alt="White-T-Shirt">
                             </td>
@@ -57,196 +57,200 @@
                             </p>
                             </td>
                             </tr> -->
-                    </table>
+                </table>
 
-                </div>
-                <div class="rightside">
-                    <h4>ORDER SUMMARY</h4>
-                    <table class="details">
-                        <caption></caption>
-                        <th scope="col"></th>
-                        <tr>
-                            <td>SUBTOTAL</td>
-                            <td class="rf">&#8377 3,554.00</td>
-                        </tr>
-                        <tr>
-                            <td>SHIPPING</td>
-                            <td class="rf">Free</td>
-                        </tr>
-                        <tr>
-                            <td>SECURE PACK</td>
-                            <td class="rf">&#8377 17.00</td>
-                        </tr>
-                        <tr>
-                            <td>DISCOUNT</td>
-                            <td class="rf">&#8377 -554.00</td>
-                        </tr>
-                        <tr>
-                            <td>ORDER TOTAL</td>
-                            <td class="rf">&#8377 3,017.00</td>
-                        </tr>
-                    </table>
-                    <div id="inc">Inclusive of all taxes
-                    </div>
-                    <button class="cbtn">
-                        <a href="./checkout.html">CHECKOUT</a>
-                    </button>
-                </div>
             </div>
-        </main>
-        <script src="/js/header.js"> </script>
+            <div class="rightside">
+                <h4>ORDER SUMMARY</h4>
+                <table class="details">
+                    <caption></caption>
+                    <th scope="col"></th>
+                    <tr>
+                        <td>SUBTOTAL</td>
+                        <td class="rf">&#8377 3,554.00</td>
+                    </tr>
+                    <tr>
+                        <td>SHIPPING</td>
+                        <td class="rf">Free</td>
+                    </tr>
+                    <tr>
+                        <td>SECURE PACK</td>
+                        <td class="rf">&#8377 17.00</td>
+                    </tr>
+                    <tr>
+                        <td>DISCOUNT</td>
+                        <td class="rf">&#8377 -554.00</td>
+                    </tr>
+                    <tr>
+                        <td>ORDER TOTAL</td>
+                        <td class="rf">&#8377 3,017.00</td>
+                    </tr>
+                </table>
+                <div id="inc">Inclusive of all taxes
+                </div>
+                <button class="cbtn">
+                    <a href="./checkout.html">CHECKOUT</a>
+                </button>
+            </div>
+        </div>
+    </main>
+    <script src="/js/header.js"> </script>
 
-        <script>
+    <script>
         const cart = JSON.parse(localStorage.getItem("cart_details"));
         const pro_data = JSON.parse(localStorage.getItem("products_details"));
         const cart_products = [];
 
         for (let i = 0; i < cart.length; i++) {
-                const cartpro = pro_data.find(e => e.puid === cart[i].product_id);
-                cart_products.push(cartpro);
+            const cartpro = pro_data.find(e => e.puid === cart[i].product_id);
+            cart_products.push(cartpro);
         }
 
-for (let i = 0; i < cart_products.length; i++) {
-                // Create the <tr> element
+        for (let i = 0; i < cart_products.length; i++) {
+            // Create the <tr> element
 
-                const trElement = document.createElement("tr");
-                trElement.id = "carit";
+            const trElement = document.createElement("tr");
+            trElement.id = "carit";
 
-                // Create the first <td> element
-                const tdElement1 = document.createElement("td");
-                tdElement1.className = "trex";
+            // Create the first <td> element
+            const tdElement1 = document.createElement("td");
+            tdElement1.className = "trex";
 
-                // Create the <img> element
-                const imgElement = document.createElement("img");
-                imgElement.setAttribute("src", cart_products[i].image.main_img);
-                imgElement.setAttribute("class", "cart_img");
-                imgElement.setAttribute("data-id", cart_products[i].puid);
-                imgElement.width = "150";
-                imgElement.height = "130";
+            // Create the <img> element
+            const imgElement = document.createElement("img");
+            imgElement.setAttribute("src", cart_products[i].image.main_img);
+            imgElement.setAttribute("class", "cart_img");
+            imgElement.setAttribute("data-id", cart_products[i].puid);
+            imgElement.width = "150";
+            imgElement.height = "130";
 
-                // Append the <img> element to the first <td> element
-                tdElement1.appendChild(imgElement);
+            // Append the <img> element to the first <td> element
+            tdElement1.appendChild(imgElement);
 
-                // Append the first <td> element to the <tr> element
-                trElement.appendChild(tdElement1);
+            // Append the first <td> element to the <tr> element
+            trElement.appendChild(tdElement1);
 
-                // Create the second <td> element
-                const tdElement2 = document.createElement("td");
-                tdElement2.className = "trex";
+            // Create the second <td> element
+            const tdElement2 = document.createElement("td");
+            tdElement2.className = "trex";
 
-                // Create the first <p> element
-                const pElement1 = document.createElement("p");
-                pElement1.textContent = cart_products[i].product_name;
+            // Create the first <p> element
+            const pElement1 = document.createElement("p");
+            pElement1.textContent = cart_products[i].product_name;
 
-                // Create the second <p> element
-        
-                // const pElement2 = document.createElement("p");
-                // pElement2.textContent = cart_products[i].brand_name;
+            // Create the second <p> element
 
-                // // Create the third <p> element
-                // const pElement3 = document.createElement("p");
-                // pElement3.textContent = "Size: L";
+            // const pElement2 = document.createElement("p");
+            // pElement2.textContent = cart_products[i].brand_name;
 
-                // Append the <p> elements to the second <td> element
-                tdElement2.appendChild(pElement1);
-                // tdElement2.appendChild(pElement2);
+            // // Create the third <p> element
+            // const pElement3 = document.createElement("p");
+            // pElement3.textContent = "Size: L";
 
-                // tdElement2.appendChild(pElement3);
+            // Append the <p> elements to the second <td> element
+            tdElement2.appendChild(pElement1);
+            // tdElement2.appendChild(pElement2);
 
-                // Append the second <td> element to the <tr> element
-                trElement.appendChild(tdElement2);
+            // tdElement2.appendChild(pElement3);
 
-                // Create the third <td> element
-                const tdElement3 = document.createElement("td");
-                tdElement3.className = "trex";
+            // Append the second <td> element to the <tr> element
+            trElement.appendChild(tdElement2);
 
-                // Create the <p> element with the price
-                const pElement4 = document.createElement("p");
-                pElement4.innerHTML = `₹${cart_products[i].price}`;
+            // Create the third <td> element
+            const tdElement3 = document.createElement("td");
+            tdElement3.className = "trex";
 
-                // Append the <p> element to the third <td> element
-                tdElement3.appendChild(pElement4);
+            // Create the <p> element with the price
+            const pElement4 = document.createElement("p");
+            pElement4.innerHTML = `₹${cart_products[i].price}`;
 
-                // Append the third <td> element to the <tr> element
-                trElement.appendChild(tdElement3);
+            // Append the <p> element to the third <td> element
+            tdElement3.appendChild(pElement4);
 
-                // Create the fourth <td> element
-                const tdElement4 = document.createElement("td");
-                tdElement4.className = "trex";
+            // Append the third <td> element to the <tr> element
+            trElement.appendChild(tdElement3);
 
-                // Create the <input> element
-                const inputElement = document.createElement("input");
-                inputElement.type = "number";
-                inputElement.placeholder = "2";
+            // Create the fourth <td> element
+            const tdElement4 = document.createElement("td");
+            tdElement4.className = "trex";
 
-                // Append the <input> element to the fourth <td> element
-                tdElement4.appendChild(inputElement);
+            // Create the <input> element
+            const inputElement = document.createElement("input");
+            inputElement.className = "quan";
+            inputElement.type = "number";
+            inputElement.value = cart_products[i].product_qty;
+            inputElement.min = "1";
+            inputElement.max = "7";
+            inputElement.data = cart_products[i].puid;
 
-                // Append the fourth <td> element to the <tr> element
-                trElement.appendChild(tdElement4);
+            // Append the <input> element to the fourth <td> element
+            tdElement4.appendChild(inputElement);
 
-                // Create the fifth <td> element
-                const tdElement5 = document.createElement("td");
-                tdElement5.className = "trex";
+            // Append the fourth <td> element to the <tr> element
+            trElement.appendChild(tdElement4);
 
-                // Create the <p> element with the total price
-                const pElement5 = document.createElement("p");
-                pElement5.innerHTML = "&#8377 3,554.00";
+            // Create the fifth <td> element
+            const tdElement5 = document.createElement("td");
+            tdElement5.className = "trex";
 
-                // Append the <p> element to the fifth <td> element
-                tdElement5.appendChild(pElement5);
+            // Create the <p> element with the total price
+            const pElement5 = document.createElement("p");
+            pElement5.innerHTML = "&#8377 3,554.00";
 
-                // Append the fifth <td> element to the <tr> element
-                trElement.appendChild(tdElement5);
+            // Append the <p> element to the fifth <td> element
+            tdElement5.appendChild(pElement5);
 
-                // Create the sixth <td> element
-                const tdElement6 = document.createElement("td");
-                tdElement6.className = "trex";
+            // Append the fifth <td> element to the <tr> element
+            trElement.appendChild(tdElement5);
 
-                // Create the <i> element for the delete icon
-                const iElement = document.createElement("i");
-                iElement.className = "fa-solid fa-xmark fa-sm";
-                iElement.id = "remove_icon";
-                iElement.style.color = "#900c";
-                tdElement6.appendChild(iElement);
+            // Create the sixth <td> element
+            const tdElement6 = document.createElement("td");
+            tdElement6.className = "trex";
 
-                // Append the sixth <td> element to the <tr> element
-                trElement.appendChild(tdElement6);
+            // Create the <i> element for the delete icon
+            const iElement = document.createElement("i");
+            iElement.className = "fa-solid fa-xmark fa-sm";
+            iElement.id = "remove_icon";
+            iElement.style.color = "#900c";
+            tdElement6.appendChild(iElement);
 
-                document.querySelector(".product-table").append(trElement);
-}
-// delete function
-const cart_remove = document.querySelectorAll("#remove_icon");
-cart_remove.forEach(function (remove_item) {
-                remove_item.addEventListener("click", function () {
-                        if (confirm("Are you Sure?")) {
-                                const parent = this.parentNode.parentNode;
-                                const id = parent.querySelector(".cart_img").getAttribute("data-id");
-        
-                                const tot_cartpro = JSON.parse(localStorage.getItem("cart_details"));
-                                const find_products = tot_cartpro.find(e => e.product_id === id);
-                                const find_index = tot_cartpro.indexOf(find_products);
-                                tot_cartpro.splice(find_index, 1);
-                                localStorage.setItem("cart_details", JSON.stringify(tot_cartpro));
-                                window.location.reload();
-                        }
-                });
-});
-</script> 
-    </body>
-    <footer>
-        <div class="cartfoot">
-            <div class="cfl">
-                <p>
-                    <a href="">Terms of Use</a>
-                </p>
-                <p>© 2022-present JAUNTY RIALTO.com</p>
-                <p>All rights reserved.</p>
-            </div>
-            <div class="cfr">
-                <img src="../../assets/images/footer/payment.png" alt="">
-            </div>
+            // Append the sixth <td> element to the <tr> element
+            trElement.appendChild(tdElement6);
+
+            document.querySelector(".product-table").append(trElement);
+        }
+        // delete function
+        const cart_remove = document.querySelectorAll("#remove_icon");
+        cart_remove.forEach((remove_item) => {
+            remove_item.addEventListener("click", function del() {
+                if (confirm("Are you Sure?")) {
+                    const parent = this.parentNode.parentNode;
+                    const id = parent.querySelector(".cart_img").getAttribute("data-id");
+
+                    const tot_cartpro = JSON.parse(localStorage.getItem("cart_details"));
+                    const find_products = tot_cartpro.find(e => e.product_id === id);
+                    const find_index = tot_cartpro.indexOf(find_products);
+                    tot_cartpro.splice(find_index, 1);
+                    localStorage.setItem("cart_details", JSON.stringify(tot_cartpro));
+                    window.location.reload();
+                }
+            });
+        });
+    </script>
+</body>
+<!-- <footer>
+    <div class="cartfoot">
+        <div class="cfl">
+            <p>
+                <a href="">Terms of Use</a>
+            </p>
+            <p>© 2022-present JAUNTY RIALTO.com</p>
+            <p>All rights reserved.</p>
         </div>
-    </footer>
+        <div class="cfr">
+            <img src="../../assets/images/footer/payment.png" alt="">
+        </div>
+    </div>
+</footer> -->
 
 </html>

@@ -234,7 +234,7 @@
 
     // delete function
     const whish_remove = document.querySelectorAll(".w_remove");
-    whish_remove.forEach(function (remove_item) {
+    whish_remove.forEach((remove_item) => {
             remove_item.addEventListener("click", function () {
                     if (confirm("Are you Sure?")) {
                             const w_u_id = this.dataset.id;

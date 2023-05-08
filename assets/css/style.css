@@ -978,7 +978,7 @@ font-size: 15px;
     cursor: pointer;
 }
 
-.common-row-col-deals, .common-row-col-deals1{
+.common-row-col-deals, .common-row-col-deals1, .common-row-col-deals2 , .common-row-col-deals3, .common-row-col-deals4, .common-row-col-deals5, .common-row-col-deals6, .common-row-col-deals7, .common-row-col-deals8{
     display:grid;
     grid-template-columns: repeat(5, 1fr);  
 }

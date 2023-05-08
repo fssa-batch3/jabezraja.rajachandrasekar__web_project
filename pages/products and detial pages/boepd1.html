@@ -303,7 +303,7 @@
 
     // ADD TO WHISLIST
 
-    whishlist_btn.addEventListener("click", function (event) {
+    whishlist_btn.addEventListener("click", (event) => {
             const product_id = event.currentTarget.getAttribute("custom-id");
 
             const whishlist = JSON.parse(localStorage.getItem("whishlist_details")) || [];
@@ -332,7 +332,7 @@
 
     // ADD TO CART FUNCTION
 
-    atc_btn.addEventListener("click", function (event) {
+    atc_btn.addEventListener("click", (event) => {
             const product_id = event.currentTarget.getAttribute("custom-id");
 
             const cart = JSON.parse(localStorage.getItem("cart_details")) || [];
