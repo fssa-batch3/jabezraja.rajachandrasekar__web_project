@@ -220,21 +220,21 @@
         <script src="../../js/header.js"></script>
         <script src="/js/main.js"></script>
         <script>
-    const params = new URLSearchParams(window.location.search);
-    const pid = params.get("uid");
+            const params = new URLSearchParams(window.location.search);
+            const pid = params.get("uid");
 
-    // getting all products_details
-    const p_data = JSON.parse(localStorage.getItem("products_details"));
+            // getting all products_details
+            const p_data = JSON.parse(localStorage.getItem("products_details"));
 
-    const p_detail = p_data.find(e => e.puid === pid);
-    document.getElementById("ph").innerText = p_detail.product_name;
-    document.getElementById("rupee").innerText = `₹${p_detail.price}`;
-    document.getElementById("feboxli").innerText = p_detail.features;
-    document.getElementById("dis").innerText = p_detail.description;
+            const p_detail = p_data.find(e => e.puid === pid);
+            document.getElementById("ph").innerText = p_detail.product_name;
+            document.getElementById("rupee").innerText = `₹${p_detail.price}`;
+            document.getElementById("feboxli").innerText = p_detail.features;
+            document.getElementById("dis").innerText = p_detail.description;
 
-    const left_div = document.createElement("div");
-    left_div.setAttribute("class", "left");
-    document.querySelector("div.detail").prepend(left_div);
+            const left_div = document.createElement("div");
+            left_div.setAttribute("class", "left");
+            document.querySelector("div.detail").prepend(left_div);
 
     const img_div = document.createElement("div");
     img_div.setAttribute("class", "image");

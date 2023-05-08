@@ -28,6 +28,34 @@ function logout() {
 //         });
 // });
 
+// JSON FOR THE CATAGORY IF THE ARRAY IS EMPTY
+const pr_detail = [
+        {
+                Quantiy: "23",
+                attractive_offer_discount: "upto 50% off",
+                brand_name: "JBL",
+                catagory: "Deals of the Day",
+                description:
+                        " asdklfj eoifj odfjhw9oeufoadvnlwehofu;odnvlsdnvlfjwhreoughjolfnvljwesjhfgwi",
+                features: " asdf;lkmj asdf ;lkj asdf ;lkj asdf ;lkj asdf lkj asdf ;lkj asdf ;lkj asdf ;lkj asdf;lj asdfl ;lja;sldjf ;asdjf;asjdf;alskdjf;ajsdf;lajds;fljas;lfj",
+                image: {
+                        source: "https://m.media-amazon.com/images/I/41Idnxm7oXL._SY300_SX300_QL70_FMwebp_.jpg",
+                        sub_img1: "https://m.media-amazon.com/images/I/41Idnxm7oXL._SY300_SX300_QL70_FMwebp_.jpg",
+                        sub_img2: "https://m.media-amazon.com/images/I/91kcPKEG-NL._SL1500_.jpg",
+                        sub_img3: "https://m.media-amazon.com/images/I/41Idnxm7oXL._SY300_SX300_QL70_FMwebp_.jpg",
+                },
+                price: "544",
+                product_catagory: "Best_of_Electronics",
+                product_name: "JBL C100SI Wired In Ear Headphones with Mic",
+                puid: "3d4d8afc-e9c3-4d74-a601-6aaa36e10937",
+                size: "-",
+        },
+];
+const products_details = JSON.parse(localStorage.getItem("products_details"));
+if (!products_details) {
+        localStorage.setItem("products_details", JSON.stringify(pr_detail));
+}
+
 // JSON FOR DEALS OF THE DAY
 const deals_of_the_day = [
         {
