@@ -235,15 +235,15 @@
     // delete function
     const whish_remove = document.querySelectorAll(".w_remove");
     whish_remove.forEach((remove_item) => {
-            remove_item.addEventListener("click", function () {
+            remove_item.addEventListener("click", function delwis () {
                     if (confirm("Are you Sure?")) {
                             const w_u_id = this.dataset.id;
                             console.log(w_u_id)
                             const tot_pro = JSON.parse(localStorage.getItem("whishlist_details"));
                             const find_products = tot_pro.find(e => e.product_id === w_u_id);
                             const find_index = tot_pro.indexOf(find_products);
-                            // tot_pro.splice(find_index, 1);
-                            // localStorage.setItem("whishlist_details", JSON.stringify(tot_pro));
+                            tot_pro.splice(find_index, 1);
+                            localStorage.setItem("whishlist_details", JSON.stringify(tot_pro));
                             window.location.reload();
                     }
             });
