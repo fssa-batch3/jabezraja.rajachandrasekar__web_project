@@ -40,7 +40,7 @@
                         <a href="" class="quantity__minus">
                             <span>-</span>                 
                         </a>
-                        <input type="text" class="sqb" value="1">
+                        <input type="text" id="incre_decre" class="sqb" value="1">
                         <a href="" class="quantity__plus">
                             <span>+</span>                 
                         </a>
@@ -236,103 +236,103 @@
             left_div.setAttribute("class", "left");
             document.querySelector("div.detail").prepend(left_div);
 
-    const img_div = document.createElement("div");
-    img_div.setAttribute("class", "image");
-    left_div.append(img_div);
+            const img_div = document.createElement("div");
+            img_div.setAttribute("class", "image");
+            left_div.append(img_div);
 
-    const img_of_product = document.createElement("img");
-    img_of_product.setAttribute("src", p_detail.image.main_img);
-    img_of_product.setAttribute("height", "450px");
-    img_of_product.setAttribute("width", "400px");
-    img_of_product.setAttribute("class", "image");
-    left_div.append(img_of_product);
+            const img_of_product = document.createElement("img");
+            img_of_product.setAttribute("src", p_detail.image.main_img);
+            img_of_product.setAttribute("height", "450px");
+            img_of_product.setAttribute("width", "400px");
+            img_of_product.setAttribute("class", "image");
+            left_div.append(img_of_product);
 
-    const img_of_subi = document.createElement("div");
-    img_of_subi.setAttribute("class", "subi");
-    left_div.append(img_of_subi);
+            const img_of_subi = document.createElement("div");
+            img_of_subi.setAttribute("class", "subi");
+            left_div.append(img_of_subi);
 
-    /// SUB IMAGE 1
-    const img_of_sub1 = document.createElement("div");
-    img_of_sub1.setAttribute("class", "sub-images");
-    img_of_subi.append(img_of_sub1);
-    
-    const down_images1 = document.createElement("img");
-    down_images1.setAttribute("src", p_detail.image.main_img);
-    img_of_sub1.prepend(down_images1);
-    
-    /// SUB IMAGE 2
-    const img_of_sub2 = document.createElement("div");
-    img_of_sub2.setAttribute("class", "sub-images");
-    img_of_subi.append(img_of_sub2);
-    
-    const down_images2 = document.createElement("img");
-    down_images2.setAttribute("src", p_detail.image.sub_img3);
-    img_of_sub2.prepend(down_images2);
+            /// SUB IMAGE 1
+            const img_of_sub1 = document.createElement("div");
+            img_of_sub1.setAttribute("class", "sub-images");
+            img_of_subi.append(img_of_sub1);
+            
+            const down_images1 = document.createElement("img");
+            down_images1.setAttribute("src", p_detail.image.main_img);
+            img_of_sub1.prepend(down_images1);
+            
+            /// SUB IMAGE 2
+            const img_of_sub2 = document.createElement("div");
+            img_of_sub2.setAttribute("class", "sub-images");
+            img_of_subi.append(img_of_sub2);
+            
+            const down_images2 = document.createElement("img");
+            down_images2.setAttribute("src", p_detail.image.sub_img3);
+            img_of_sub2.prepend(down_images2);
 
-    /// SUB IMAGE 3
-    const img_of_sub3 = document.createElement("div");
-    img_of_sub3.setAttribute("class", "sub-images");
-    img_of_subi.append(img_of_sub3);
-    
-    const down_images3 = document.createElement("img");
-    down_images3.setAttribute("src", p_detail.image.sub_img2);
-    img_of_sub3.prepend(down_images3);
+            /// SUB IMAGE 3
+            const img_of_sub3 = document.createElement("div");
+            img_of_sub3.setAttribute("class", "sub-images");
+            img_of_subi.append(img_of_sub3);
+            
+            const down_images3 = document.createElement("img");
+            down_images3.setAttribute("src", p_detail.image.sub_img2);
+            img_of_sub3.prepend(down_images3);
 
-    /// SUB IMAGE 4
-    const img_of_sub4 = document.createElement("div");
-    img_of_sub4.setAttribute("class", "sub-images");
-    img_of_subi.append(img_of_sub4);
-    
-    const down_images4 = document.createElement("img");
-    down_images4.setAttribute("src", p_detail.image.sub_img3);
-    img_of_sub4.prepend(down_images4);
+            /// SUB IMAGE 4
+            const img_of_sub4 = document.createElement("div");
+            img_of_sub4.setAttribute("class", "sub-images");
+            img_of_subi.append(img_of_sub4);
+            
+            const down_images4 = document.createElement("img");
+            down_images4.setAttribute("src", p_detail.image.sub_img3);
+            img_of_sub4.prepend(down_images4);
 
-    // Add to cart button
+            // Add to cart button
 
-    const atc_btn = document.createElement("button");
-    atc_btn.setAttribute("class", "add");
-    atc_btn.setAttribute("custom-id", pid);
-    atc_btn.innerText = "Add to Cart";
+            const atc_btn = document.createElement("button");
+            atc_btn.setAttribute("class", "add");
+            atc_btn.setAttribute("custom-id", pid);
+            atc_btn.innerText = "Add to Cart";
 
-    // Whislist button
-    const whishlist_btn = document.createElement("button");
-    whishlist_btn.setAttribute("class", "buy");
-    whishlist_btn.setAttribute("custom-id", pid);
-    whishlist_btn.innerText = "Wishlist";
-    document.querySelector(".addbuy").append(atc_btn, whishlist_btn);
+            // Whislist button
+            const whishlist_btn = document.createElement("button");
+            whishlist_btn.setAttribute("class", "buy");
+            whishlist_btn.setAttribute("custom-id", pid);
+            whishlist_btn.innerText = "Wishlist";
+            document.querySelector(".addbuy").append(atc_btn, whishlist_btn);
 
-    // ADD TO WHISLIST
+            // ADD TO WHISLIST
 
-    whishlist_btn.addEventListener("click", (event) => {
-            const product_id = event.currentTarget.getAttribute("custom-id");
+            whishlist_btn.addEventListener("click", (event) => {
+                const product_id = event.currentTarget.getAttribute("custom-id");
 
-            const whishlist = JSON.parse(localStorage.getItem("whishlist_details")) || [];
+                const whishlist = JSON.parse(localStorage.getItem("whishlist_details")) || [];
 
-            // getting current user details
+                // getting current user details
 
-            const sam = JSON.parse(localStorage.getItem("user_data"));
+                const sam = JSON.parse(localStorage.getItem("user_data"));
 
-            for (let i = 0; i < whishlist.length; i++) {
-                    if (!sam) {
-                            alert("Please Login");
-                            return;
-                    }
-                    if (product_id === whishlist[i].product_id && whishlist[i].sam === sam) {
+                for (let i = 0; i < whishlist.length; i++) {
+                        if (!sam) {
+                           alert("Please Login");
+                           return;
+                           }
+                        if (product_id === whishlist[i].product_id && whishlist[i].sam === sam) {
                             alert("This item is already added");
                             window.location.href = "../cart/wishlist.html";
                             return;
+                            }
                     }
-            }
-            alert("added to your wishlist");
+                alert("added to your wishlist");
 
-            whishlist.push({ product_id, sam });
-            localStorage.setItem("whishlist_details", JSON.stringify(whishlist));
-            window.location.href = "../cart/wishlist.html";
-});
+                whishlist.push({ product_id, sam });
+                localStorage.setItem("whishlist_details", JSON.stringify(whishlist));
+                window.location.href = "../cart/wishlist.html";
+        });
 
-    // ADD TO CART FUNCTION
+            // ADD TO CART FUNCTION
 
-    atc_btn.addEventListener("click", (event) => {
+            atc_btn.addEventListener("click", (event) => {
             const product_id = event.currentTarget.getAttribute("custom-id");
 
             const cart = JSON.parse(localStorage.getItem("cart_details")) || [];
@@ -340,23 +340,59 @@
             // getting current user details
 
             const sam = JSON.parse(localStorage.getItem("user_data"));
+            let incre_decre = document.getElementById("incre_decre")
+            let p_qty = incre_decre.value;
 
             for (let i = 0; i < cart.length; i++) {
-                    if (!sam) {
-                            alert("Please Login");
-                            return;
+                if (!sam) {
+                    alert("Please Login");
+                    return;
+                }
+                if (product_id === cart[i].product_id && cart[i].sam === sam) {
+                    alert("This item is already added");
+                    window.location.href = "../cart/cart.html";
+                    return;
                     }
-                    if (product_id === cart[i].product_id && cart[i].sam === sam) {
-                            alert("This item is already added");
-                            window.location.href = "../cart/cart.html";
-                            return;
-                    }
-            }
-            alert("added to your cart");
+                }
+                    alert("added to your cart");
 
-            cart.push({ product_id, sam });
-            localStorage.setItem("cart_details", JSON.stringify(cart));
-});
+                    cart.push({ product_id, sam, p_qty });
+                    localStorage.setItem("cart_details", JSON.stringify(cart));
+        });
+
+            // Increment/decrement counter
+
+            document.addEventListener("DOMContentLoaded", () => {
+            const minus = document.querySelector(".quantity__minus");
+            const plus = document.querySelector(".quantity__plus");
+            const input = document.querySelector(".sqb");
+
+            const minValue = 1; // Minimum allowed value
+            const maxValue = 12; // Maximum allowed value
+
+            minus.addEventListener("click", (e) => {
+                e.preventDefault();
+                // eslint-disable-next-line radix
+            let value = parseInt(input.value);
+            if (value > minValue) {
+                value--;
+            //   console.log(value)
+                }
+                input.value = value;
+        });
+
+            plus.addEventListener("click", (e) => {
+                 e.preventDefault();
+            // eslint-disable-next-line radix
+            let value = parseInt(input.value);
+            if (value < maxValue) {
+                value++;
+            //   console.log(value)
+            document.getElementById("plus-btn")
+            }
+            input.value = value;
+        });
+    });
 </script>
     </body>
 </html>

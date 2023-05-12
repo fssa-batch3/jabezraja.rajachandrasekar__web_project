@@ -4,30 +4,6 @@ function logout() {
         window.location.href = "./pages/login/Login.html";
 }
 
-// Increment/decrement counter
-
-// document.addEventListener("DOMContentLoaded", function () {
-//         const minus = document.querySelector(".quantity__minus");
-//         const plus = document.querySelector(".quantity__plus");
-//         const input = document.querySelector(".sqb");
-
-//         minus.addEventListener("click", function (e) {
-//                 e.preventDefault();
-//                 let value = parseInt(input.value);
-//                 if (value > 1) {
-//                         value--;
-//                 }
-//                 input.value = value;
-//         });
-
-//         plus.addEventListener("click", function (e) {
-//                 e.preventDefault();
-//                 let value = parseInt(input.value);
-//                 value++;
-//                 input.value = value;
-//         });
-// });
-
 // JSON FOR THE CATAGORY IF THE ARRAY IS EMPTY
 const pr_detail = [
         {
@@ -62,7 +38,7 @@ const deals_of_the_day = [
                 title: "Best_of_Electronics",
                 image: {
                         source: "assets/images/products/r1.jpg",
-                        alt: "Best of Electronics",
+                        alt: "Best_of_Electronics",
                 },
                 "price-offers": "₹1,777",
                 sub: "Apple, Samsung  & more",
@@ -72,7 +48,7 @@ const deals_of_the_day = [
                 title: "Barware_Bakeware",
                 image: {
                         source: "assets/images/products/r2.jpg",
-                        alt: "Barware & Bakeware",
+                        alt: "Barware_Bakeware",
                 },
                 "price-offers": "Upto 67% off",
                 sub: "Grab & Gone",
@@ -82,7 +58,7 @@ const deals_of_the_day = [
                 title: "Cars_Bikes",
                 image: {
                         source: "assets/images/products/r3.jpg",
-                        alt: "Cars & Bikes",
+                        alt: "Cars_Bikes",
                 },
                 "price-offers": "Top Selling!",
                 sub: "Starts from ₹299",
@@ -92,7 +68,7 @@ const deals_of_the_day = [
                 title: "Best_of_Hair_Dryers",
                 image: {
                         source: "assets/images/products/r4.jpg",
-                        alt: "Best of Hair Dryers",
+                        alt: "Best_of_Hair_Dryers",
                 },
                 "price-offers": "Top Brands",
                 sub: "Starts from ₹499",
@@ -102,7 +78,7 @@ const deals_of_the_day = [
                 title: "Personal_care_essential",
                 image: {
                         source: "assets/images/products/r6.jpg",
-                        alt: "Personal care essential",
+                        alt: "Personal_care_essential",
                 },
                 "price-offers": "Min 10% off + extra 15% off",
                 sub: "Wisper, colgate & nivea",
@@ -181,20 +157,20 @@ const furniture_bestseller = [
         },
 
         {
-                title: "Office Study Table",
+                title: "Office_Study_Table",
                 image: {
                         source: "assets/images/products/z5.png",
-                        alt: "Office Study Table",
+                        alt: "Office_Study_Table",
                 },
                 "price-offers": "₹1,777",
                 sub: "Work at Home like Boss",
         },
 
         {
-                title: "Best Selling Bed",
+                title: "Best_Selling_Bed",
                 image: {
                         source: "assets/images/products/z5.png",
-                        alt: "Best Selling Bed",
+                        alt: "Best_Selling_Bed",
                 },
                 "price-offers": "Upto 30% off",
                 sub: "King, Queen & More",
@@ -227,7 +203,7 @@ for (let i = 0; i <= 4; i++) {
 
         // eslint-disable-next-line no-inner-declarations
         function redirect() {
-                window.location.href = `./pages/products and detial pages/best of electronincs.html?id=${deals_of_the_day[i].title}`;
+                window.location.href = `./pages/products and detial pages/best of electronincs.html?id=${furniture_bestseller[i].title}`;
         }
 
         img_of_electronics.addEventListener("click", redirect);
@@ -251,7 +227,7 @@ for (let i = 0; i <= 4; i++) {
         document.querySelector("div.common-row-col-deals1").append(card_2);
 }
 
-// JSON FOR Furniture Bestseller
+// JSON FOR Best of Electronics
 const Best_of_Electronics = [
         {
                 title: "Best of Electronics",
@@ -264,20 +240,20 @@ const Best_of_Electronics = [
         },
 
         {
-                title: "Top Mirrorless camers",
+                title: "Top_Mirrorless_camers",
                 image: {
                         source: "assets/images/products/row2.jpg",
-                        alt: "Top Mirrorless camers",
+                        alt: "Top_Mirrorless_camers",
                 },
                 "price-offers": "₹7,977",
                 sub: "Canon, Sony & More",
         },
 
         {
-                title: "Premium Power Bank",
+                title: "Power_Bank",
                 image: {
                         source: "assets/images/products/row5.jpg",
-                        alt: "Premium Power Bank",
+                        alt: "Power_Bank",
                 },
                 "price-offers": "₹777",
                 sub: "Apple, Mi, realme & More",
@@ -320,7 +296,7 @@ for (let i = 0; i <= 4; i++) {
 
         // eslint-disable-next-line no-inner-declarations
         function redirect() {
-                window.location.href = `./pages/products and detial pages/best of electronincs.html?id=${deals_of_the_day[i].title}`;
+                window.location.href = `./pages/products and detial pages/best of electronincs.html?id=${Best_of_Electronics[i].title}`;
         }
 
         img_of_electronics.addEventListener("click", redirect);
@@ -342,4 +318,470 @@ for (let i = 0; i <= 4; i++) {
 
         // append the card to the container outside the loop
         document.querySelector("div.common-row-col-deals2").append(card_3);
+}
+
+// JSON for Beauty, Food & Toys
+const Beauty_Food_Toys = [
+        {
+                title: "Sting_Instruments",
+                image: {
+                        source: "assets/images/products/R6.png",
+                        alt: "Sting_Instruments",
+                },
+                "price-offers": "₹949",
+                sub: "Guitars, Ukuless & More",
+        },
+
+        {
+                title: "Food_Spreads",
+                image: {
+                        source: "assets/images/products/R2.png",
+                        alt: "Food_Spreads",
+                },
+                "price-offers": "₹777",
+                sub: "Myfiness, Alpino & more",
+        },
+
+        {
+                title: "Doboo_Toys",
+                image: {
+                        source: "assets/images/products/R4.png",
+                        alt: "Doboo_Toys",
+                },
+                "price-offers": "₹177",
+                sub: "DB, KM & More",
+        },
+
+        {
+                title: "Helmet",
+                image: {
+                        source: "assets/images/products/R5.png",
+                        alt: "Helmet",
+                },
+                "price-offers": "₹677",
+                sub: "Steelbird, Vega & More",
+        },
+
+        {
+                title: "Bath_&_Shower",
+                image: {
+                        source: "assets/images/products/R1.png",
+                        alt: "Bath_&_Shower",
+                },
+                "price-offers": "₹77",
+                sub: "Pears, Fiama & More",
+        },
+];
+
+// declare and initialize the variable outside the loop
+let card_4;
+
+for (let i = 0; i <= 4; i++) {
+        // remove the re-declaration and re-initialization
+        card_4 = document.createElement("div");
+        card_4.setAttribute("class", "common-col");
+
+        const img_of_electronics = document.createElement("img");
+        img_of_electronics.setAttribute("class", "product-img");
+        img_of_electronics.setAttribute("src", Beauty_Food_Toys[i].image.source);
+        img_of_electronics.setAttribute("alt", Beauty_Food_Toys[i].image.alt);
+        card_4.append(img_of_electronics);
+
+        // eslint-disable-next-line no-inner-declarations
+        function redirect() {
+                window.location.href = `./pages/products and detial pages/best of electronincs.html?id=${Beauty_Food_Toys[i].title}`;
+        }
+
+        img_of_electronics.addEventListener("click", redirect);
+
+        const h3_for_product = document.createElement("h3");
+        h3_for_product.setAttribute("class", "product-title");
+        h3_for_product.innerText = Beauty_Food_Toys[i].title;
+        card_4.append(h3_for_product);
+
+        const h4_for_product = document.createElement("h4");
+        h4_for_product.setAttribute("class", "price-title"); // add the missing prefix
+        h4_for_product.innerText = Beauty_Food_Toys[i]["price-offers"];
+        card_4.append(h4_for_product);
+
+        const h6_for_product = document.createElement("h6");
+        h6_for_product.setAttribute("class", "price");
+        h6_for_product.innerText = Beauty_Food_Toys[i].sub;
+        card_4.append(h6_for_product);
+
+        // append the card to the container outside the loop
+        document.querySelector("div.common-row-col-deals3").append(card_4);
+}
+
+// JSON for Sports, Healthcare & More
+const Sports_Healthcare = [
+        {
+                title: "Cycle",
+                image: {
+                        source: "assets/images/products/s1.png",
+                        alt: "Cycle",
+                },
+                "price-offers": "₹5949",
+                sub: "TATA, Hero & more",
+        },
+
+        {
+                title: "Dumbbell",
+                image: {
+                        source: "assets/images/products/s2.png",
+                        alt: "Dumbbell",
+                },
+                "price-offers": "₹477",
+                sub: "PROWL, HRX & KRK",
+        },
+
+        {
+                title: "Breakfast_Cereal",
+                image: {
+                        source: "assets/images/products/s3.png",
+                        alt: "Breakfast_Cereal",
+                },
+                "price-offers": "₹277",
+                sub: "Oats, Muesli & More",
+        },
+
+        {
+                title: "Skin_Care",
+                image: {
+                        source: "assets/images/products/s4.png",
+                        alt: "Skin_Care",
+                },
+                "price-offers": "₹767",
+                sub: "Himalaya, Mamaeart & More",
+        },
+
+        {
+                title: "Honey",
+                image: {
+                        source: "assets/images/products/s6.png",
+                        alt: "Honey",
+                },
+                "price-offers": "₹177",
+                sub: "Saffola, Dabur & More",
+        },
+];
+
+// declare and initialize the variable outside the loop
+let card_5;
+
+for (let i = 0; i <= 4; i++) {
+        // remove the re-declaration and re-initialization
+        card_5 = document.createElement("div");
+        card_5.setAttribute("class", "common-col");
+
+        const img_of_electronics = document.createElement("img");
+        img_of_electronics.setAttribute("class", "product-img");
+        img_of_electronics.setAttribute("src", Sports_Healthcare[i].image.source);
+        img_of_electronics.setAttribute("alt", Sports_Healthcare[i].image.alt);
+        card_5.append(img_of_electronics);
+
+        // eslint-disable-next-line no-inner-declarations
+        function redirect() {
+                window.location.href = `./pages/products and detial pages/best of electronincs.html?id=${Sports_Healthcare[i].title}`;
+        }
+
+        img_of_electronics.addEventListener("click", redirect);
+
+        const h3_for_product = document.createElement("h3");
+        h3_for_product.setAttribute("class", "product-title");
+        h3_for_product.innerText = Sports_Healthcare[i].title;
+        card_5.append(h3_for_product);
+
+        const h4_for_product = document.createElement("h4");
+        h4_for_product.setAttribute("class", "price-title"); // add the missing prefix
+        h4_for_product.innerText = Sports_Healthcare[i]["price-offers"];
+        card_5.append(h4_for_product);
+
+        const h6_for_product = document.createElement("h6");
+        h6_for_product.setAttribute("class", "price");
+        h6_for_product.innerText = Sports_Healthcare[i].sub;
+        card_5.append(h6_for_product);
+
+        // append the card to the container outside the loop
+        document.querySelector("div.common-row-col-deals4").append(card_5);
+}
+
+// JSON for  Kitchen Essentials
+const Home_Kitchen_Essentials = [
+        {
+                title: "Bulb",
+                image: {
+                        source: "assets/images/products/k2.png",
+                        alt: "Bulb",
+                },
+                "price-offers": "₹149",
+                sub: "LED & LCD",
+        },
+
+        {
+                title: "Artificial_Plants",
+                image: {
+                        source: "assets/images/products/k3.png",
+                        alt: "Artificial_Plants",
+                },
+                "price-offers": "₹477",
+                sub: "JR, SR & KR",
+        },
+
+        {
+                title: "Kitchen_Linean_Sets",
+                image: {
+                        source: "assets/images/products/k4.png",
+                        alt: "Kitchen_Linean_Sets",
+                },
+                "price-offers": "₹57",
+                sub: "CAPYLYTE, Wanzhow",
+        },
+
+        {
+                title: "Cloth_Clips",
+                image: {
+                        source: "assets/images/products/k5.png",
+                        alt: "Cloth_Clips",
+                },
+                "price-offers": "₹77",
+                sub: "Best Selling Range",
+        },
+
+        {
+                title: "Gardening_Tools",
+                image: {
+                        source: "assets/images/products/k7.png",
+                        alt: "Gardening_Tools",
+                },
+                "price-offers": "₹99",
+                sub: "BSR",
+        },
+];
+
+// declare and initialize the variable outside the loop
+let card_6;
+
+for (let i = 0; i <= 4; i++) {
+        // remove the re-declaration and re-initialization
+        card_6 = document.createElement("div");
+        card_6.setAttribute("class", "common-col");
+
+        const img_of_electronics = document.createElement("img");
+        img_of_electronics.setAttribute("class", "product-img");
+        img_of_electronics.setAttribute("src", Home_Kitchen_Essentials[i].image.source);
+        img_of_electronics.setAttribute("alt", Home_Kitchen_Essentials[i].image.alt);
+        card_6.append(img_of_electronics);
+
+        // eslint-disable-next-line no-inner-declarations
+        function redirect() {
+                window.location.href = `./pages/products and detial pages/best of electronincs.html?id=${Home_Kitchen_Essentials[i].title}`;
+        }
+
+        img_of_electronics.addEventListener("click", redirect);
+
+        const h3_for_product = document.createElement("h3");
+        h3_for_product.setAttribute("class", "product-title");
+        h3_for_product.innerText = Home_Kitchen_Essentials[i].title;
+        card_6.append(h3_for_product);
+
+        const h4_for_product = document.createElement("h4");
+        h4_for_product.setAttribute("class", "price-title"); // add the missing prefix
+        h4_for_product.innerText = Home_Kitchen_Essentials[i]["price-offers"];
+        card_6.append(h4_for_product);
+
+        const h6_for_product = document.createElement("h6");
+        h6_for_product.setAttribute("class", "price");
+        h6_for_product.innerText = Home_Kitchen_Essentials[i].sub;
+        card_6.append(h6_for_product);
+
+        // append the card to the container outside the loop
+        document.querySelector("div.common-row-col-deals5").append(card_6);
+}
+
+// JSON for Mens_Fashion
+const Mens_Fashion = [
+        {
+                title: "Watches",
+                image: {
+                        source: "assets/images/products/m2.png",
+                        alt: "Watches",
+                },
+                "price-offers": "₹149",
+                sub: "LED & LCD",
+        },
+
+        {
+                title: "Jackets_&_Hoodies",
+                image: {
+                        source: "assets/images/products/m1.png",
+                        alt: "Jackets & Hoodies",
+                },
+                "price-offers": "₹477",
+                sub: "JR, SR & KR",
+        },
+
+        {
+                title: "Shoes",
+                image: {
+                        source: "assets/images/products/m3.png",
+                        alt: "Shoes",
+                },
+                "price-offers": "₹57",
+                sub: "CAPYLYTE, Wanzhow",
+        },
+
+        {
+                title: "Accessories",
+                image: {
+                        source: "assets/images/products/m6.png",
+                        alt: "Accessories",
+                },
+                "price-offers": "₹77",
+                sub: "Best Selling Range",
+        },
+
+        {
+                title: "Grooming",
+                image: {
+                        source: "assets/images/products/m7.png",
+                        alt: "Grooming",
+                },
+                "price-offers": "₹99",
+                sub: "BSR",
+        },
+];
+
+// declare and initialize the variable outside the loop
+let card_7;
+
+for (let i = 0; i <= 4; i++) {
+        // remove the re-declaration and re-initialization
+        card_7 = document.createElement("div");
+        card_7.setAttribute("class", "common-col");
+
+        const img_of_electronics = document.createElement("img");
+        img_of_electronics.setAttribute("class", "product-img");
+        img_of_electronics.setAttribute("src", Mens_Fashion[i].image.source);
+        img_of_electronics.setAttribute("alt", Mens_Fashion[i].image.alt);
+        card_7.append(img_of_electronics);
+
+        // eslint-disable-next-line no-inner-declarations
+        function redirect() {
+                window.location.href = `./pages/products and detial pages/best of electronincs.html?id=${Mens_Fashion[i].title}`;
+        }
+
+        img_of_electronics.addEventListener("click", redirect);
+
+        const h3_for_product = document.createElement("h3");
+        h3_for_product.setAttribute("class", "product-title");
+        h3_for_product.innerText = Mens_Fashion[i].title;
+        card_7.append(h3_for_product);
+
+        const h4_for_product = document.createElement("h4");
+        h4_for_product.setAttribute("class", "price-title"); // add the missing prefix
+        h4_for_product.innerText = Mens_Fashion[i]["price-offers"];
+        card_7.append(h4_for_product);
+
+        const h6_for_product = document.createElement("h6");
+        h6_for_product.setAttribute("class", "price");
+        h6_for_product.innerText = Mens_Fashion[i].sub;
+        card_7.append(h6_for_product);
+
+        // append the card to the container outside the loop
+        document.querySelector("div.common-row-col-deals6").append(card_7);
+}
+
+// JSON for Mens_Fashion
+const Womens_Fashion = [
+        {
+                title: "Jewellary",
+                image: {
+                        source: "assets/images/products/w2.png",
+                        alt: "Jewellary",
+                },
+                "price-offers": "₹449",
+                sub: "Shop Now!",
+        },
+
+        {
+                title: "Grooming",
+                image: {
+                        source: "assets/images/products/w7.png",
+                        alt: "Grooming",
+                },
+                "price-offers": "₹477",
+                sub: "SkinCare, Makeupkit & More",
+        },
+
+        {
+                title: "Dresses",
+                image: {
+                        source: "assets/images/products/w3.png",
+                        alt: "Dresses",
+                },
+                "price-offers": "45% to 55% off",
+                sub: "Sarees & more",
+        },
+
+        {
+                title: "Shoes",
+                image: {
+                        source: "assets/images/products/w5.png",
+                        alt: "Shoes",
+                },
+                "price-offers": "₹377",
+                sub: "Asian, Puma & More",
+        },
+
+        {
+                title: "Accessories",
+                image: {
+                        source: "assets/images/products/w6.png",
+                        alt: "Accessories",
+                },
+
+                "price-offers": "₹199",
+                sub: "Handbags, Wallets & Totes",
+        },
+];
+
+// declare and initialize the variable outside the loop
+let card_8;
+
+for (let i = 0; i <= 4; i++) {
+        // remove the re-declaration and re-initialization
+        card_8 = document.createElement("div");
+        card_8.setAttribute("class", "common-col");
+
+        const img_of_electronics = document.createElement("img");
+        img_of_electronics.setAttribute("class", "product-img");
+        img_of_electronics.setAttribute("src", Womens_Fashion[i].image.source);
+        img_of_electronics.setAttribute("alt", Womens_Fashion[i].image.alt);
+        card_8.append(img_of_electronics);
+
+        // eslint-disable-next-line no-inner-declarations
+        function redirect() {
+                window.location.href = `./pages/products and detial pages/best of electronincs.html?id=${Womens_Fashion[i].title}`;
+        }
+
+        img_of_electronics.addEventListener("click", redirect);
+
+        const h3_for_product = document.createElement("h3");
+        h3_for_product.setAttribute("class", "product-title");
+        h3_for_product.innerText = Womens_Fashion[i].title;
+        card_8.append(h3_for_product);
+
+        const h4_for_product = document.createElement("h4");
+        h4_for_product.setAttribute("class", "price-title"); // add the missing prefix
+        h4_for_product.innerText = Womens_Fashion[i]["price-offers"];
+        card_8.append(h4_for_product);
+
+        const h6_for_product = document.createElement("h6");
+        h6_for_product.setAttribute("class", "price");
+        h6_for_product.innerText = Womens_Fashion[i].sub;
+        card_8.append(h6_for_product);
+
+        // append the card to the container outside the loop
+        document.querySelector("div.common-row-col-deals7").append(card_8);
 }
