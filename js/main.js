@@ -6,26 +6,127 @@ function logout() {
 
 // JSON FOR THE CATAGORY IF THE ARRAY IS EMPTY
 const pr_detail = [
+        //1
         {
                 Quantiy: "23",
-                attractive_offer_discount: "upto 50% off",
-                brand_name: "JBL",
+                attractive_offer_discount: "10% off",
+                brand_name: "Boult",
                 catagory: "Deals of the Day",
-                description:
-                        " asdklfj eoifj odfjhw9oeufoadvnlwehofu;odnvlsdnvlfjwhreoughjolfnvljwesjhfgwi",
-                features: " asdf;lkmj asdf ;lkj asdf ;lkj asdf ;lkj asdf lkj asdf ;lkj asdf ;lkj asdf ;lkj asdf;lj asdfl ;lja;sldjf ;asdjf;asjdf;alskdjf;ajsdf;lajds;fljas;lfj",
+                description: "Combat Mode for gaming: Switch on the Combat mode and enjoy seamless gameplay with 45m/s latency. 35 Hrs total playtime with gaming mode on, and 7 hrs playtime on a single charge. You may run out of things to play, but you’ll not run out of battery. Lightning Boult Fast charging: 10 mins charge delivers 120 mins of playtime. A quick fix for anything impromptu.",
+                features: "Sweatproof, Fast Charging, Microphone Included, Fast Charging,In-Line Touch Control, Water Resistant, Low Latency Mode, Voice Assistant, Microphone included, Extra Bass, 32 Hours Playtime",
                 image: {
-                        source: "https://m.media-amazon.com/images/I/41Idnxm7oXL._SY300_SX300_QL70_FMwebp_.jpg",
-                        sub_img1: "https://m.media-amazon.com/images/I/41Idnxm7oXL._SY300_SX300_QL70_FMwebp_.jpg",
-                        sub_img2: "https://m.media-amazon.com/images/I/91kcPKEG-NL._SL1500_.jpg",
-                        sub_img3: "https://m.media-amazon.com/images/I/41Idnxm7oXL._SY300_SX300_QL70_FMwebp_.jpg",
+                        main_img: "https://m.media-amazon.com/images/I/71cBZJsl+EL._SL1500_.jpg",
+                        sub_img1: "https://m.media-amazon.com/images/I/81nKL4v5EiL._SL1500_.jpg",
+                        sub_img2: "https://m.media-amazon.com/images/I/71TdaIPWSBL._SL1500_.jpg",
+                        sub_img3: "https://m.media-amazon.com/images/I/81XnLhAEnDL._SL1500_.jpg",
                 },
-                price: "544",
+                price: "1544",
                 product_catagory: "Best_of_Electronics",
-                product_name: "JBL C100SI Wired In Ear Headphones with Mic",
+                product_name: "Boult Audio Maverick Truly Wireless",
                 puid: "3d4d8afc-e9c3-4d74-a601-6aaa36e10937",
                 size: "-",
         },
+        //2
+        {
+                Quantiy: "23",
+                attractive_offer_discount: "10% off",
+                brand_name: "Bar Box",
+                catagory: "Deals of the Day",
+                description: "18/8 STAINLESS STEEL COCKTAIL SHAKER - Cocktail drink shaker are made by 18/8 food grade stainless steel with a mirror finish,This all-stainless drink shaker set will not break like glass shakers, no rubber seal to crack.The Shaker features a nice leak-proof seal, it will not wobbly, shakers will not rusty, if you clean dry the cocktails shaker after every use.You can dish-wash your bar tools and keep their shine with ease.",
+                features: "Material-Stainless Steel, Brand-Bar Box, Colour-Steel 14 pcs",
+                image: {
+                        main_img: "https://m.media-amazon.com/images/I/71nPNTjo75L._SL1500_.jpg",
+                        sub_img1: "https://m.media-amazon.com/images/I/71TfjEKEnfL._SL1500_.jpg",
+                        sub_img2: "https://m.media-amazon.com/images/I/71pmkMg5cML._SL1500_.jpg",
+                        sub_img3: "https://m.media-amazon.com/images/I/71lQSs8zNfL._SL1500_.jpg",
+                },
+                price: "1954",
+                product_catagory: "Barware_Bakeware",
+                product_name: "Bar Box 14-Piece Cocktail Shaker Set",
+                puid: "3d4d8afc-e9c3-4d74-a601-6zaa36e10937",
+                size: "-",
+        },
+        //3
+        {
+                Quantiy: "23",
+                attractive_offer_discount: "5% off",
+                brand_name: "Centy",
+                catagory: "Deals of the Day",
+                description: "Country of Origin: India, Color: Assorted Color; Number of Pieces: 1; Skills: Eye Hand Coordination, Material: Plastic; Included Items: 1 Pull Back Car, Dimension: LxWxH: 150*60*60 mm; Recommended Age: 3 Years and Above, Pull back toy; Attractive colors, Included Components: 1 Pull Back Car, Age Range Description: 3 Years and Above, Item Dimension: 2.36 inches x 2.36 inches x 5.9 inches",
+                features: "Colour: Silver, Style Name: Echo Sports, Size: Small",
+                image: {
+                        main_img: "https://m.media-amazon.com/images/I/51SnQeZkPmL._SL1000_.jpg",
+                        sub_img1: "https://m.media-amazon.com/images/I/51aLFBsue7L._SL1000_.jpg",
+                        sub_img2: "https://m.media-amazon.com/images/I/51w0bMBUrxL._SL1000_.jpg",
+                        sub_img3: "https://m.media-amazon.com/images/I/51Yfb7hfvwL._SL1000_.jpg",
+                },
+                price: "457",
+                product_catagory: "Cars_Bikes",
+                product_name: "Centy Toys Plastic Pull Back Car",
+                puid: "3d4d8afc-e9c3-4d74-a601-6aza36e10937",
+                size: "-",
+        },
+        //4
+        {
+                Quantiy: "3",
+                attractive_offer_discount: "5% off",
+                brand_name: "PHILIPS",
+                catagory: "Deals of the Day",
+                description: "Advanced concentrator technology with quick-heat head, Thermo protect temperature setting. Hanging loop : yes, Not cordless, 1.5-meter power cord, Compact design for easy handling; easy storage hook for convenient storage, 1000 watts and 2 years Philips India warranty from the date of purchase, There are two settings for drying speed (low, high); the motor speed is regulated to cater to these settings perfectly. There will not be any issue on fan speeds at low, high settings.",
+                features: "Colour:Purple, Material:Plastic, Wattage:1000 Watts, Power Source:Corded Electric.",
+                image: {
+                        main_img: "https://m.media-amazon.com/images/I/51FGbb3EbgL._SL1227_.jpg",
+                        sub_img1: "https://m.media-amazon.com/images/I/51uykbLD+WL._SL1227_.jpg",
+                        sub_img2: "https://m.media-amazon.com/images/I/61+mzp99RvL._SL1227_.jpg",
+                        sub_img3: "https://m.media-amazon.com/images/I/51tFeHnj8TL._SL1227_.jpg",
+                },
+                price: "697",
+                product_catagory: "Best_of_Hair_Dryers",
+                product_name: "PHILIPS 1000 watts Hair Dryer (HP8100/46, Purple)",
+                puid: "3d4d8afc-e9c3-4d74-a601-6zia14e10937",
+                size: "-",
+        },
+        //5
+        {
+                Quantiy: "4",
+                attractive_offer_discount: "23% off",
+                brand_name: "Nature4Nature",
+                catagory: "Deals of the Day",
+                description: "Product Dimensions: 7.6 x 7.6 x 7.6 cm; Date First Available: 31 August 2022, Manufacturer: Hans Herbal Overseas (India) New Delhi, ASIN: B0BD9685LS, Item part number: Quick Enhance: Soap Free Face cleanser, Country of Origin: India, Item Weight: 290 g",
+                features: "Cruelty Free, Vegan, Paraben Free, Scent: Sandalwood.",
+                image: {
+                        main_img: "https://m.media-amazon.com/images/I/81SRDwFqPEL._SL1500_.jpg",
+                        sub_img1: "https://m.media-amazon.com/images/I/81pGQ9-lcTL._SL1500_.jpg",
+                        sub_img2: "https://m.media-amazon.com/images/I/61JXGlPnVBL._SL1280_.jpg",
+                        sub_img3: "https://m.media-amazon.com/images/I/61pU3+KYP4L._SL1280_.jpg",
+                },
+                price: "967",
+                product_catagory: "Personal_care_essential",
+                product_name: "Nature4Nature Men, Women Quick Enhance Soap",
+                puid: "3d4d8afc-e9c3-4d74-a637-6zia14e10937",
+                size: "-",
+        },
+        //6
+        {
+                Quantiy: "47",
+                attractive_offer_discount: "39% off",
+                brand_name: "Trevi Mustang",
+                catagory: "Furniture Bestseller",
+                description: "Primary Material: Engineered Wood, Width x Height: 145.2 cm x 180 cm (4 ft 9 in x 5 ft 10 in), Number Of Doors: 4, Number Of Shelves: 11, Weight: 98",
+                features: "Primary Material: Engineered Wood, Width x Height: 145.2 cm x 180 cm (4 ft 9 in x 5 ft 10 in).",
+                image: {
+                        main_img: "https://rukminim1.flixcart.com/image/832/832/xif0q/wardrobe-closet/w/q/y/-original-imagztahzfesqtsh.jpeg?q=70",
+                        sub_img1: "https://rukminim1.flixcart.com/image/832/832/xif0q/wardrobe-closet/8/e/v/no-particle-board-ozone-4-door-wardrobe-maple-brown-trevi-maple-original-imaggzwgqf72hgrw.jpeg?q=70",
+                        sub_img2: "https://rukminim1.flixcart.com/image/832/832/xif0q/wardrobe-closet/e/g/p/no-particle-board-ozone-4-door-wardrobe-maple-brown-trevi-maple-original-imaggzwgqnayhmf3.jpeg?q=70",
+                        sub_img3: "https://rukminim1.flixcart.com/image/832/832/xif0q/wardrobe-closet/e/o/z/no-particle-board-ozone-4-door-wardrobe-maple-brown-trevi-maple-original-imaggzwgg3h2cggz.jpeg?q=70",
+                },
+                price: "18,990",
+                product_catagory: "Wardrobes",
+                product_name: "Trevi Mustang Engineered Wood 4 Door Wardrobe",
+                puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
+                size: "-",
+        },
+        //7
 ];
 const products_details = JSON.parse(localStorage.getItem("products_details"));
 if (!products_details) {
@@ -86,11 +187,10 @@ const deals_of_the_day = [
 ];
 
 // declare and initialize the variable outside the loop
-let card_1;
 
 for (let i = 0; i <= 4; i++) {
         // remove the re-declaration and re-initialization
-        card_1 = document.createElement("div");
+        let card_1 = document.createElement("div");
         card_1.setAttribute("class", "common-col");
 
         const img_of_electronics = document.createElement("img");
@@ -612,7 +712,7 @@ const Mens_Fashion = [
         },
 
         {
-                title: "Jackets_&_Hoodies",
+                title: "Jackets_Hoodies",
                 image: {
                         source: "assets/images/products/m1.png",
                         alt: "Jackets & Hoodies",

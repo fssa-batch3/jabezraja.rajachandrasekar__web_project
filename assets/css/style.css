@@ -204,13 +204,16 @@ header{
     background-color: transparent;
 }
 
-.pnem{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+.pnem ,.pne{    
     width: 75%;
     float: left;
     border-left: 1px solid #e3d1a9;
     padding-left: 50px;
+}
+
+.pne{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
 }
 
 .pnem h2 , .pnem p{
@@ -1374,12 +1377,11 @@ font-size: 15px;
     width: 80px;
 }
 
-.add a, .buy a{
-    text-decoration: none;
+/* .add a, .buy a{
     color: #f2c452;
     font-family: 'Philosopher',serif;
     font-size: 13px;
-}
+} */
 
 .addbuy{
     display: flex;
@@ -1393,10 +1395,9 @@ font-size: 15px;
     background-color: #900c19;
     height: 44px;
     width: 100%; 
-    text-align: center;
-    line-height: 4px;
     border: none;
-    margin-top: 8px;
+    cursor: pointer;
+    color: #f2c452;
 }
 .add{
     margin-right: 20px;

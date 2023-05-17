@@ -32,68 +32,10 @@
                             <i class="fa-sharp fa-solid fa-trash" style="color: #886619;"></i>
                         </th>
                     </tr>
-                    <!-- <tr id="carit">
-                            <td class="trex">
-                            <img src="../../assets/images/products/img (32).jpg" width="150px" height="130px" alt="White-T-Shirt">
-                            </td>
-                            <td class="trex">
-                            <p>Navy Blue Kurta</p>
-                            <p>Color: Navy Blue</p>
-                            <p>Size: L</p>
-                            </td>          
-                            <td class="trex">
-                            <p>&#8377 1,777.00</p>
-                            </td>
-                            <td class="trex">
-                            <input type="number" 
-                            placeholder="2">               
-                            </td>
-                            <td class="trex">
-                            <p>&#8377 3,554.00</p>
-                            </td>
-                            <td>
-                            <p class="fa-sm">
-                            <i class="fa-solid fa-xmark fa-sm" style="color: #900c19;"></i>
-                            </p>
-                            </td>
-                            </tr> -->
                 </table>
-
             </div>
-            <!-- <div class="rightside"> -->
-                <!-- <h4>ORDER SUMMARY</h4>
-                <table class="details">
-                    <caption></caption>
-                    <th scope="col"></th>
-                    <tr>
-                        <td>SUBTOTAL</td>
-                        <td class="rf" id="subtotal1"></td>
-                    </tr>
-                    <tr>
-                        <td>SHIPPING</td>
-                        <td class="rf">Free</td>
-                    </tr>
-                    <tr>
-                        <td>SECURE PACK</td>
-                        <td class="rf">&#8377 17.00</td>
-                    </tr>
-                    <tr>
-                        <td>DISCOUNT</td>
-                        <td class="rf">&#8377 -554.00</td>
-                    </tr>
-                    <tr>
-                        <td>ORDER TOTAL</td>
-                        <td class="rf">&#8377 3,017.00</td>
-                    </tr>
-                </table>
-                <div id="inc">Inclusive of all taxes
-                </div>
-                <button class="cbtn">
-                    <a href="./checkout.html">CHECKOUT</a>
-                </button> -->
-            <!-- </div> -->
         </div>
-    </main>
+</main>
     <script src="/js/header.js"> </script>
 
     <script>
@@ -188,7 +130,6 @@
             const pElement = document.createElement("p");
             pElement.innerHTML = cart[i].p_qty;
 
-
             // const minusLink = document.createElement('a');
             // const minusSpan = document.createElement('span');
             // const input = document.createElement('input');
@@ -264,103 +205,126 @@
 
             document.querySelector(".product-table").append(trElement);
         }
-        console.log(total)
-// Create the parent div element with class "rightside"
-const risdtosum = document.createElement('div');
-risdtosum.className = 'rightside';
 
-// Create the h4 element with text "ORDER SUMMARY"
-const heading = document.createElement('h4');
-heading.textContent = 'ORDER SUMMARY';
-risdtosum.appendChild(heading);
+            ////// RIGHT SIDE[ORDER SUMMARY] //////
+            
+            // Create the parent div element with class "rightside"
+            const risdtosum = document.createElement('div');
+            risdtosum.className = 'rightside';
 
-// Create the table element with class "details"
-const table = document.createElement('table');
-table.className = 'details';
-risdtosum.appendChild(table);
+            // Create the h4 element with text "ORDER SUMMARY"
+            const heading = document.createElement('h4');
+            heading.textContent = 'ORDER SUMMARY';
+            risdtosum.appendChild(heading);
 
-// Create the caption element
-const caption = document.createElement('caption');
-table.appendChild(caption);
+            // Create the table element with class "details"
+            const table = document.createElement('table');
+            table.className = 'details';
+            risdtosum.appendChild(table);
 
-// Create the th element
-const tableHeader = document.createElement('th');
-table.appendChild(tableHeader);
+            // Create the caption element
+            const caption = document.createElement('caption');
+            table.appendChild(caption);
 
-// Create the first row - Subtotal
-const row1 = document.createElement('tr');
-const subtotalLabel = document.createElement('td');
-subtotalLabel.textContent = 'SUBTOTAL';
-row1.appendChild(subtotalLabel);
-const subtotalAmount = document.createElement('td');
-subtotalAmount.className = 'rf';
-subtotalAmount.id = 'subtotal1';
-subtotalAmount.innerText = "₹" + total
-row1.appendChild(subtotalAmount);
-table.appendChild(row1);
+            // Create the th element
+            const tableHeader = document.createElement('th');
+            table.appendChild(tableHeader);
 
-// Create the second row - Shipping
-const row2 = document.createElement('tr');
-const shippingLabel = document.createElement('td');
-shippingLabel.textContent = 'SHIPPING';
-row2.appendChild(shippingLabel);
-const shippingAmount = document.createElement('td');
-shippingAmount.className = 'rf';
-shippingAmount.textContent = 'Free';
-row2.appendChild(shippingAmount);
-table.appendChild(row2);
+            // Create the first row - Subtotal
+            const row1 = document.createElement('tr');
+            const subtotalLabel = document.createElement('td');
+            subtotalLabel.textContent = 'SUBTOTAL';
+            row1.appendChild(subtotalLabel);
+            const subtotalAmount = document.createElement('td');
+            subtotalAmount.className = 'rf';
+            subtotalAmount.id = 'subtotal1';
+            subtotalAmount.innerText = "₹" + total;
+            row1.appendChild(subtotalAmount);
+            table.appendChild(row1);
 
-// Create the third row - Secure Pack
-const row3 = document.createElement('tr');
-const securePackLabel = document.createElement('td');
-securePackLabel.textContent = 'SECURE PACK';
-row3.appendChild(securePackLabel);
-const securePackAmount = document.createElement('td');
-securePackAmount.className = 'rf';
-securePackAmount.innerHTML = '&#8377 17.00';
-row3.appendChild(securePackAmount);
-table.appendChild(row3);
+            // Add the total in order summary
 
-// Create the fourth row - Discount
-const row4 = document.createElement('tr');
-const discountLabel = document.createElement('td');
-discountLabel.textContent = 'DISCOUNT';
-row4.appendChild(discountLabel);
-const discountAmount = document.createElement('td');
-discountAmount.className = 'rf';
-discountAmount.innerHTML = '&#8377 -554.00';
-row4.appendChild(discountAmount);
-table.appendChild(row4);
+            // Create the second row - Shipping
+            const row2 = document.createElement('tr');
+            const shippingLabel = document.createElement('td');
+            shippingLabel.textContent = 'SHIPPING';
+            row2.appendChild(shippingLabel);
+            const shippingAmount = document.createElement('td');
+            shippingAmount.className = 'rf';
+            shippingAmount.textContent = 'Free';
+            row2.appendChild(shippingAmount);
+            table.appendChild(row2);
 
-// Create the fifth row - Order Total
-const row5 = document.createElement('tr');
-const orderTotalLabel = document.createElement('td');
-orderTotalLabel.textContent = 'ORDER TOTAL';
-row5.appendChild(orderTotalLabel);
-const orderTotalAmount = document.createElement('td');
-orderTotalAmount.className = 'rf';
-orderTotalAmount.innerHTML = '&#8377 3,017.00';
-row5.appendChild(orderTotalAmount);
-table.appendChild(row5);
+            // Create the third row - Secure Pack
+            const row3 = document.createElement('tr');
+            const securePackLabel = document.createElement('td');
+            securePackLabel.textContent = 'SECURE PACK';
+            row3.appendChild(securePackLabel);
+            const securePackAmount = document.createElement('td');
+            securePackAmount.className = 'rf';
+            securePackAmount.innerHTML = "₹" + 17;
+            row3.appendChild(securePackAmount);
+            table.appendChild(row3);
 
-// Create the div element with id "inc" and text "Inclusive of all taxes"
-const inclusiveDiv = document.createElement('div');
-inclusiveDiv.id = 'inc';
-inclusiveDiv.textContent = 'Inclusive of all taxes';
-risdtosum.appendChild(inclusiveDiv);
+            let securePackamount = 17;
 
-// Create the button element with class "cbtn" and link to "./checkout.html"
-const checkoutButton = document.createElement('button');
-checkoutButton.className = 'cbtn';
-const checkoutLink = document.createElement('a');
-checkoutLink.href = './checkout.html';
-checkoutLink.textContent = 'CHECKOUT';
-checkoutButton.appendChild(checkoutLink);
-risdtosum.appendChild(checkoutButton);
+            // function for discount
+            let str ="";
+            let discalcu = total;
+            if(discalcu <= 1500){
+                str = 100;
+            }else if(discalcu <= 2500){
+                str = 200;
+            }else if(discalcu <= 3500){
+                str = 300;
+            }else if(discalcu <= 4500){
+                str = 400;
+            }else if(discalcu <= 5500){
+                str = 500;
+            }
 
-// Append the risdtosum to the document body or any desired container element
-document.body.appendChild(risdtosum);
-document.querySelector(".content").append(risdtosum);
+            const subtotal = parseInt(total + securePackamount - str);
+
+            // Create the fourth row - Discount
+            const row4 = document.createElement('tr');
+            const discountLabel = document.createElement('td');
+            discountLabel.textContent = 'DISCOUNT';
+            row4.appendChild(discountLabel);
+            const discountAmount = document.createElement('td');
+            discountAmount.className = 'rf';
+            discountAmount.innerHTML =  "-" + "₹" + str;
+            row4.appendChild(discountAmount);
+            table.appendChild(row4);
+
+            // Create the fifth row - Order Total
+            const row5 = document.createElement('tr');
+            const orderTotalLabel = document.createElement('td');
+            orderTotalLabel.textContent = 'ORDER TOTAL';
+            row5.appendChild(orderTotalLabel);
+            const orderTotalAmount = document.createElement('td');
+            orderTotalAmount.className = 'rf';
+            orderTotalAmount.innerHTML = "₹" + subtotal;
+            row5.appendChild(orderTotalAmount);
+            table.appendChild(row5);
+
+            // // Create the div element with id "inc" and text "Inclusive of all taxes"
+            // const inclusiveDiv = document.createElement('div');
+            // inclusiveDiv.id = 'inc';
+            // inclusiveDiv.textContent = 'Inclusive of all taxes';
+            // risdtosum.appendChild(inclusiveDiv);
+
+            // Create the button element with class "cbtn" and link to "./checkout.html"
+            const checkoutButton = document.createElement('button');
+            checkoutButton.className = 'cbtn';
+            const checkoutLink = document.createElement('a');
+            checkoutLink.href = './checkout.html';
+            checkoutLink.textContent = 'CHECKOUT';
+            checkoutButton.appendChild(checkoutLink);
+            risdtosum.appendChild(checkoutButton);
+
+            // Append the risdtosum to the document body or any desired container element
+            document.body.appendChild(risdtosum);
+            document.querySelector(".content").append(risdtosum);
 
         // delete function
         const cart_remove = document.querySelectorAll("#remove_icon");
