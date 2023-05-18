@@ -32,10 +32,10 @@
         const pattern = new RegExp (/[6-9]{1}[0-9]{9}/)
         return pattern.test(phoneNumber)
        }
-       validatePhoneNumber(password){
-        const pattern = new RegExp (/[a-z]/)
-        return pattern.test(password)
-       }
+      //  validatePhoneNumber(password){
+      //   const pattern = new RegExp (/[a-z]/)
+      //   return pattern.test(password)
+      //  }
     }
 //
 //
