@@ -120,7 +120,7 @@ const pr_detail = [
                         sub_img2: "https://rukminim1.flixcart.com/image/832/832/xif0q/wardrobe-closet/e/g/p/no-particle-board-ozone-4-door-wardrobe-maple-brown-trevi-maple-original-imaggzwgqnayhmf3.jpeg?q=70",
                         sub_img3: "https://rukminim1.flixcart.com/image/832/832/xif0q/wardrobe-closet/e/o/z/no-particle-board-ozone-4-door-wardrobe-maple-brown-trevi-maple-original-imaggzwgg3h2cggz.jpeg?q=70",
                 },
-                price: "18,990",
+                price: "18990",
                 product_catagory: "Wardrobes",
                 product_name: "Trevi Mustang Engineered Wood 4 Door Wardrobe",
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
@@ -140,7 +140,7 @@ const pr_detail = [
                         sub_img2: "https://m.media-amazon.com/images/I/61LpRPzMJ0L._SL1000_.jpg",
                         sub_img3: "https://m.media-amazon.com/images/I/61kXRUMHEYL.jpg",
                 },
-                price: "89,999",
+                price: "89999",
                 product_catagory: "Sofa",
                 product_name: "Luxury Imperia Collection Diamond Buttoned Quilting Back and Golden Strips Sofa",
                 puid: "3d4d8afc-e9c3-0d74-a637-6lda14e10937",
@@ -160,7 +160,7 @@ const pr_detail = [
                         sub_img2: "https://m.media-amazon.com/images/I/71n6joe8o4L._SL1300_.jpg",
                         sub_img3: "https://m.media-amazon.com/images/I/61xK4CihBGL._SL1300_.jpg",
                 },
-                price: "2,799",
+                price: "2799",
                 product_catagory: "Office_Study_Table",
                 product_name: "PAZANO Multipurpose Engineered Wood Finish Office Table",
                 puid: "3d4d8afc-e9c3-4d74-cc37-6kia14e10937",
@@ -180,7 +180,7 @@ const pr_detail = [
                         sub_img2: "https://m.media-amazon.com/images/I/51ylk8k0I7L._SL1500_.jpg",
                         sub_img3: "https://m.media-amazon.com/images/I/71GLl46+QrL._SL1500_.jpg",
                 },
-                price: "34,668",
+                price: "34668",
                 product_catagory: "Best_Selling_Bed",
                 product_name: "Sheesham Wood Armania King Size Bed with Box Storage",
                 puid: "3d4d8afc-e237-4d74-a637-6kia14e10937",
@@ -200,7 +200,7 @@ const pr_detail = [
                         sub_img2: "https://m.media-amazon.com/images/I/91tLCgpRqKL._SL1500_.jpg",
                         sub_img3: "https://m.media-amazon.com/images/I/71JRXiqvo3L._SL1500_.jpg",
                 },
-                price: "45,699",
+                price: "45699",
                 product_catagory: "Reclinear",
                 product_name: "Solimo Garcin Manual Three Seater Recliner (Dark Brown)",
                 puid: "3d4d8afc-e9c3-4d13-a637-6kia14e10937",
@@ -1014,20 +1014,20 @@ for (let i = 0; i <= 4; i++) {
 // JSON FOR Best of Electronics
 const Best_of_Electronics = [
         {
-                title: "Best of Electronics",
+                title: "Monitors",
                 image: {
                         source: "assets/images/products/row1.jpg",
-                        alt: "Best of Electronics",
+                        alt: "Monitors",
                 },
                 "price-offers": "₹7,949",
                 sub: "Apple, Samsung & more",
         },
 
         {
-                title: "Top_Mirrorless_camers",
+                title: "Top_Mirrorless_cameras",
                 image: {
                         source: "assets/images/products/row2.jpg",
-                        alt: "Top_Mirrorless_camers",
+                        alt: "Top_Mirrorless_cameras",
                 },
                 "price-offers": "₹7,977",
                 sub: "Canon, Sony & More",
@@ -1569,3 +1569,6 @@ for (let i = 0; i <= 4; i++) {
         // append the card to the container outside the loop
         document.querySelector("div.common-row-col-deals7").append(card_8);
 }
+
+const cart = JSON.parse(localStorage.getItem("cart_details")) || [];
+    localStorage.setItem("cart_details",JSON.stringify(cart));

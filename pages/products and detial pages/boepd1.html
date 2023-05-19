@@ -335,7 +335,7 @@
             atc_btn.addEventListener("click", (event) => {
             const product_id = event.currentTarget.getAttribute("custom-id");
 
-            const cart = JSON.parse(localStorage.getItem("cart_details")) || [];
+            const cart = JSON.parse(localStorage.getItem("cart_details"));
 
             // getting current user details
 

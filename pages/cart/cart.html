@@ -38,14 +38,25 @@
 </main>
     <script src="/js/header.js"> </script>
 
+
     <script>
         const cart = JSON.parse(localStorage.getItem("cart_details"));
         const pro_data = JSON.parse(localStorage.getItem("products_details"));
         const cart_products = [];
 
+
         for (let i = 0; i < cart.length; i++) {
             const cartpro = pro_data.find(e => e.puid === cart[i].product_id);
             cart_products.push(cartpro);
+        }
+
+        if (cart.length === 0){
+            console.log("HI")
+            document.querySelector("div.content").style.display = "none";
+            head = document.createElement("h1");
+            head.setAttribute("class", "head3")
+            head.innerText = "NO PRODUCTS ADDED IN THE CART";
+            document.querySelector("main").append(head);
         }
 
         let total =0;
@@ -279,7 +290,7 @@
                 str = 300;
             }else if(discalcu <= 4500){
                 str = 400;
-            }else if(discalcu <= 5500){
+            }else if(discalcu >= 5500){
                 str = 500;
             }
 
