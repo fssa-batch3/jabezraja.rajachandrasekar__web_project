@@ -51,7 +51,6 @@
         }
 
         if (cart.length === 0){
-            console.log("HI")
             document.querySelector("div.content").style.display = "none";
             head = document.createElement("h1");
             head.setAttribute("class", "head3")
@@ -290,8 +289,10 @@
                 str = 300;
             }else if(discalcu <= 4500){
                 str = 400;
+            }else if(discalcu <= 5500){
+                str = 450;
             }else if(discalcu >= 5500){
-                str = 500;
+                str = 550;
             }
 
             const subtotal = parseInt(total + securePackamount - str);

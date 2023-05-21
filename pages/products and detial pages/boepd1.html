@@ -323,7 +323,7 @@
                             return;
                             }
                     }
-                alert("added to your wishlist");
+                            alert("added to your wishlist");
 
                 whishlist.push({ product_id, sam });
                 localStorage.setItem("whishlist_details", JSON.stringify(whishlist));
@@ -358,6 +358,7 @@
 
                     cart.push({ product_id, sam, p_qty });
                     localStorage.setItem("cart_details", JSON.stringify(cart));
+                    window.location.href = "../cart/cart.html";
         });
 
             // Increment/decrement counter

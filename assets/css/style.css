@@ -510,10 +510,7 @@ header{
     font-size: 12px;
     letter-spacing: 1.68px;
     font-family: 'Philosopher',serif;
-    font-weight: 700;
     padding: 10px 15px 9px;
-    margin-bottom: 20px;
-    cursor: pointer;
     display: inline-block;
 }
 
@@ -562,7 +559,7 @@ header{
     text-align: center;
     display: inline-block;
     width: 100%;
-    margin-top: 35px;
+    margin-bottom: 5px;
 }
 
 .sd, .ca{
@@ -585,6 +582,7 @@ header{
 
 .cot input, .cot textarea{
     outline: none;
+    border: 1px solid #d5c8aa;
 }
 
 .cofd{
@@ -609,6 +607,7 @@ font-size: 15px;
 
 .leftside{
     width: 55pc;
+    border: 1px solid #d5c8aa;
 }
 
 /*-----checkout details page End-----*/
@@ -891,42 +890,36 @@ font-size: 15px;
     padding-right: 60px;
 }
 
+@keyframes slide{
+    0%{left:0%;}
+    9%{left:0%;}
+    18%{left:-100%;}
+    27%{left:-100%;}
+    36%{left:-200%;}
+    45%{left:-200%;}
+    54%{left:-300%;}
+    63%{left:-300%;}
+    72%{left:-400%;}
+	81%{left:-400%;}
+	90%{left:-500%;}
+	100%{left:-500%;}
+}
+
 .slider{
-    height: 400px;
     overflow: hidden;
 }
 
-.slider figure img{
-    float: left;
-    width: 20%;
-}
-
 .slider figure{
-    position: relative;
-    width:500%;
-    animation-name:slide;
-    animation-duration: 10s;
-    animation-direction: alternate;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    position:relative;
+    width:600%;
+    animation: 30s slide infinite;
 }
 
-@keyframes slide{
-    0%  {left: 0%;}
-    15% {left: 0%;}
-    20% {left: -100%;}
-    35% {left: -100%;}
-    40% {left: -200%;}
-    60% {left: -200%;}
-    65% {left: -300%;}
-    70% {left: -300%;}
+.slider figure img{
+    float:left;
+    width:16.6666%;
+    height:400px;   
 }
-/* 0%{
-    right: calc(0% - 100px);
- }
- 100%{
-    right: calc(100%);
- } */
 
 /*-----Common Things-----*/
 
@@ -938,9 +931,7 @@ font-size: 15px;
 }
 
 .common-heading{
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 20px ;
+    text-align: center;
     margin: 5px;
     box-shadow: 0 1px 1px 0 rgb(0 0 0 /16%);
 }
@@ -952,13 +943,14 @@ font-size: 15px;
 }
 
 .common-heading-right button{
-    width: 90px;
+    display: none;
+    /* width: 90px;
     height: 40px;
     font-size: 18px;
     background-color: #900c19;
     border: none;
     color: whitesmoke;
-    border-radius: 2px;
+    border-radius: 2px; */
 }
 
 .btn a , .cbtn a{

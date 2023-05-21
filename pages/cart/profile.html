@@ -10,52 +10,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     </head>
     <!-----Header Section----->
-    <header>
-        <div class="header-left">
-            <a href="#">JAUNTY</a>  
-            <div class="header-left-p">
-                <p>
-                    <a href="#"> RIALTO</a>
-                </p>
-            </div>
-        </div>
-        <div class="header-center"> 
-            <input class="header-center-input" type="text" placeholder="search for products">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-        <!-----Login Button----->
-        <div class="login">
-            <a href="../../home pages/home.html" class="login_btn">HOME</a>
-        </div>
+    <header id="hed"></header>
 
-            </div>
-        <!-----more details----->
-        <div class="more">
-            <span class="more_lan">MORE</span>
-            <div class="more_dropdown none">
-                <ul class="more_dropdown_list">
-                    <li class="login_drop_li">
-                        <i class="more-icon fa fa-shopping-basket"></i>Sell on JR
-                    </li>
-                    <li class="login_drop_li">
-                        <i class="more-icon fa fa-phone"></i>24x7 customer Care
-                    </li>
-                    <li class="login_drop_li">
-                        <i class="more-icon fa fa-line-chart"></i>Advertise
-                    </li>
-                    <li class="login_drop_li">
-                        <i class="more-icon fa fa-download"></i>Download App
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-----cart details----->
-        <span class="cart_lan">
-            <a href="../cart/cart.index.html">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-        </span>
-    </header>
     <body class="body">
         <div class="headpic">
             <img src="../../assets/images/banner/cart.png" alt="">
@@ -71,19 +27,19 @@
                 <aside class="pow">
                     <ul>
                         <li class="powa">
-                            <a href="../cart/profile.index.html">PROFILE</a>
+                            <a href="../cart/profile.html">PROFILE</a>
                         </li>
                         <li class="powa">
-                            <a href="../cart/order.index.html">ORDERS</a>
+                            <a href="../cart/order.html">ORDERS</a>
                         </li>
                         <li class="powa">
-                            <a href="../cart/wishlist.index.html">WHISHLIST</a>
+                            <a href="../cart/wishlist.html">WHISHLIST</a>
                         </li>
                         <li class="powa">
-                            <a href="../cart/cart.index.html">CART</a>
+                            <a href="../cart/cart.html">CART</a>
                         </li>
                         <li class="powa">
-                            <a href="../cart/notification.index.html">NOTIFICATION</a>
+                            <a href="../cart/notification.html">NOTIFICATION</a>
                         </li>
                     </ul>
                 </aside>
@@ -258,7 +214,7 @@
         </div>
         </footer>
         <!-----Footer End----->
-
+<script src="/js/header.js"></script>
         <script>
 // getting data from login and register
 const user_data = JSON.parse(localStorage.getItem("user_data"));

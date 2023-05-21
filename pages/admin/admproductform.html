@@ -180,24 +180,24 @@
           const products = JSON.parse(localStorage.getItem("products_details")) || [];
 
           products.push({
-              catagory,
-    product_catagory,
-    product_name,
-    attractive_offer_discount,
-            brand_name,
-    price,
-    size,
-    Quantiy,
-    features,
-    description,
-    puid,
-              image: {
-                main_img,
-      sub_img1,
-      sub_img2,
-      sub_img3,
-              },
-          });
+                 catagory,
+                 product_catagory,
+                 product_name,
+                 attractive_offer_discount,
+                 brand_name,
+                 price,
+                 size,
+                 Quantiy,
+                 features,
+                 description,
+                 puid,
+                 image: {
+                        main_img,
+                        sub_img1,
+                        sub_img2,
+                        sub_img3,
+                       },
+                });
 
           localStorage.setItem("products_details", JSON.stringify(products));
           location.href = "./admproductlist.html";
