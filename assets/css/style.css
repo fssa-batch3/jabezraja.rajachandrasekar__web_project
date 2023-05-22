@@ -594,6 +594,13 @@ header{
     font-size: 15px;
     font-family: 'Philosopher',serif;
     outline: none;
+    padding: 10px;
+}
+
+.coft{
+    padding: 10px;
+    max-height: 60px;
+    max-width: 823px;
 }
 
 #fon{

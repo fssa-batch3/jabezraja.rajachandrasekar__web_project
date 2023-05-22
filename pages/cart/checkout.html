@@ -64,10 +64,10 @@
                             </div>
                             <div class="cot">
                                 <input class="cofd" id="" type="text" placeholder="PIN CODE" required="true" value="630007">
-                                <input class="cofd" id="" style="margin-left:20px" type="text" placeholder="LANDMARK" required="true" value="DHARPHY GYM">
+                                <input class="cofd" id="" style="margin-left:20px" type="text" placeholder="LANDMARK" required="true" value="Backside to DHARPHY GYM">
                             </div>
                             <div class="cot">
-                                <textarea class="coft" id="fon" placeholder="ADDRESS" value="(Ground Floor)No. 83, Perfect Parkview, Palaniappa Nagar, 2nd street, Gowriwakkam, Chennai 600073."></textarea>
+                                <textarea class="coft" id="fon" placeholder="ADDRESS">(Ground Floor)No. 83, Perfect Parkview, Palaniappa Nagar, 2nd street, Gowriwakkam, Chennai 600073</textarea>
                             </div>
                             <div class="cot">
                                 <input class="cofd" type="text" placeholder="CITY/DISTRICT/TOWN" required="true" value="CHENNAI">
@@ -128,6 +128,10 @@
         </main>
     <script src="/js/header.js"> </script>
     <script>
+
+        const upram = new URLSearchParams(window.location.search);
+        const upr = upram.get("stotal");
+
         // Create the table element
         const c_itm = JSON.parse(localStorage.getItem("cart_details"));
 
@@ -172,7 +176,7 @@
         // Create the second cell in the second row
         const cell2_2 = document.createElement("td");
         cell2_2.id = "rf";
-        cell2_2.textContent = "Free";
+        cell2_2.textContent = upr;
         row2.appendChild(cell2_2);
 
         table.appendChild(row2);

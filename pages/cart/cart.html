@@ -325,11 +325,13 @@
             // inclusiveDiv.textContent = 'Inclusive of all taxes';
             // risdtosum.appendChild(inclusiveDiv);
 
+
+
             // Create the button element with class "cbtn" and link to "./checkout.html"
             const checkoutButton = document.createElement('button');
             checkoutButton.className = 'cbtn';
             const checkoutLink = document.createElement('a');
-            checkoutLink.href = './checkout.html';
+            checkoutLink.href = `./checkout.html?stotal=${subtotal}`;
             checkoutLink.textContent = 'CHECKOUT';
             checkoutButton.appendChild(checkoutLink);
             risdtosum.appendChild(checkoutButton);
