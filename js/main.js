@@ -20,7 +20,7 @@ const pr_detail = [
                         sub_img2: "https://m.media-amazon.com/images/I/71TdaIPWSBL._SL1500_.jpg",
                         sub_img3: "https://m.media-amazon.com/images/I/81XnLhAEnDL._SL1500_.jpg",
                 },
-                price: "1544",
+                price: "1124",
                 product_catagory: "Best_of_Electronics",
                 product_name: "Boult Audio Maverick Truly Wireless",
                 puid: "3d4d8afc-e9c3-4d74-a601-6aaa36e10937",

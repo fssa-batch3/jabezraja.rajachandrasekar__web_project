@@ -8,8 +8,8 @@
         <link rel="icon" href="../../assets/images/logo.jpg" type="image/x-icon">
         <link href="../../assets/css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family-Roboto&display-swap" rel="stylesheet">
     </head>
+    <header id="hed"></header>
     <body class="body">
     
         <div class="headpic">
@@ -224,13 +224,32 @@
                     </div>
                 </div>
 
-                <div class="cobtn">
-                    <a href="../../index.html" class="sd">CONFIRM</a>
-                    <a href="./cart.index.html" class="ca">CANCEL</a>
+                <div class="cobtn" id="pbtn">
+                    <a href="../../index.html" class="sd" id="pcb">CONFIRM</a>
+                    <a href="./cart.html" class="ca" id="pcab">CANCEL</a>
                 </div>
             </div>
         </main>
+        <script src="/js/header.js"> </script><a href="./cart.html"></a>
+<script>
+document.getElementById("pcb").addEventListener("click", function(event) {
+  event.preventDefault();
+  alert("Are you sure you want to confirm?");
+  window.location.href="/index.html"
+});
+        // // payment confirm button
+        // const pay_btn = document.createElement("button");
+        // pay_btn.setAttribute("class", "add");
+        // pay_btn.setAttribute("id", pcb);
+        // pay_btn.innerText = "Add to Cart";
 
+        // // payment cancel button
+        // const paycancel_btn = document.createElement("button");
+        // paycancel_btn.setAttribute("class", "buy");
+        // paycancel_btn.setAttribute("custom-id", pcab);
+        // paycancel_btn.innerText = "Wishlist";
+        // document.querySelector(".cobtn").append(pay_btn, paycancel_btn);
+</script>
     </body>
 
 </html>

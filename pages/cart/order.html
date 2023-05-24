@@ -8,55 +8,10 @@
         <link rel="icon" href="../../assets/images/logo.jpg" type="image/x-icon">
         <link href="../../assets/css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family-Roboto&display-swap" rel="stylesheet">
     </head>
     <!-----Header Section----->
-    <header>
-        <div class="header-left">
-            <a href="#">JAUNTY</a>  
-            <div class="header-left-p">
-                <p>
-                    <a href="#"> RIALTO</a>
-                </p>
-            </div>
-        </div>
-        <div class="header-center"> 
-            <input class="header-center-input" type="text" placeholder="search for products">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-        <!-----Login Button----->
-        <div class="login">
-            <a href="../../home pages/home.html" class="login_btn">HOME</a>
-        </div>
+    <header id="hed"></header>
 
-            </div>
-        <!-----more details----->
-        <div class="more">
-            <span class="more_lan">MORE</span>
-            <div class="more_dropdown none">
-                <ul class="more_dropdown_list">
-                    <li class="login_drop_li">
-                        <i class="more-icon fa fa-shopping-basket"></i>Sell on JR
-                    </li>
-                    <li class="login_drop_li">
-                        <i class="more-icon fa fa-phone"></i>24x7 customer Care
-                    </li>
-                    <li class="login_drop_li">
-                        <i class="more-icon fa fa-line-chart"></i>Advertise
-                    </li>
-                    <li class="login_drop_li">
-                        <i class="more-icon fa fa-download"></i>Download App
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-----cart details----->
-        <span class="cart_lan">
-            <a href="../cart/cart.index.html">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-        </span>
-    </header>
     <body class="body">
         <div class="headpic">
             <img src="../../assets/images/banner/cart.png" alt="">
@@ -91,8 +46,21 @@
 
                 <section class="pnem">
                     <h2>ORDERS</h2>
-                    <div>
-                        <p>No Items In Order </p>
+                    <div id="" class="ordmd">
+                        <!-- <div id="ordimg" class="ordi">
+                            <img src="/assets/images/products/r6.jpg" alt="">
+                        </div>
+                        <div id="ordprna" class="ordi">
+                            <p>Luxury Imperia Collection Diamond Buttoned Quilting Back and Golden Strips Sofa</p>
+                        </div>
+                        <div id="ordqtpr" class="ordi"> 
+                            <p id="ordqty">Qty: 5</p>
+                            <p id="ordpri">Price: 1938</p>
+                        </div>
+                        <div id="ordeli" class="ordi">
+                            <p id="ordate">Delivary Date: 23-05-2023</p>
+                            <p id="ordsta">Status:shipping</p>
+                        </div> -->
                     </div>
                 </section>
             </div>
@@ -244,5 +212,93 @@
         </div>
         </footer>
         <!-----Footer End----->
+        <script src="/js/header.js"></script>
+        <script>
+            // Create the main container div
+const containerDiv = document.createElement('div');
+containerDiv.id = 'orderContainer';
+containerDiv.className ='ordmdi';
+
+// Create the first div for the image
+const imageDiv = document.createElement('div');
+imageDiv.id = 'ordimg';
+imageDiv.className = 'ordi';
+
+// Create the image element
+const image = document.createElement('img');
+image.src = 'https://m.media-amazon.com/images/I/71cBZJsl+EL._SL1500_.jpg';
+image.alt = '';
+
+// Append the image to the image div
+imageDiv.appendChild(image);
+
+// Append the image div to the container div
+containerDiv.appendChild(imageDiv);
+
+// Create the second div for the product name
+const productNameDiv = document.createElement('div');
+productNameDiv.id = 'ordprna';
+productNameDiv.className = 'ordi';
+
+// Create the paragraph element for the product name
+const productName = document.createElement('p');
+productName.textContent = 'Boult Audio Maverick Truly Wireless';
+
+// Append the product name paragraph to the product name div
+productNameDiv.appendChild(productName);
+
+// Append the product name div to the container div
+containerDiv.appendChild(productNameDiv);
+
+// Create the third div for quantity and price
+const quantityPriceDiv = document.createElement('div');
+quantityPriceDiv.id = 'ordqtpr';
+quantityPriceDiv.className = 'ordi';
+
+// Create the paragraph element for quantity
+const quantity = document.createElement('p');
+quantity.id = 'ordqty';
+quantity.textContent = 'Qty: 2';
+
+// Create the paragraph element for price
+const price = document.createElement('p');
+price.id = 'ordpri';
+price.textContent = 'Price: 2248';
+
+// Append the quantity and price paragraphs to the quantity and price div
+quantityPriceDiv.appendChild(quantity);
+quantityPriceDiv.appendChild(price);
+
+// Append the quantity and price div to the container div
+containerDiv.appendChild(quantityPriceDiv);
+
+// Create the fourth div for delivery date and status
+const deliveryStatusDiv = document.createElement('div');
+deliveryStatusDiv.id = 'ordeli';
+deliveryStatusDiv.className = 'ordi';
+
+// Create the paragraph element for delivery date
+const deliveryDate = document.createElement('p');
+deliveryDate.id = 'ordate';
+deliveryDate.textContent = 'Delivery Date: 2023-05-26';
+
+// Create the paragraph element for status
+const status = document.createElement('p');
+status.id = 'ordsta';
+status.textContent = 'Status: shipping';
+
+// Append the delivery date and status paragraphs to the delivery and status div
+deliveryStatusDiv.appendChild(deliveryDate);
+deliveryStatusDiv.appendChild(status);
+
+// Append the delivery and status div to the container div
+containerDiv.appendChild(deliveryStatusDiv);
+
+// Append the container div to the document body
+document.body.appendChild(containerDiv);
+document.querySelector(".ordmd").append(containerDiv);
+
+
+        </script>
     </body>
 </html>

@@ -176,7 +176,9 @@
         // Create the second cell in the second row
         const cell2_2 = document.createElement("td");
         cell2_2.id = "rf";
-        cell2_2.textContent = upr;
+        // cell2_2.textContent = upr;
+        cell2_2.innerHTML =  "₹" + upr;
+
         row2.appendChild(cell2_2);
 
         table.appendChild(row2);
@@ -184,6 +186,19 @@
         // Add the table to the document body or any desired container element
         document.body.appendChild(table);
         document.querySelector(".rightside").append(table);
+
+        // // payment confirm button
+        // const pay_btn = document.createElement("button");
+        // pay_btn.setAttribute("class", "add");
+        // pay_btn.setAttribute("custom-id", pid);
+        // pay_btn.innerText = "Add to Cart";
+
+        // // payment cancel button
+        // const paycancel_btn = document.createElement("button");
+        // paycancel_btn.setAttribute("class", "buy");
+        // paycancel_btn.setAttribute("custom-id", pid);
+        // paycancel_btn.innerText = "Wishlist";
+        // document.querySelector(".cobtn").append(pay_btn, paycancel_btn);
         
     </script>
 

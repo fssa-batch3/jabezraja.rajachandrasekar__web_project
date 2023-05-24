@@ -48,7 +48,7 @@ const afterlog = `<div class="header-left">
         <ul class="login_dropdown_list">
             <li class="login_drop_li"><i class="fa-solid fa-user"></i><a href="${myportal}">My Profile</a></li>
             <li class="login_drop_li"><i class="fa-solid fa-bag-shopping"></i> <a href="${order}" >Order</a></li>
-            <li class="login_drop_li"><i class="fa-solid fa-heart"></i> <a href="${wishlist}" >Whislist</a></li>
+            <li class="login_drop_li"><i class="fa-solid fa-heart"></i> <a href="${wishlist}" >Wishlist</a></li>
             <li class="login_drop_li"><i class="more-icon fa fa-bell"></i> <a href="${notification}" >Notification</a></li>
         </ul>
     </div>

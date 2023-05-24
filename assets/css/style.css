@@ -237,6 +237,50 @@ header{
     margin-bottom: 20px;
 }
 
+/*----ORDER DIV----*/
+.ordmd{
+    border: 1px solid #e3d1a9;
+    width: 760px;
+}
+.ordmdi{
+display: flex;
+/* box-shadow: 1px 1px 3px rgb(145 145 145); */
+border-bottom: 1px solid #e3d1a9;
+cursor: pointer;
+align-content: space-between;
+width: 760px;
+align-items: center;
+}
+.ordi p{
+    color: black;
+    letter-spacing: normal;
+    line-height: 18px;
+    margin-bottom: auto;
+ 
+}
+.ordi{
+    padding: 10px;
+}
+.ordi p{
+    font-size: 16px;
+}
+.ordi img{
+    height: 100px;
+    width: 80px;
+}
+#ordimg{
+    max-width: 140px;
+}
+#ordprna{
+    max-width: 360px;
+}
+#ordqtpr{
+    max-width: 180px;
+}
+#ordeli{
+    max-width:307px;
+}
+
 .proedi{
     display: flex;
     justify-content: space-between;
@@ -561,6 +605,9 @@ header{
     width: 100%;
     margin-bottom: 5px;
 }
+#pbtn{
+    margin-top: 10px;
+}
 
 .sd, .ca{
     width: 200px;
@@ -644,11 +691,9 @@ font-size: 15px;
     padding-right:  20px;
     padding-left: 20px;
 }
-
 .sti{
-    margin-top: 13.5;
+    margin-top: 12px;
 }
-
 .stin{
     margin-top: 16px;
     padding-right:  20px;
