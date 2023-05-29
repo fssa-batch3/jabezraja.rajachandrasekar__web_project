@@ -22,13 +22,13 @@
             <div class="left">
                 <!-- <div class="image">
                         <img src="../../assets/images/products/cr1boe1.jpg" alt="boAt BassHeads 950v2 wired Over Ear Headphones (Warm Grey)" height="450px" width="400px" />
-                        </div> -->
+                     </div> -->
                 <!--<div class="subi">
                         <div class="sub-images"> <img src="../../assets/images/products/cr1boe1.jpg" alt="boAt BassHeads 950v2 wired Over Ear Headphones (Warm Grey)"/>  </div>
                         <div class="sub-images"> <img src="../../assets/images/products/cr1boe1.1.jpg" alt="40mm driver"/> </div>
                         <div class="sub-images"> <img src="../../assets/images/products/cr1boe1.2.jpg" alt="lightweight"/> </div>
                         <div class="sub-images"> <img src="../../assets/images/products/cr1boe1.4.jpg" alt="3.5mm gold plated jack"/> </div> 
-                        </div>-->
+                    </div>-->
             </div>
             <div class="right">
                 <h2 id="ph"> </h2>
@@ -48,10 +48,7 @@
                     </a>
                 </div>
 
-                <div class="addbuy">
-                    <!-- <button class="add"> <a href="../cart/cart.html">ADD TO CART </a> </button> -->
-                    <!-- <button class="buy"> <a href="../cart/wishlist.html">WISHLIST </a> </button> -->
-                </div>
+                <div class="addbuy"></div>
 
                 <div class="">
                     <div class="fe">FEATURES</div>
@@ -315,7 +312,7 @@
 
             if (!sam) {
                 alert("Please Login");
-                return;
+
             }
             else {
                 for (let i = 0; i < whishlist.length; i++) {
@@ -325,11 +322,11 @@
                         window.location.href = "../cart/wishlist.html";
                         return;
                     }
-                }   
+                }
                 alert("added to your wishlist");
                 whishlist.push({ product_id, sam });
                 localStorage.setItem("whishlist_details", JSON.stringify(whishlist));
-                window.location.href = "../cart/wishlist.html";      
+                window.location.href = "../cart/wishlist.html";
             }
         });
 
@@ -343,12 +340,12 @@
             // getting current user details
 
             const sam = JSON.parse(localStorage.getItem("user_data"));
-            let incre_decre = document.getElementById("incre_decre")
-            let p_qty = incre_decre.value;
+            const incre_decre = document.getElementById("incre_decre")
+            const p_qty = incre_decre.value;
 
             if (!sam) {
                 alert("Please Login");
-                return;
+
             }
             else {
                 for (let i = 0; i < cart.length; i++) {
@@ -359,10 +356,10 @@
                         return;
                     }
                 }
-                        alert("added to your cart");
-                        cart.push({ product_id, sam, p_qty });
-                        localStorage.setItem("cart_details", JSON.stringify(cart));
-                        window.location.href = "../cart/cart.html";
+                alert("added to your cart");
+                cart.push({ product_id, sam, p_qty });
+                localStorage.setItem("cart_details", JSON.stringify(cart));
+                window.location.href = "../cart/cart.html";
             }
         });
 

@@ -6,13 +6,14 @@ function logout() {
 
 // JSON FOR THE CATAGORY IF THE ARRAY IS EMPTY
 const pr_detail = [
-        //1
+        // 1
         {
                 Quantiy: "23",
                 attractive_offer_discount: "10% off",
                 brand_name: "Boult",
                 catagory: "Deals of the Day",
-                description: "Combat Mode for gaming: Switch on the Combat mode and enjoy seamless gameplay with 45m/s latency. 35 Hrs total playtime with gaming mode on, and 7 hrs playtime on a single charge. You may run out of things to play, but you’ll not run out of battery. Lightning Boult Fast charging: 10 mins charge delivers 120 mins of playtime. A quick fix for anything impromptu.",
+                description:
+                        "Combat Mode for gaming: Switch on the Combat mode and enjoy seamless gameplay with 45m/s latency. 35 Hrs total playtime with gaming mode on, and 7 hrs playtime on a single charge. You may run out of things to play, but you’ll not run out of battery. Lightning Boult Fast charging: 10 mins charge delivers 120 mins of playtime. A quick fix for anything impromptu.",
                 features: "Sweatproof, Fast Charging, Microphone Included, Fast Charging,In-Line Touch Control, Water Resistant, Low Latency Mode, Voice Assistant, Microphone included, Extra Bass, 32 Hours Playtime",
                 image: {
                         main_img: "https://m.media-amazon.com/images/I/71cBZJsl+EL._SL1500_.jpg",
@@ -26,13 +27,14 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a601-6aaa36e10937",
                 size: "-",
         },
-        //2
+        // 2
         {
                 Quantiy: "23",
                 attractive_offer_discount: "10% off",
                 brand_name: "Bar Box",
                 catagory: "Deals of the Day",
-                description: "18/8 STAINLESS STEEL COCKTAIL SHAKER - Cocktail drink shaker are made by 18/8 food grade stainless steel with a mirror finish,This all-stainless drink shaker set will not break like glass shakers, no rubber seal to crack.The Shaker features a nice leak-proof seal, it will not wobbly, shakers will not rusty, if you clean dry the cocktails shaker after every use.You can dish-wash your bar tools and keep their shine with ease.",
+                description:
+                        "18/8 STAINLESS STEEL COCKTAIL SHAKER - Cocktail drink shaker are made by 18/8 food grade stainless steel with a mirror finish,This all-stainless drink shaker set will not break like glass shakers, no rubber seal to crack.The Shaker features a nice leak-proof seal, it will not wobbly, shakers will not rusty, if you clean dry the cocktails shaker after every use.You can dish-wash your bar tools and keep their shine with ease.",
                 features: "Material-Stainless Steel, Brand-Bar Box, Colour-Steel 14 pcs",
                 image: {
                         main_img: "https://m.media-amazon.com/images/I/71nPNTjo75L._SL1500_.jpg",
@@ -46,13 +48,14 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a601-6zaa36e10937",
                 size: "-",
         },
-        //3
+        // 3
         {
                 Quantiy: "23",
                 attractive_offer_discount: "5% off",
                 brand_name: "Centy",
                 catagory: "Deals of the Day",
-                description: "Country of Origin: India, Color: Assorted Color; Number of Pieces: 1; Skills: Eye Hand Coordination, Material: Plastic; Included Items: 1 Pull Back Car, Dimension: LxWxH: 150*60*60 mm; Recommended Age: 3 Years and Above, Pull back toy; Attractive colors, Included Components: 1 Pull Back Car, Age Range Description: 3 Years and Above, Item Dimension: 2.36 inches x 2.36 inches x 5.9 inches",
+                description:
+                        "Country of Origin: India, Color: Assorted Color; Number of Pieces: 1; Skills: Eye Hand Coordination, Material: Plastic; Included Items: 1 Pull Back Car, Dimension: LxWxH: 150*60*60 mm; Recommended Age: 3 Years and Above, Pull back toy; Attractive colors, Included Components: 1 Pull Back Car, Age Range Description: 3 Years and Above, Item Dimension: 2.36 inches x 2.36 inches x 5.9 inches",
                 features: "Colour: Silver, Style Name: Echo Sports, Size: Small",
                 image: {
                         main_img: "https://m.media-amazon.com/images/I/51SnQeZkPmL._SL1000_.jpg",
@@ -66,13 +69,14 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a601-6aza36e10937",
                 size: "-",
         },
-        //4
+        // 4
         {
                 Quantiy: "3",
                 attractive_offer_discount: "5% off",
                 brand_name: "PHILIPS",
                 catagory: "Deals of the Day",
-                description: "Advanced concentrator technology with quick-heat head, Thermo protect temperature setting. Hanging loop : yes, Not cordless, 1.5-meter power cord, Compact design for easy handling; easy storage hook for convenient storage, 1000 watts and 2 years Philips India warranty from the date of purchase, There are two settings for drying speed (low, high); the motor speed is regulated to cater to these settings perfectly. There will not be any issue on fan speeds at low, high settings.",
+                description:
+                        "Advanced concentrator technology with quick-heat head, Thermo protect temperature setting. Hanging loop : yes, Not cordless, 1.5-meter power cord, Compact design for easy handling; easy storage hook for convenient storage, 1000 watts and 2 years Philips India warranty from the date of purchase, There are two settings for drying speed (low, high); the motor speed is regulated to cater to these settings perfectly. There will not be any issue on fan speeds at low, high settings.",
                 features: "Colour:Purple, Material:Plastic, Wattage:1000 Watts, Power Source:Corded Electric.",
                 image: {
                         main_img: "https://m.media-amazon.com/images/I/51FGbb3EbgL._SL1227_.jpg",
@@ -86,13 +90,14 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a601-6zia14e10937",
                 size: "-",
         },
-        //5
+        // 5
         {
                 Quantiy: "4",
                 attractive_offer_discount: "23% off",
                 brand_name: "Nature4Nature",
                 catagory: "Deals of the Day",
-                description: "Product Dimensions: 7.6 x 7.6 x 7.6 cm; Date First Available: 31 August 2022, Manufacturer: Hans Herbal Overseas (India) New Delhi, ASIN: B0BD9685LS, Item part number: Quick Enhance: Soap Free Face cleanser, Country of Origin: India, Item Weight: 290 g",
+                description:
+                        "Product Dimensions: 7.6 x 7.6 x 7.6 cm; Date First Available: 31 August 2022, Manufacturer: Hans Herbal Overseas (India) New Delhi, ASIN: B0BD9685LS, Item part number: Quick Enhance: Soap Free Face cleanser, Country of Origin: India, Item Weight: 290 g",
                 features: "Cruelty Free, Vegan, Paraben Free, Scent: Sandalwood.",
                 image: {
                         main_img: "https://m.media-amazon.com/images/I/81SRDwFqPEL._SL1500_.jpg",
@@ -106,13 +111,14 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6zia14e10937",
                 size: "-",
         },
-        //6
+        // 6
         {
                 Quantiy: "47",
                 attractive_offer_discount: "39% off",
                 brand_name: "Trevi Mustang",
                 catagory: "Furniture Bestseller",
-                description: "Primary Material: Engineered Wood, Width x Height: 145.2 cm x 180 cm (4 ft 9 in x 5 ft 10 in), Number Of Doors: 4, Number Of Shelves: 11, Weight: 98",
+                description:
+                        "Primary Material: Engineered Wood, Width x Height: 145.2 cm x 180 cm (4 ft 9 in x 5 ft 10 in), Number Of Doors: 4, Number Of Shelves: 11, Weight: 98",
                 features: "Primary Material: Engineered Wood, Width x Height: 145.2 cm x 180 cm (4 ft 9 in x 5 ft 10 in).",
                 image: {
                         main_img: "https://rukminim1.flixcart.com/image/832/832/xif0q/wardrobe-closet/w/q/y/-original-imagztahzfesqtsh.jpeg?q=70",
@@ -126,13 +132,14 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
                 size: "-",
         },
-        //7
+        // 7
         {
                 Quantiy: "10",
                 attractive_offer_discount: "51% off",
                 brand_name: "T&TFM Co",
                 catagory: "Furniture Bestseller",
-                description: "PRIMARY MATERIAL: Upholstery Material: Premium Soft Touch Leatherette; Legs: Pure Stainless Steel Legs in Gold Finish; Frame Material: Solid Teak Sagwan Wood+ Multilayer Board, FILLING MATERIAL: Sleepwell Super Soft Premium Foam with High and fiber-wrapped soy-based polyfoam, 2 YEARS WARRANTY: The product comes with a 2 Year warranty against any manufacturing defects, FEATURES: Super Soft Cushions; 3x Comfortable; Upholstered Soft Touch Leatherette Cushion back Sofa Set with Solid Teak Wood Sofa Set, Comfy, Imperia Collection Stylish, Modern & Luxury. Diamond buttons adds lovely detail to the Modern style.",
+                description:
+                        "PRIMARY MATERIAL: Upholstery Material: Premium Soft Touch Leatherette; Legs: Pure Stainless Steel Legs in Gold Finish; Frame Material: Solid Teak Sagwan Wood+ Multilayer Board, FILLING MATERIAL: Sleepwell Super Soft Premium Foam with High and fiber-wrapped soy-based polyfoam, 2 YEARS WARRANTY: The product comes with a 2 Year warranty against any manufacturing defects, FEATURES: Super Soft Cushions; 3x Comfortable; Upholstered Soft Touch Leatherette Cushion back Sofa Set with Solid Teak Wood Sofa Set, Comfy, Imperia Collection Stylish, Modern & Luxury. Diamond buttons adds lovely detail to the Modern style.",
                 features: "Pattern Name: Beige.",
                 image: {
                         main_img: "https://m.media-amazon.com/images/I/61+h9JtR2fL._SL1000_.jpg",
@@ -142,17 +149,19 @@ const pr_detail = [
                 },
                 price: "89999",
                 product_catagory: "Sofa",
-                product_name: "Luxury Imperia Collection Diamond Buttoned Quilting Back and Golden Strips Sofa",
+                product_name:
+                        "Luxury Imperia Collection Diamond Buttoned Quilting Back and Golden Strips Sofa",
                 puid: "3d4d8afc-e9c3-0d74-a637-6lda14e10937",
                 size: "large",
         },
-        //8
+        // 8
         {
                 Quantiy: "30",
                 attractive_offer_discount: "40% off",
                 brand_name: "PAZANO",
                 catagory: "Furniture Bestseller",
-                description: "[Large desktop space, ergonomic design] Computer workstation panel size: 90x 60cm. Large space can be easily used to cope with work and study scenes. When working, the desktop can easily place a monitor and a laptop for simultaneous use. Size may very ±1.5%. When studying, the desktop can easily accommodate books and learning tools. Ergonomic design, 75 cm desktop height, both adults and children can be used comfortably, [Robust and durable construction] The table is composed of a high-quality metal frame. The frame is made of solid powdery coated steel, with high stability and durability. Compared with the same model in the market, both the material and durability are far better.",
+                description:
+                        "[Large desktop space, ergonomic design] Computer workstation panel size: 90x 60cm. Large space can be easily used to cope with work and study scenes. When working, the desktop can easily place a monitor and a laptop for simultaneous use. Size may very ±1.5%. When studying, the desktop can easily accommodate books and learning tools. Ergonomic design, 75 cm desktop height, both adults and children can be used comfortably, [Robust and durable construction] The table is composed of a high-quality metal frame. The frame is made of solid powdery coated steel, with high stability and durability. Compared with the same model in the market, both the material and durability are far better.",
                 features: "Brand: PAZANO, Shape: Rectangular, Desk design: Computer Desk, Colour: White, Style: Modern, Base Material:Wood",
                 image: {
                         main_img: "https://m.media-amazon.com/images/I/615GNA6y2nL._SL1100_.jpg",
@@ -166,13 +175,14 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-cc37-6kia14e10937",
                 size: "",
         },
-        //9
+        // 9
         {
                 Quantiy: "22",
                 attractive_offer_discount: "39% off",
                 brand_name: "GANPATI ARTS",
                 catagory: "Furniture Bestseller",
-                description: "The Wooden King Size Double Bed Furniture for Home has an ideal that can be placed easily in your bedroom. The Palang Bed furniture is made of Solid Wood which ensures durability of the Solid Wood Bed, The Wooden King Size Bed Furniture has been one of the most essential and integral part of the Bedroom Furniture. The Wooden Bed has fine finishing that is ensuring no rough ends to the Bed Design, King Size Double Bed Dimensions: Length ( 78 Inch),Width (81 Inch),Height (41.5 Inch), Mattress Size: 72 x 78 inches (Not Included)KingSize.",
+                description:
+                        "The Wooden King Size Double Bed Furniture for Home has an ideal that can be placed easily in your bedroom. The Palang Bed furniture is made of Solid Wood which ensures durability of the Solid Wood Bed, The Wooden King Size Bed Furniture has been one of the most essential and integral part of the Bedroom Furniture. The Wooden Bed has fine finishing that is ensuring no rough ends to the Bed Design, King Size Double Bed Dimensions: Length ( 78 Inch),Width (81 Inch),Height (41.5 Inch), Mattress Size: 72 x 78 inches (Not Included)KingSize.",
                 features: "Size: King Size, Material: Rose Wood, Style:Modern, Special Feature: Durable, Finish Type: Glossy.",
                 image: {
                         main_img: "https://m.media-amazon.com/images/I/615g7zKpN+L._SL1500_.jpg",
@@ -186,13 +196,14 @@ const pr_detail = [
                 puid: "3d4d8afc-e237-4d74-a637-6kia14e10937",
                 size: "King",
         },
-        //10
+        // 10
         {
                 Quantiy: "57",
                 attractive_offer_discount: "57% off",
                 brand_name: "JR BRAND",
                 catagory: "Furniture Bestseller",
-                description: "Dimensions: 2007 x 940 x 1016 mm, Frame Material: Solid Wood; Color: Dark Brown, Special Features: Zig-zag spring with end-to-end hold prevents sagging when seated, keeping you comfortable, Warranty Description: Mechanism: 3-year manufacturing warranty Foam: 2-year manufacturing warranty Upholstery: 1-year manufacturing warranty.",
+                description:
+                        "Dimensions: 2007 x 940 x 1016 mm, Frame Material: Solid Wood; Color: Dark Brown, Special Features: Zig-zag spring with end-to-end hold prevents sagging when seated, keeping you comfortable, Warranty Description: Mechanism: 3-year manufacturing warranty Foam: 2-year manufacturing warranty Upholstery: 1-year manufacturing warranty.",
                 features: "Colour: Dark Brown, Style: Manual, Material: Pine.",
                 image: {
                         main_img: "https://m.media-amazon.com/images/I/91iq-oxI8hL._SL1500_.jpg",
@@ -206,7 +217,7 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d13-a637-6kia14e10937",
                 size: "large",
         },
-        //11
+        // 11
         {
                 Quantiy: "",
                 attractive_offer_discount: "",
@@ -226,7 +237,7 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
                 size: "",
         },
-        //12
+        // 12
         {
                 Quantiy: "",
                 attractive_offer_discount: "",
@@ -246,7 +257,7 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
                 size: "",
         },
-        //13
+        // 13
         {
                 Quantiy: "",
                 attractive_offer_discount: "",
@@ -266,7 +277,7 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
                 size: "",
         },
-        //14
+        // 14
         {
                 Quantiy: "",
                 attractive_offer_discount: "",
@@ -286,7 +297,7 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
                 size: "",
         },
-        //15
+        // 15
         {
                 Quantiy: "",
                 attractive_offer_discount: "",
@@ -306,7 +317,7 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
                 size: "",
         },
-                //16
+        // 16
         {
                 Quantiy: "",
                 attractive_offer_discount: "",
@@ -326,27 +337,7 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
                 size: "",
         },
-        //17
-        {
-                Quantiy: "",
-                attractive_offer_discount: "",
-                brand_name: "",
-                catagory: "",
-                description: "",
-                features: ".",
-                image: {
-                        main_img: "",
-                        sub_img1: "",
-                        sub_img2: "",
-                        sub_img3: "",
-                },
-                price: "",
-                product_catagory: "",
-                product_name: "",
-                puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
-                size: "",
-                },
-        //18
+        // 17
         {
                 Quantiy: "",
                 attractive_offer_discount: "",
@@ -366,7 +357,7 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
                 size: "",
         },
-        //19
+        // 18
         {
                 Quantiy: "",
                 attractive_offer_discount: "",
@@ -386,7 +377,7 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
                 size: "",
         },
-        //20
+        // 19
         {
                 Quantiy: "",
                 attractive_offer_discount: "",
@@ -406,7 +397,7 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
                 size: "",
         },
-        //21
+        // 20
         {
                 Quantiy: "",
                 attractive_offer_discount: "",
@@ -426,7 +417,7 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
                 size: "",
         },
-        //22
+        // 21
         {
                 Quantiy: "",
                 attractive_offer_discount: "",
@@ -446,7 +437,7 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
                 size: "",
         },
-        //23
+        // 22
         {
                 Quantiy: "",
                 attractive_offer_discount: "",
@@ -466,7 +457,7 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
                 size: "",
         },
-        //24
+        // 23
         {
                 Quantiy: "",
                 attractive_offer_discount: "",
@@ -486,7 +477,7 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
                 size: "",
         },
-        //25
+        // 24
         {
                 Quantiy: "",
                 attractive_offer_discount: "",
@@ -506,7 +497,7 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
                 size: "",
         },
-        //26
+        // 25
         {
                 Quantiy: "",
                 attractive_offer_discount: "",
@@ -526,7 +517,7 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
                 size: "",
         },
-        //27
+        // 26
         {
                 Quantiy: "",
                 attractive_offer_discount: "",
@@ -546,7 +537,7 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
                 size: "",
         },
-        //28
+        // 27
         {
                 Quantiy: "",
                 attractive_offer_discount: "",
@@ -566,7 +557,7 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
                 size: "",
         },
-        //29
+        // 28
         {
                 Quantiy: "",
                 attractive_offer_discount: "",
@@ -586,7 +577,7 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
                 size: "",
         },
-        //30
+        // 29
         {
                 Quantiy: "",
                 attractive_offer_discount: "",
@@ -606,187 +597,7 @@ const pr_detail = [
                 puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
                 size: "",
         },
-        //31
-        {
-                Quantiy: "",
-                attractive_offer_discount: "",
-                brand_name: "",
-                catagory: "",
-                description: "",
-                features: ".",
-                image: {
-                        main_img: "",
-                        sub_img1: "",
-                        sub_img2: "",
-                        sub_img3: "",
-                },
-                price: "",
-                product_catagory: "",
-                product_name: "",
-                puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
-                size: "",
-        },
-        //32
-        {
-                Quantiy: "",
-                attractive_offer_discount: "",
-                brand_name: "",
-                catagory: "",
-                description: "",
-                features: ".",
-                image: {
-                        main_img: "",
-                        sub_img1: "",
-                        sub_img2: "",
-                        sub_img3: "",
-                },
-                price: "",
-                product_catagory: "",
-                product_name: "",
-                puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
-                size: "",
-        },
-        //33
-        {
-                Quantiy: "",
-                attractive_offer_discount: "",
-                brand_name: "",
-                catagory: "",
-                description: "",
-                features: ".",
-                image: {
-                        main_img: "",
-                        sub_img1: "",
-                        sub_img2: "",
-                        sub_img3: "",
-                },
-                price: "",
-                product_catagory: "",
-                product_name: "",
-                puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
-                size: "",
-        },
-        //34
-        {
-                Quantiy: "",
-                attractive_offer_discount: "",
-                brand_name: "",
-                catagory: "",
-                description: "",
-                features: ".",
-                image: {
-                        main_img: "",
-                        sub_img1: "",
-                        sub_img2: "",
-                        sub_img3: "",
-                },
-                price: "",
-                product_catagory: "",
-                product_name: "",
-                puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
-                size: "",
-        },
-        //35
-        {
-                Quantiy: "",
-                attractive_offer_discount: "",
-                brand_name: "",
-                catagory: "",
-                description: "",
-                features: ".",
-                image: {
-                        main_img: "",
-                        sub_img1: "",
-                        sub_img2: "",
-                        sub_img3: "",
-                },
-                price: "",
-                product_catagory: "",
-                product_name: "",
-                puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
-                size: "",
-        },
-        //36
-        {
-                Quantiy: "",
-                attractive_offer_discount: "",
-                brand_name: "",
-                catagory: "",
-                description: "",
-                features: ".",
-                image: {
-                        main_img: "",
-                        sub_img1: "",
-                        sub_img2: "",
-                        sub_img3: "",
-                },
-                price: "",
-                product_catagory: "",
-                product_name: "",
-                puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
-                size: "",
-        },
-        //37
-        {
-                Quantiy: "",
-                attractive_offer_discount: "",
-                brand_name: "",
-                catagory: "",
-                description: "",
-                features: ".",
-                image: {
-                        main_img: "",
-                        sub_img1: "",
-                        sub_img2: "",
-                        sub_img3: "",
-                },
-                price: "",
-                product_catagory: "",
-                product_name: "",
-                puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
-                size: "",
-        },
-        //38
-        {
-                Quantiy: "",
-                attractive_offer_discount: "",
-                brand_name: "",
-                catagory: "",
-                description: "",
-                features: ".",
-                image: {
-                        main_img: "",
-                        sub_img1: "",
-                        sub_img2: "",
-                        sub_img3: "",
-                },
-                price: "",
-                product_catagory: "",
-                product_name: "",
-                puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
-                size: "",
-        },
-        //39
-        {
-                Quantiy: "",
-                attractive_offer_discount: "",
-                brand_name: "",
-                catagory: "",
-                description: "",
-                features: ".",
-                image: {
-                        main_img: "",
-                        sub_img1: "",
-                        sub_img2: "",
-                        sub_img3: "",
-                },
-                price: "",
-                product_catagory: "",
-                product_name: "",
-                puid: "3d4d8afc-e9c3-4d74-a637-6kia14e10937",
-                size: "",
-        },
-        //40
+        // 30
         {
                 Quantiy: "",
                 attractive_offer_discount: "",
@@ -869,7 +680,7 @@ const deals_of_the_day = [
 
 for (let i = 0; i <= 4; i++) {
         // remove the re-declaration and re-initialization
-        let card_1 = document.createElement("div");
+        const card_1 = document.createElement("div");
         card_1.setAttribute("class", "common-col");
 
         const img_of_electronics = document.createElement("img");
@@ -900,7 +711,6 @@ for (let i = 0; i <= 4; i++) {
         h6_for_product.innerText = deals_of_the_day[i].sub;
         card_1.append(h6_for_product);
 
-        // append the card to the container outside the loop
         document.querySelector("div.common-row-col-deals").append(card_1);
         // if the append is null or not define uncomment this code
         // const containers = document.querySelectorAll("div.common-row-col-deals");
@@ -908,15 +718,6 @@ for (let i = 0; i <= 4; i++) {
         //     container.append(card_1.cloneNode(true));
         // });
 }
-
-// const category = document.querySelectorAll('.product-img')
-
-// category.forEach(function (add){
-//    add.addEventListener("click",(e)=> {
-//       const id = each.id;
-//       window.location.href = `./pages/products and detial pages/best of electronincs.html=${id}`;
-//    })
-// });
 
 // JSON FOR Furniture Bestseller
 const furniture_bestseller = [
@@ -1383,192 +1184,192 @@ for (let i = 0; i <= 4; i++) {
         document.querySelector("div.common-row-col-deals5").append(card_6);
 }
 
-// JSON for Mens_Fashion
-const Mens_Fashion = [
-        {
-                title: "Watches",
-                image: {
-                        source: "assets/images/products/m2.png",
-                        alt: "Watches",
-                },
-                "price-offers": "₹149",
-                sub: "LED & LCD",
-        },
+// // JSON for Mens_Fashion
+// const Mens_Fashion = [
+//         {
+//                 title: "Watches",
+//                 image: {
+//                         source: "assets/images/products/m2.png",
+//                         alt: "Watches",
+//                 },
+//                 "price-offers": "₹149",
+//                 sub: "LED & LCD",
+//         },
 
-        {
-                title: "Jackets_Hoodies",
-                image: {
-                        source: "assets/images/products/m1.png",
-                        alt: "Jackets & Hoodies",
-                },
-                "price-offers": "₹477",
-                sub: "JR, SR & KR",
-        },
+//         {
+//                 title: "Jackets_Hoodies",
+//                 image: {
+//                         source: "assets/images/products/m1.png",
+//                         alt: "Jackets & Hoodies",
+//                 },
+//                 "price-offers": "₹477",
+//                 sub: "JR, SR & KR",
+//         },
 
-        {
-                title: "Shoes",
-                image: {
-                        source: "assets/images/products/m3.png",
-                        alt: "Shoes",
-                },
-                "price-offers": "₹57",
-                sub: "CAPYLYTE, Wanzhow",
-        },
+//         {
+//                 title: "Shoes",
+//                 image: {
+//                         source: "assets/images/products/m3.png",
+//                         alt: "Shoes",
+//                 },
+//                 "price-offers": "₹57",
+//                 sub: "CAPYLYTE, Wanzhow",
+//         },
 
-        {
-                title: "Accessories",
-                image: {
-                        source: "assets/images/products/m6.png",
-                        alt: "Accessories",
-                },
-                "price-offers": "₹77",
-                sub: "Best Selling Range",
-        },
+//         {
+//                 title: "Accessories",
+//                 image: {
+//                         source: "assets/images/products/m6.png",
+//                         alt: "Accessories",
+//                 },
+//                 "price-offers": "₹77",
+//                 sub: "Best Selling Range",
+//         },
 
-        {
-                title: "Grooming",
-                image: {
-                        source: "assets/images/products/m7.png",
-                        alt: "Grooming",
-                },
-                "price-offers": "₹99",
-                sub: "BSR",
-        },
-];
+//         {
+//                 title: "Grooming",
+//                 image: {
+//                         source: "assets/images/products/m7.png",
+//                         alt: "Grooming",
+//                 },
+//                 "price-offers": "₹99",
+//                 sub: "BSR",
+//         },
+// ];
 
-// declare and initialize the variable outside the loop
-let card_7;
+// // declare and initialize the variable outside the loop
+// let card_7;
 
-for (let i = 0; i <= 4; i++) {
-        // remove the re-declaration and re-initialization
-        card_7 = document.createElement("div");
-        card_7.setAttribute("class", "common-col");
+// for (let i = 0; i <= 4; i++) {
+//         // remove the re-declaration and re-initialization
+//         card_7 = document.createElement("div");
+//         card_7.setAttribute("class", "common-col");
 
-        const img_of_electronics = document.createElement("img");
-        img_of_electronics.setAttribute("class", "product-img");
-        img_of_electronics.setAttribute("src", Mens_Fashion[i].image.source);
-        img_of_electronics.setAttribute("alt", Mens_Fashion[i].image.alt);
-        card_7.append(img_of_electronics);
+//         const img_of_electronics = document.createElement("img");
+//         img_of_electronics.setAttribute("class", "product-img");
+//         img_of_electronics.setAttribute("src", Mens_Fashion[i].image.source);
+//         img_of_electronics.setAttribute("alt", Mens_Fashion[i].image.alt);
+//         card_7.append(img_of_electronics);
 
-        // eslint-disable-next-line no-inner-declarations
-        function redirect() {
-                window.location.href = `./pages/products and detial pages/best of electronincs.html?id=${Mens_Fashion[i].title}`;
-        }
+//         // eslint-disable-next-line no-inner-declarations
+//         function redirect() {
+//                 window.location.href = `./pages/products and detial pages/best of electronincs.html?id=${Mens_Fashion[i].title}`;
+//         }
 
-        img_of_electronics.addEventListener("click", redirect);
+//         img_of_electronics.addEventListener("click", redirect);
 
-        const h3_for_product = document.createElement("h3");
-        h3_for_product.setAttribute("class", "product-title");
-        h3_for_product.innerText = Mens_Fashion[i].title;
-        card_7.append(h3_for_product);
+//         const h3_for_product = document.createElement("h3");
+//         h3_for_product.setAttribute("class", "product-title");
+//         h3_for_product.innerText = Mens_Fashion[i].title;
+//         card_7.append(h3_for_product);
 
-        const h4_for_product = document.createElement("h4");
-        h4_for_product.setAttribute("class", "price-title"); // add the missing prefix
-        h4_for_product.innerText = Mens_Fashion[i]["price-offers"];
-        card_7.append(h4_for_product);
+//         const h4_for_product = document.createElement("h4");
+//         h4_for_product.setAttribute("class", "price-title"); // add the missing prefix
+//         h4_for_product.innerText = Mens_Fashion[i]["price-offers"];
+//         card_7.append(h4_for_product);
 
-        const h6_for_product = document.createElement("h6");
-        h6_for_product.setAttribute("class", "price");
-        h6_for_product.innerText = Mens_Fashion[i].sub;
-        card_7.append(h6_for_product);
+//         const h6_for_product = document.createElement("h6");
+//         h6_for_product.setAttribute("class", "price");
+//         h6_for_product.innerText = Mens_Fashion[i].sub;
+//         card_7.append(h6_for_product);
 
-        // append the card to the container outside the loop
-        document.querySelector("div.common-row-col-deals6").append(card_7);
-}
+//         // append the card to the container outside the loop
+//         document.querySelector("div.common-row-col-deals6").append(card_7);
+// }
 
-// JSON for Mens_Fashion
-const Womens_Fashion = [
-        {
-                title: "Jewellary",
-                image: {
-                        source: "assets/images/products/w2.png",
-                        alt: "Jewellary",
-                },
-                "price-offers": "₹449",
-                sub: "Shop Now!",
-        },
+// // JSON for Mens_Fashion
+// const Womens_Fashion = [
+//         {
+//                 title: "Jewellary",
+//                 image: {
+//                         source: "assets/images/products/w2.png",
+//                         alt: "Jewellary",
+//                 },
+//                 "price-offers": "₹449",
+//                 sub: "Shop Now!",
+//         },
 
-        {
-                title: "Grooming",
-                image: {
-                        source: "assets/images/products/w7.png",
-                        alt: "Grooming",
-                },
-                "price-offers": "₹477",
-                sub: "SkinCare, Makeupkit & More",
-        },
+//         {
+//                 title: "Grooming",
+//                 image: {
+//                         source: "assets/images/products/w7.png",
+//                         alt: "Grooming",
+//                 },
+//                 "price-offers": "₹477",
+//                 sub: "SkinCare, Makeupkit & More",
+//         },
 
-        {
-                title: "Dresses",
-                image: {
-                        source: "assets/images/products/w3.png",
-                        alt: "Dresses",
-                },
-                "price-offers": "45% to 55% off",
-                sub: "Sarees & more",
-        },
+//         {
+//                 title: "Dresses",
+//                 image: {
+//                         source: "assets/images/products/w3.png",
+//                         alt: "Dresses",
+//                 },
+//                 "price-offers": "45% to 55% off",
+//                 sub: "Sarees & more",
+//         },
 
-        {
-                title: "Shoes",
-                image: {
-                        source: "assets/images/products/w5.png",
-                        alt: "Shoes",
-                },
-                "price-offers": "₹377",
-                sub: "Asian, Puma & More",
-        },
+//         {
+//                 title: "Shoes",
+//                 image: {
+//                         source: "assets/images/products/w5.png",
+//                         alt: "Shoes",
+//                 },
+//                 "price-offers": "₹377",
+//                 sub: "Asian, Puma & More",
+//         },
 
-        {
-                title: "Accessories",
-                image: {
-                        source: "assets/images/products/w6.png",
-                        alt: "Accessories",
-                },
+//         {
+//                 title: "Accessories",
+//                 image: {
+//                         source: "assets/images/products/w6.png",
+//                         alt: "Accessories",
+//                 },
 
-                "price-offers": "₹199",
-                sub: "Handbags, Wallets & Totes",
-        },
-];
+//                 "price-offers": "₹199",
+//                 sub: "Handbags, Wallets & Totes",
+//         },
+// ];
 
-// declare and initialize the variable outside the loop
-let card_8;
+// // declare and initialize the variable outside the loop
+// let card_8;
 
-for (let i = 0; i <= 4; i++) {
-        // remove the re-declaration and re-initialization
-        card_8 = document.createElement("div");
-        card_8.setAttribute("class", "common-col");
+// for (let i = 0; i <= 4; i++) {
+//         // remove the re-declaration and re-initialization
+//         card_8 = document.createElement("div");
+//         card_8.setAttribute("class", "common-col");
 
-        const img_of_electronics = document.createElement("img");
-        img_of_electronics.setAttribute("class", "product-img");
-        img_of_electronics.setAttribute("src", Womens_Fashion[i].image.source);
-        img_of_electronics.setAttribute("alt", Womens_Fashion[i].image.alt);
-        card_8.append(img_of_electronics);
+//         const img_of_electronics = document.createElement("img");
+//         img_of_electronics.setAttribute("class", "product-img");
+//         img_of_electronics.setAttribute("src", Womens_Fashion[i].image.source);
+//         img_of_electronics.setAttribute("alt", Womens_Fashion[i].image.alt);
+//         card_8.append(img_of_electronics);
 
-        // eslint-disable-next-line no-inner-declarations
-        function redirect() {
-                window.location.href = `./pages/products and detial pages/best of electronincs.html?id=${Womens_Fashion[i].title}`;
-        }
+//         // eslint-disable-next-line no-inner-declarations
+//         function redirect() {
+//                 window.location.href = `./pages/products and detial pages/best of electronincs.html?id=${Womens_Fashion[i].title}`;
+//         }
 
-        img_of_electronics.addEventListener("click", redirect);
+//         img_of_electronics.addEventListener("click", redirect);
 
-        const h3_for_product = document.createElement("h3");
-        h3_for_product.setAttribute("class", "product-title");
-        h3_for_product.innerText = Womens_Fashion[i].title;
-        card_8.append(h3_for_product);
+//         const h3_for_product = document.createElement("h3");
+//         h3_for_product.setAttribute("class", "product-title");
+//         h3_for_product.innerText = Womens_Fashion[i].title;
+//         card_8.append(h3_for_product);
 
-        const h4_for_product = document.createElement("h4");
-        h4_for_product.setAttribute("class", "price-title"); // add the missing prefix
-        h4_for_product.innerText = Womens_Fashion[i]["price-offers"];
-        card_8.append(h4_for_product);
+//         const h4_for_product = document.createElement("h4");
+//         h4_for_product.setAttribute("class", "price-title"); // add the missing prefix
+//         h4_for_product.innerText = Womens_Fashion[i]["price-offers"];
+//         card_8.append(h4_for_product);
 
-        const h6_for_product = document.createElement("h6");
-        h6_for_product.setAttribute("class", "price");
-        h6_for_product.innerText = Womens_Fashion[i].sub;
-        card_8.append(h6_for_product);
+//         const h6_for_product = document.createElement("h6");
+//         h6_for_product.setAttribute("class", "price");
+//         h6_for_product.innerText = Womens_Fashion[i].sub;
+//         card_8.append(h6_for_product);
 
-        // append the card to the container outside the loop
-        document.querySelector("div.common-row-col-deals7").append(card_8);
-}
+//         // append the card to the container outside the loop
+//         document.querySelector("div.common-row-col-deals7").append(card_8);
+// }
 
 const cart = JSON.parse(localStorage.getItem("cart_details")) || [];
-    localStorage.setItem("cart_details",JSON.stringify(cart));
+localStorage.setItem("cart_details", JSON.stringify(cart));

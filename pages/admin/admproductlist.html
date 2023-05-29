@@ -142,7 +142,7 @@
     const item = JSON.parse(localStorage.getItem("products_details"));
 
     const edit = document.querySelectorAll(".product-img");
-    edit.forEach(function (findId) {
+    edit.forEach((findId) => {
       findId.addEventListener("click", function () {
         const { id } = this.dataset;
         localStorage.setItem("product_uniqueId", JSON.stringify(id));
@@ -202,8 +202,7 @@
       product_data.image.sub_img1 = document.getElementById("simg1").value;
       product_data.image.main_img = document.getElementById("mimg").value;
       product_data.brand_name = document.getElementById("bname").value;
-      product_data.attractive_offer_discount =
-        document.getElementById("aofdis").value;
+      product_data.attractive_offer_discount = document.getElementById("aofdis").value;
       product_data.product_name = document.getElementById("pname").value;
 
       localStorage.setItem("products_details", JSON.stringify(item));
@@ -221,7 +220,7 @@
         function createproduct(e) {
           return e.puid === id;
         }
-        product_data = item.find(createproduct);
+        const product_data = item.find(createproduct);
 
         const removedata = item.indexOf(product_data);
 

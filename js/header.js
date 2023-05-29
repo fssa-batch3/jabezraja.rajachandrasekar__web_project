@@ -74,14 +74,14 @@ const afterlog = `<div class="header-left">
 
 // function of header
 function header() {
-  const uid = JSON.parse(localStorage.getItem("user_data"));
-  const userlogin = document.getElementById("hed");
+        const uid = JSON.parse(localStorage.getItem("user_data"));
+        const userlogin = document.getElementById("hed");
 
-  if (!uid) {
-    userlogin.innerHTML = beforelog;
-  } else {
-    userlogin.innerHTML = afterlog;
-  }
+        if (!uid) {
+                userlogin.innerHTML = beforelog;
+        } else {
+                userlogin.innerHTML = afterlog;
+        }
 }
 
 // linking the script for HTML

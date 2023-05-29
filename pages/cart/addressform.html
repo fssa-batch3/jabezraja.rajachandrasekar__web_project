@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Site</title>
+    <link rel="icon" href="../../assets/images/logo.jpg" type="image/x-icon">
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<header id="hed"></header>
+
+<body class="body">
+    <div class="headpic">
+        <img src="../../assets/images/banner/cart.png" alt="">
+    </div>
+    <div class="head1">ADDRESS</div>
+    <div class="head2">Detail</div>
+    <main>
+
+        <div class="content">
+            <div class="leftside">
+                <div class="log">
+                    <span class="n1">
+                        <img src="../../assets/images/gif/truck-delivery.gif" alt="" height="21px">
+                    </span>
+                    <h2>ADD ADDRESS</h2>
+                </div>
+                <div>
+                    <form class="cof" onsubmit="createaddress()">
+                        <div class="cot">
+                            <input class="cofd" id="aname" type="text" placeholder="NAME" required="true">
+                            <input class="cofd" id="number" style="margin-left:20px" type="text"
+                                placeholder="MOBILE NUMBER" maxlength="10" required="true">
+                        </div>
+                        <div class="cot">
+                            <input class="cofd" id="pincode" type="text" placeholder="PIN CODE" maxlength="" required="true">
+                            <input class="cofd" id="lmark" style="margin-left:20px" type="text" placeholder="LANDMARK"
+                                required="true">
+                        </div>
+                        <div class="cot">
+                            <textarea class="coft" id="fon" placeholder="ADDRESS"></textarea>
+                        </div>
+                        <div class="cot">
+                            <input class="cofd" id="cidito" type="text" placeholder="CITY/DISTRICT/TOWN"
+                                required="true">
+                            <select id="state" class="cofd" style="margin-left:20px" required="true">
+                                <option>--Select State--</option>
+                                <option id="">Andaman &amp; Nicobar Islands</option>
+                                <option id="">Andhra Pradesh</option>
+                                <option id="">Arunachal Pradesh</option>
+                                <option id="">Assam</option>
+                                <option id="">Bihar</option>
+                                <option id="">Chandigarh</option>
+                                <option id="">Chhattisgarh</option>
+                                <option id="">Dadra &amp; Nagar Haveli &amp; Daman &amp; Diu</option>
+                                <option id="">Delhi</option>
+                                <option id="">Goa</option>
+                                <option id="">Gujarat</option>
+                                <option id="">Haryana</option>
+                                <option id="">Himachal Pradesh</option>
+                                <option id="">Jammu &amp; Kashmir</option>
+                                <option id="">Jharkhand</option>
+                                <option id="">Karnataka</option>
+                                <option id="">Kerala</option>
+                                <option id="">Ladakh</option>
+                                <option id="">Lakshadweep</option>
+                                <option id="">Madhya Pradesh</option>
+                                <option id="">Maharashtra</option>
+                                <option id="">Manipur</option>
+                                <option id="">Meghalaya</option>
+                                <option id="">Mizoram</option>
+                                <option id="">Nagaland</option>
+                                <option id="">Odisha</option>
+                                <option id="">Puducherry</option>
+                                <option id="">Punjab</option>
+                                <option id="">Rajasthan</option>
+                                <option id="">Sikkim</option>
+                                <option id="">Tamil Nadu</option>
+                                <option id="">Telangana</option>
+                                <option id="">Tripura</option>
+                                <option id="">Uttarakhand</option>
+                                <option id="">Uttar Pradesh</option>
+                                <option id="">West Bengal</option>
+                            </select>
+                        </div>
+                        <div class="cobtn">
+                            <button class="sd" type="submit">SAVE</button>
+                            <a href="./cart.html" class="ca">REMOVE</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="multi_add">
+            <div class="single_addcont">
+                <div>
+                    <label class="container">
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div style="margin-left: 34px;">
+                    KINGJR
+                </div>
+                <span>
+                    <div style="margin-left: 34px;">
+                        7904615246
+                    </div>
+                </span>
+                <div>
+                    <address style="margin-left: 34px;">(Ground Floor)No. 83, Perfect Parkview, Palaniappa Nagar, 2nd
+                        street, Gowriwakkam, Chennai 600073</address>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/js/header.js"> </script>
+    <script>
+
+        function createaddress() {
+            event.preventDefault();
+
+            const add_name = document.getElementById("aname").value;
+            const add_number = document.getElementById("number").value;
+            const add_pincode = document.getElementById("pincode").value;
+            const add_landmark = document.getElementById("lmark").value;
+            const add_address = document.getElementById("fon").value;
+            const add_district = document.getElementById("cidito").value;
+            const add_state = document.getElementById("state").value;
+
+            //array
+
+            const a_details = JSON.parse(localStorage.getItem("address_details")) || [];
+
+            a_details.push({
+                "name":add_name,
+                "number":add_number,
+                "pincode":add_pincode,
+                "landmark":add_landmark,
+                "address":add_address,
+                "district":add_district,
+                "state":add_state,
+            });
+            // console.log(a_details)
+
+            localStorage.setItem("address_details", JSON.stringify(a_details));
+            window.location.reload();
+            document.querySelector("form").reset();
+        }
+    // </script>
+    // <script>
+        // Create the parent div element
+        const parentDiv = document.createElement('div');
+        parentDiv.className = 'single_addcont';
+
+        // Create the first inner div element
+        const div1 = document.createElement('div');
+
+        // Create the label element
+        const label = document.createElement('label');
+        label.className = 'container';
+        div1.appendChild(label);
+
+        // Create the radio input element
+        const radioInput = document.createElement('input');
+        radioInput.setAttribute('type', 'radio');
+        radioInput.setAttribute('checked', 'checked');
+        radioInput.setAttribute('name', 'radio');
+        label.appendChild(radioInput);
+
+        // Create the span element for the checkmark
+        const checkmarkSpan = document.createElement('span');
+        checkmarkSpan.className = 'checkmark';
+        label.appendChild(checkmarkSpan);
+
+        // Create the span element
+        const span = document.createElement('span');
+
+        // Create the second inner div element
+        const div2 = document.createElement('div');
+        div2.setAttribute('class', 'stydiv')
+        div2.textContent = 'KINGJR';
+        span.appendChild(div2);
+
+        // Create the third inner div element
+        const div3 = document.createElement('div');
+        div3.setAttribute('class', 'stydiv')
+        div3.textContent = '7904615246';
+        span.appendChild(div3);
+
+        // Create the fourth inner div element
+        const div4 = document.createElement('div');
+
+        // Create the address element
+        const address = document.createElement('address');
+        address.setAttribute('class', 'stydiv')
+        address.textContent = '(Ground Floor)No. 83, Perfect Parkview, Palaniappa Nagar, 2nd street, Gowriwakkam, Chennai 600073';
+        div4.appendChild(address);
+
+        // Append all the inner divs and span to the parent div
+        parentDiv.appendChild(div1);
+        parentDiv.appendChild(span);
+        parentDiv.appendChild(div4);
+
+        // Append the parent div to the document body or any other desired container element
+        document.body.appendChild(parentDiv);
+        document.querySelector(".multi_add").append(parentDiv);
+
+    </script>
+</body>
+
+</html>
+<style>
+    /* The container */
+    .container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    /* Hide the browser's default radio button */
+    .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    /* Create a custom radio button */
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+        border-radius: 50%;
+    }
+
+    /* On mouse-over, add a grey background color */
+    .container:hover input~.checkmark {
+        background-color: #ccc;
+    }
+
+    /* When the radio button is checked, add a blue background */
+    .container input:checked~.checkmark {
+        background-color: #2196F3;
+    }
+
+    /* Create the indicator (the dot/circle - hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    /* Show the indicator (dot/circle) when checked */
+    .container input:checked~.checkmark:after {
+        display: block;
+    }
+
+    /* Style the indicator (dot/circle) */
+    .container .checkmark:after {
+        top: 9px;
+        left: 9px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+    }
+
+    /* Address*/
+    .multi_add {
+        margin: 20px;
+        width: auto;
+        display: flex;
+    }
+
+    .single_addcont {
+        border: 1px solid #d5c8aa;
+        max-width: 365px;
+        padding-left: 10px;
+        margin-left: 10px;
+    }
+
+    .stydiv {
+        margin-left: 34px;
+    }
+</style>
