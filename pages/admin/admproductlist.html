@@ -1,501 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Shopping Site</title>
-    <link rel="icon" href="assets/images/logo.jpg" type="image/x-icon">
-    <link href="/assets/css/admstyle.css" rel="stylesheet">
-    <link href="/assets/css/style.css" rel="stylesheet" >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">    <link href="https://fonts.googleapis.com/css2?family-Roboto&display-swap" rel="stylesheet">
-</head>
-<body class="manico">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online Shopping Site</title>
+        <link rel="icon" href="../../assets/images/logo.jpg" type="image/x-icon">
+        <link href="../../assets/css/admstyle.css" rel="stylesheet">
+        <link href="../../assets/css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
+
+    <body class="manico">
         <!-----Header Section----->
         <header>
             <div class="admnav">
-                <a href="#">JAUNTY</a>  
+                <a href="#">JAUNTY</a>
                 <div class="admnav-p">
-                    <p><a href="#">RIALTO</a></p>
+                    <p>
+                        <a href="#">RIALTO</a>
+                    </p>
                 </div>
             </div>
         </header>
-            <div class="sbox">
-                <div class="search-box">
-                    <button class="btn-search"><i class="fas fa-search"></i></button>
-                    <input type="text" class="input-search" placeholder="Type to Search...">
-                  </div>
+        <div class="sbox">
+            <div class="search-box">
+                <button class="btn-search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <input type="text" class="input-search" placeholder="Type to Search...">
+            </div>
+        </div>
+        <section>
+            <div class="bx">
+                <div>
+                    <p class="enable">
+                        <i class="fas fa-edit"></i>
+                    </p>
                 </div>
-                <section>
-                    <div class="cardvd">
-                        <div class="common-headingv">
-                            <div class="common-heading-leftv">
-                                <h1>Best of Electronics</h1><i class="fa-solid fa-timer"></i>
+                <form>
+                    <div class="adm_editform">
+                        <div class="inter">
+                            <label>Product ID</label>
+                            <input id="pro_id" type="text" disabled>
+
+                            <label>Product Name</label>
+                            <input id="pname" type="text" readonly required>
+
+                            <label>Attractive Offers/Discount</label>
+                            <input id="aofdis" type="text" readonly required>
+
+                            <label>Brand Name</label>
+                            <input id="bname" type="text" readonly required>
+                        </div>
+
+                        <div class="inter">
+                            <label>Main Image</label>
+                            <input id="mimg" type="url" readonly required>
+
+                            <label>Sub Image 1</label>
+                            <input id="simg1" type="url" readonly required>
+
+                            <label>Sub Image 2</label>
+                            <input id="smig2" type="url" readonly required>
+
+                            <label>Sub Image 3</label>
+                            <input id="simg3" type="url" readonly required>
+                        </div>
+
+                        <div class="inter">
+                            <label>Price</label>
+                            <input id="price" type="text" readonly required>
+
+                            <label>Size</label>
+                            <input id="size" type="text" readonly required maxlength="1">
+
+                            <label>Quantiy</label>
+                            <input id="qty" type="" pattern="[0-9]+" readonly required>
+                            <label>Features</label>
+                            <textarea id="fetes" title="" readonly required> </textarea>
+                        </div>
+                        <div class="inter">
+                            <label>Description</label>
+                            <textarea id="descrin" title="" readonly required> </textarea>
+
+                            <div class="adm_editformbtn">
+                                <div id="admfbtnd">
+                                    <button class="ebtn" id = "save" type="submit">SAVE</button>
+                                </div>
+
+                                <div id="admfbtnd">
+                                    <button class="ebtn" type="button"
+                                        onclick="deleteaccount()">DELETE</button></div>
                             </div>
                         </div>
-                        <div class="common-row-col-dealsv">
-                        </div>                    
-                </section>
-<section>
-    <div class="bx">
-    <div>
-        <p class="enable"><i class="fas fa-edit"></i></p>
-    </div>
-    <form role="form" onsubmit="createproduct(event);">
-        <div class="adm_editform">
-         <div class="inter">  <label>Product ID</label>
-                <input id="" type="text" disabled >
-                
-                <label>Product Name</label>
-                <input id="pname" type="text" readonly required>
-
-                <label>Attractive Offers/Discount</label>                  
-                <input id="aofdis" type="text" readonly required>
-
-                <label>Brand Name</label>
-                <input id="bname" type="text" readonly required> </div>
-
-        <div class="inter">   <label>Main Image</label>
-                <input id="mimg" type="url" readonly required> 
-
-                <label>Sub Image 1</label>
-                <input id="simg1" type="url" readonly required> 
-
-                <label>Sub Image 2</label>
-                <input id="smig2" type="url" readonly required> 
-
-                <label>Sub Image 3</label>
-                <input id="simg3" type="url" readonly required> </div>
-
-         <div class="inter"> <label>Price</label>
-                <input id="price" type="text" readonly required> 
-
-                <label>Size</label>
-                <input id="size" type="text" readonly required maxlength="1">
-
-                <label>Quantiy</label>
-                <input id="qty" type="" pattern="[0-9]+" readonly required>  
-                <label>Features</label>
-                <textarea id="fetes" title="" readonly required> </textarea>      </div> 
-<div class="inter">
-                <label>Description</label>
-                <textarea id="descrin" title="" readonly required> </textarea>    
-
-            <div class="adm_editformbtn">    
-               <div id="admfbtnd"><button class="ebtn" type="submit">SAVE</button></div> 
-             
-               <div id="admfbtnd"><button class="ebtn" type="button" onclick="">DELETE</button></div>  
+                    </div>
+                </form>
             </div>
-        </div>  
-    </div>
-            </form>
-        </div>
-</section>
+        </section>
 
-</body>
+        <section>
+            <div class="cardvd">
+                <div class="common-row-col-dealsv"></div>
+            </div>
+        </section>
 
-<script>
+    </body>
 
-    let boe_catagory = JSON.parse(localStorage.getItem('boe_catagory'));
-    console.log(boe_catagory);
+    <script>const boe_catagory = JSON.parse(localStorage.getItem("products_details"));
+    
+    for (let i = 0; i < boe_catagory.length; i++) {
+  const card_1 = document.createElement("div");
+      card_1.setAttribute("class", "common-col");
+      document.querySelector("div.common-row-col-dealsv").append(card_1);
 
-for(let i=0; i<boe_catagory.length; i++){
+      const a = document.createElement("a");
+      a.setAttribute("class", "anchor");
+      card_1.append(a);
 
-card_1 = document.createElement("div");
-card_1.setAttribute("class", "common-col");
-document.querySelector("div.common-row-col-dealsv").append(card_1)
+      const img_of_electronics = document.createElement("img");
+      img_of_electronics.setAttribute("class", "product-img");
+      img_of_electronics.setAttribute("src", boe_catagory[i].image.main_img);
+      img_of_electronics.setAttribute("data-id", boe_catagory[i].puid);
+      card_1.append(img_of_electronics);
 
-img_of_electronics = document.createElement("img");
-img_of_electronics.setAttribute("class", "product-img");
-img_of_electronics.setAttribute("src", boe_catagory[i]["main_img"]);
-card_1.append(img_of_electronics);
+      const h3_for_product = document.createElement("h3");
+      h3_for_product.setAttribute("class", "product-title");
+      h3_for_product.innerText = boe_catagory[i].product_name;
+      card_1.append(h3_for_product);
 
-h3_for_product = document.createElement("h3");
-h3_for_product.setAttribute("class", "product-title");
-h3_for_product.innerText=(boe_catagory[i]["product_name"]);
-card_1.append(h3_for_product);
+      // button = document.createElement("button");
+      // button.setAttribute("class", "edit");
+      // button.innerText = "Edit";
+      // button.setAttribute("data-id", boe_catagory[i]["puid"]);
+      // card_1.append(button);
 
-h4_for_product = document.createElement("h4");
-h4_for_product.setAttribute("class", "-title");
-h4_for_product.innerText=(boe_catagory[i]["attractive_offer_discount"]);
-card_1.append(h4_for_product);
+      document.querySelector("div.common-row-col-dealsv").append(card_1);
+    }
 
-h6_for_product = document.createElement("h6");
-h6_for_product.setAttribute("class", "price");
-h6_for_product.innerText=(boe_catagory[i]["brand_name"]);
-card_1.append(h6_for_product);
+    const item = JSON.parse(localStorage.getItem("products_details"));
 
-document.querySelector("div.common-row-col-dealsv").append(card_1)
+    const edit = document.querySelectorAll(".product-img");
+    edit.forEach((findId) => {
+      findId.addEventListener("click", function () {
+        const { id } = this.dataset;
+        localStorage.setItem("product_uniqueId", JSON.stringify(id));
 
-}
+        function createproduct(e) {
+          return e.puid === id;
+        }
+        const product_data = item.find(createproduct);
 
+        document.getElementById("pro_id").value = product_data.puid;
+        document.getElementById("descrin").value = product_data.description;
+        document.getElementById("fetes").value = product_data.features;
+        document.getElementById("qty").value = product_data.Quantiy;
+        document.getElementById("size").value = product_data.size;
+        document.getElementById("price").value = product_data.price;
+        document.getElementById("simg3").value = product_data.image.sub_img3;
+        document.getElementById("smig2").value = product_data.image.sub_img2;
+        document.getElementById("simg1").value = product_data.image.sub_img1;
+        document.getElementById("mimg").value = product_data.image.main_img;
+        document.getElementById("bname").value = product_data.brand_name;
+        document.getElementById("aofdis").value =
+          product_data.attractive_offer_discount;
+        document.getElementById("pname").value = product_data.product_name;
+      });
+    });
+
+    // enable and disable function
+    function enableInput() {
+      document.getElementById("pname").removeAttribute("readonly");
+      document.getElementById("aofdis").removeAttribute("readonly");
+      document.getElementById("bname").removeAttribute("readonly");
+      document.getElementById("mimg").removeAttribute("readonly");
+      document.getElementById("simg1").removeAttribute("readonly");
+      document.getElementById("smig2").removeAttribute("readonly");
+      document.getElementById("simg3").removeAttribute("readonly");
+      document.getElementById("price").removeAttribute("readonly");
+      document.getElementById("size").removeAttribute("readonly");
+      document.getElementById("qty").removeAttribute("readonly");
+      document.getElementById("fetes").removeAttribute("readonly");
+      document.getElementById("descrin").removeAttribute("readonly");
+    }
+
+    const enable = document.querySelector(".enable");
+    enable.addEventListener("click", enableInput);
+
+    // edit function
+
+    function epro_details() {
+      event.preventDefault();
+      product_data.description = document.getElementById("descrin").value;
+      product_data.features = document.getElementById("fetes").value;
+      product_data.Quantiy = document.getElementById("qty").value;
+      product_data.size = document.getElementById("size").value;
+      product_data.price = document.getElementById("price").value;
+      product_data.image.sub_img3 = document.getElementById("simg3").value;
+      product_data.image.sub_img2 = document.getElementById("smig2").value;
+      product_data.image.sub_img1 = document.getElementById("simg1").value;
+      product_data.image.main_img = document.getElementById("mimg").value;
+      product_data.brand_name = document.getElementById("bname").value;
+      product_data.attractive_offer_discount = document.getElementById("aofdis").value;
+      product_data.product_name = document.getElementById("pname").value;
+
+      localStorage.setItem("products_details", JSON.stringify(item));
+      window.location.reload();
+    }
+
+    document.getElementById("save").addEventListener("click", epro_details);
+
+    // delete function
+
+    function deleteaccount() {
+      if (confirm("Are You Sure on deleting?")) {
+        const id = JSON.parse(localStorage.getItem("product_uniqueId"));
+
+        function createproduct(e) {
+          return e.puid === id;
+        }
+        const product_data = item.find(createproduct);
+
+        const removedata = item.indexOf(product_data);
+
+        item.splice(removedata, 1);
+        localStorage.setItem("products_details", JSON.stringify(item));
+        window.location.reload();
+      }
+    }
 </script>
 
 </html>
-<!-- <script>
-    // Create the main container
-const admEditForm = document.createElement("div");
-admEditForm.classList.add("adm_editform");
-
-// Create the first div for inputs
-const inter1 = document.createElement("div");
-inter1.classList.add("inter");
-
-// Create Product ID label and input
-const pidLabel = document.createElement("label");
-pidLabel.textContent = "Product ID";
-const pidInput = document.createElement("input");
-pidInput.id = "pid";
-pidInput.type = "text";
-pidInput.disabled = true;
-inter1.appendChild(pidLabel);
-inter1.appendChild(pidInput);
-
-// Create Product Name label and input
-const pnameLabel = document.createElement("label");
-pnameLabel.textContent = "Product Name";
-const pnameInput = document.createElement("input");
-pnameInput.id = "pname";
-pnameInput.type = "text";
-pnameInput.readOnly = true;
-pnameInput.required = true;
-inter1.appendChild(pnameLabel);
-inter1.appendChild(pnameInput);
-
-// Create Attractive Offers/Discount label and input
-const aofdisLabel = document.createElement("label");
-aofdisLabel.textContent = "Attractive Offers/Discount";
-const aofdisInput = document.createElement("input");
-aofdisInput.id = "aofdis";
-aofdisInput.type = "text";
-aofdisInput.readOnly = true;
-aofdisInput.required = true;
-inter1.appendChild(aofdisLabel);
-inter1.appendChild(aofdisInput);
-
-// Create Brand Name label and input
-const bnameLabel = document.createElement("label");
-bnameLabel.textContent = "Brand Name";
-const bnameInput = document.createElement("input");
-bnameInput.id = "bname";
-bnameInput.type = "text";
-bnameInput.readOnly = true;
-bnameInput.required = true;
-inter1.appendChild(bnameLabel);
-inter1.appendChild(bnameInput);
-
-// Append inter1 to admEditForm
-admEditForm.appendChild(inter1);
-
-// Create the second div for image inputs
-const inter2 = document.createElement("div");
-inter2.classList.add("inter");
-
-// Create Main Image label and input
-const mimgLabel = document.createElement("label");
-mimgLabel.textContent = "Main Image";
-const mimgInput = document.createElement("input");
-mimgInput.id = "mimg";
-mimgInput.type = "url";
-mimgInput.readOnly = true;
-mimgInput.required = true;
-inter2.appendChild(mimgLabel);
-inter2.appendChild(mimgInput);
-
-// Create Sub Image 1 label and input
-const simg1Label = document.createElement("label");
-simg1Label.textContent = "Sub Image 1";
-const simg1Input = document.createElement("input");
-simg1Input.id = "simg1";
-simg1Input.type = "url";
-simg1Input.readOnly = true;
-simg1Input.required = true;
-inter2.appendChild(simg1Label);
-inter2.appendChild(simg1Input);
-
-// Create Sub Image 2 label and input
-const simg2Label = document.createElement("label");
-simg2Label.textContent = "Sub Image 2";
-const simg2Input = document.createElement("input");
-simg2Input.id = "simg2";
-simg2Input.type = "url";
-simg2Input.readOnly = true;
-simg2Input.required = true;
-inter2.appendChild(simg2Label);
-inter2.appendChild(simg2Input);
-
-// Create Sub Image 3 label and input
-const simg3Label = document.createElement("label");
-simg3Label.textContent = "Sub Image 3";
-const simg3Input = document.createElement("input");
-simg3Input.id = "simg3";
-simg3Input.type = "url";
-simg3Input.readOnly = true;
-simg3Input.required = true;
-inter3.appendChild(simg3Label);
-inter3.appendChild(simg3Input);
-
-</script> -->
-
-
-
-<!-- <script>
-    // create the outer div element
-const adm_editform = document.createElement("div");
-adm_editform.classList.add("adm_editform");
-
-// create the first inner div element
-const inter1 = document.createElement("div");
-inter1.classList.add("inter");
-
-// create the Product ID label
-const pidLabel = document.createElement("label");
-pidLabel.textContent = "Product ID";
-
-// create the Product ID input element
-const pidInput = document.createElement("input");
-pidInput.setAttribute("id", "pid");
-pidInput.setAttribute("type", "text");
-pidInput.setAttribute("disabled", "");
-
-// create the Product Name label
-const pnameLabel = document.createElement("label");
-pnameLabel.textContent = "Product Name";
-
-// create the Product Name input element
-const pnameInput = document.createElement("input");
-pnameInput.setAttribute("id", "pname");
-pnameInput.setAttribute("type", "text");
-pnameInput.setAttribute("readonly", "");
-pnameInput.setAttribute("required", "");
-
-// create the Attractive Offers/Discount label
-const aofdisLabel = document.createElement("label");
-aofdisLabel.textContent = "Attractive Offers/Discount";
-
-// create the Attractive Offers/Discount input element
-const aofdisInput = document.createElement("input");
-aofdisInput.setAttribute("id", "aofdis");
-aofdisInput.setAttribute("type", "text");
-aofdisInput.setAttribute("readonly", "");
-aofdisInput.setAttribute("required", "");
-
-// create the Brand Name label
-const bnameLabel = document.createElement("label");
-bnameLabel.textContent = "Brand Name";
-
-// create the Brand Name input element
-const bnameInput = document.createElement("input");
-bnameInput.setAttribute("id", "bname");
-bnameInput.setAttribute("type", "text");
-bnameInput.setAttribute("readonly", "");
-bnameInput.setAttribute("required", "");
-
-// add the elements to the first inner div
-inter1.appendChild(pidLabel);
-inter1.appendChild(pidInput);
-inter1.appendChild(pnameLabel);
-inter1.appendChild(pnameInput);
-inter1.appendChild(aofdisLabel);
-inter1.appendChild(aofdisInput);
-inter1.appendChild(bnameLabel);
-inter1.appendChild(bnameInput);
-
-// create the second inner div element
-const inter2 = document.createElement("div");
-inter2.classList.add("inter");
-
-// create the Main Image label
-const mimgLabel = document.createElement("label");
-mimgLabel.textContent = "Main Image";
-
-// create the Main Image input element
-const mimgInput = document.createElement("input");
-mimgInput.setAttribute("id", "mimg");
-mimgInput.setAttribute("type", "url");
-mimgInput.setAttribute("readonly", "");
-mimgInput.setAttribute("required", "");
-
-// create the Sub Image 1 label
-const simg1Label = document.createElement("label");
-simg1Label.textContent = "Sub Image 1";
-
-// create the Sub Image 1 input element
-const simg1Input = document.createElement("input");
-simg1Input.setAttribute("id", "simg1");
-simg1Input.setAttribute("type", "url");
-simg1Input.setAttribute("readonly", "");
-simg1Input.setAttribute("required", "");
-
-// create the Sub Image 2 label
-const simg2Label = document.createElement("label");
-simg2Label.textContent = "Sub Image 2";
-
-// create the Sub Image 2 input element
-const simg2Input = document.createElement("input");
-simg2Input.setAttribute("id", "simg2");
-simg2Input.setAttribute("type", "url");
-simg2Input.setAttribute("readonly", "");
-simg2Input.setAttribute("required", "");
-
-// create the Sub Image 3 label
-const simg3Label = document.createElement("label");
-simg3Label.textContent = "Sub Image 2";
-
-// create the Sub Image 3 input element
-const simg3Input = document.createElement("input");
-simg3Input.setAttribute("id", "simg3");
-simg3Input.setAttribute("type", "url");
-simg3Input.setAttribute("readonly", "");
-simg3Input.setAttribute("required", "");
-
-// Append the first inner div to the adm_editform div
-admEditformDiv.appendChild(interDiv1);
-
-// Repeat the process for the remaining inner divs and elements
-
-// Append the adm_editform div to the form
-form.appendChild(admEditformDiv);
-
-// Create the div element with class "adm_editformbtn"
-const admEditformbtnDiv = document.createElement('div');
-admEditformbtnDiv.classList.add('adm_editformbtn');
-
-// Create the inner div elements and buttons
-const admfbtndDiv1 = document.createElement('div');
-const saveButton = document.createElement('button');
-saveButton.classList.add('ebtn');
-saveButton.setAttribute('type', 'submit');
-saveButton.textContent = 'SAVE';
-admfbtndDiv1.appendChild(saveButton);
-
-const admfbtndDiv2 = document.createElement('div');
-const deleteButton = document.createElement('button');
-deleteButton.classList.add('ebtn');
-deleteButton.setAttribute('type', 'button');
-deleteButton.setAttribute('onclick', '');
-deleteButton.textContent = 'DELETE';
-admfbtndDiv2.appendChild(deleteButton);
-
-// Append the inner divs and buttons to the adm_editformbtn div
-admEditformbtnDiv.appendChild(admfbtndDiv1);
-admEditformbtnDiv.appendChild(admfbtndDiv2);
-
-// Append the adm_editformbtn div to the form
-form.appendChild(admEditformbtnDiv);
-
-// Append the inner div to the bx div
-bxDiv.appendChild(innerDiv);
-
-// Append the form to the bx div
-bxDiv.appendChild(form);
-
-// Append the bx div to the section
-section.appendChild(bxDiv);
-
-</script> -->
-
-
-
-
-<!-- <script>
-    // Create the section element
-const section = document.createElement('section');
-
-// Create the div element with class "bx"
-const bxDiv = document.createElement('div');
-bxDiv.classList.add('bx');
-
-// Create the inner div element
-const innerDiv = document.createElement('div');
-
-// Create the p element with class "enable" and the i element with class "fas fa-edit" inside
-const pElement = document.createElement('p');
-pElement.classList.add('enable');
-const iElement = document.createElement('i');
-iElement.classList.add('fas', 'fa-edit');
-pElement.appendChild(iElement);
-
-// Append the p element to the inner div
-innerDiv.appendChild(pElement);
-
-// Create the form element with the "createproduct" function attached to the onsubmit event
-const form = document.createElement('form');
-form.setAttribute('role', 'form');
-form.addEventListener('submit', createproduct);
-
-// Create the div element with class "adm_editform"
-const admEditformDiv = document.createElement('div');
-admEditformDiv.classList.add('adm_editform');
-
-// Create the first inner div element with class "inter"
-const interDiv1 = document.createElement('div');
-interDiv1.classList.add('inter');
-
-// Create the labels and input elements
-const productIDLabel = document.createElement('label');
-productIDLabel.textContent = 'Product ID';
-const productIDInput = document.createElement('input');
-productIDInput.setAttribute('id', '');
-productIDInput.setAttribute('type', 'text');
-productIDInput.setAttribute('disabled', '');
-interDiv1.appendChild(productIDLabel);
-interDiv1.appendChild(productIDInput);
-
-const productNameLabel = document.createElement('label');
-productNameLabel.textContent = 'Product Name';
-const productNameInput = document.createElement('input');
-productNameInput.setAttribute('id', 'pname');
-productNameInput.setAttribute('type', 'text');
-productNameInput.setAttribute('readonly', '');
-productNameInput.setAttribute('required', '');
-interDiv1.appendChild(productNameLabel);
-interDiv1.appendChild(productNameInput);
-
-// Repeat the process for the remaining labels and inputs
-
-// Append the first inner div to the adm_editform div
-admEditformDiv.appendChild(interDiv1);
-
-// Repeat the process for the remaining inner divs and elements
-
-// Append the adm_editform div to the form
-form.appendChild(admEditformDiv);
-
-// Create the div element with class "adm_editformbtn"
-const admEditformbtnDiv = document.createElement('div');
-admEditformbtnDiv.classList.add('adm_editformbtn');
-
-// Create the inner div elements and buttons
-const admfbtndDiv1 = document.createElement('div');
-const saveButton = document.createElement('button');
-saveButton.classList.add('ebtn');
-saveButton.setAttribute('type', 'submit');
-saveButton.textContent = 'SAVE';
-admfbtndDiv1.appendChild(saveButton);
-
-const admfbtndDiv2 = document.createElement('div');
-const deleteButton = document.createElement('button');
-deleteButton.classList.add('ebtn');
-deleteButton.setAttribute('type', 'button');
-deleteButton.setAttribute('onclick', '');
-deleteButton.textContent = 'DELETE';
-admfbtndDiv2.appendChild(deleteButton);
-
-// Append the inner divs and buttons to the adm_editformbtn div
-admEditformbtnDiv.appendChild(admfbtndDiv1);
-admEditformbtnDiv.appendChild(admfbtndDiv2);
-
-// Append the adm_editformbtn div to the form
-form.appendChild(admEditformbtnDiv);
-
-// Append the inner div to the bx div
-bxDiv.appendChild(innerDiv);
-
-// Append the form to the bx div
-bxDiv.appendChild(form);
-
-// Append the bx div to the section
-section.appendChild(bxDiv);
-
-</script> -->

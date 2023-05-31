@@ -12,15 +12,15 @@
             <h4>It's free and only takes a minute</h4>
             <form role="form" onsubmit="Registered(event);">
                 <label>NAME</label>
-                <input id="name" type="text" pattern="[A-Za-z]+" required="true"/>
+                <input id="name" type="text" pattern="[A-Za-z]+" required="true" value="KINGJR">
                 <label>PHONE</label>
-                <input id="phonenumber" type="tel" pattern="[0-9]+" minlength="10" maxlength="10" required="true"/>
+                <input id="phonenumber" type="tel" pattern="[0-9]+" minlength="10" maxlength="10" required="true" value="7904615246">
                 <label>EMAIL</label>
-                <input id="email" type="email" required="true">
+                <input id="email" type="email" required="true" value="kingjjj777@gmail.com">
                 <label>PASSWORD</label>                  
-                <input id="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required="true">
+                <input id="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required="true" value="Asdf;lkj1">
                 <label>CONFORM PASSWORD</label>
-                <input id="confirm_password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required="true"> 
+                <input id="confirm_password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required="true" value="Asdf;lkj1"> 
                 <!-- <button class="btn" type="button"  onclick="subit()">SUBMIT</button> -->
                 <button class="btn" type="submit">SUBMIT</button>           
 
@@ -28,12 +28,14 @@
 
             <p>
                 By clicking the Submit button, you agree to our <br>
-                <a href="#"> Terms and Condition</a> and <a href="#"> Policy And Privacy</a>
+                <a href="#"> Terms and Condition</a>
+                and <a href="#"> Policy And Privacy</a>
             </p>
         </div>
-        <p class="para2">Already have an account? <a href="Login.html">Login here</a></p>
+        <p class="para2">
+            Already have an account? <a href="Login.html">Login here</a>
+        </p>
 
-<script src="/js/register.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
-</body>
+        <script src="/js/register.js"></script>
+    </body>
 </html>

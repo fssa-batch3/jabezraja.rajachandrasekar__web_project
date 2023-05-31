@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Site</title>
+    <link rel="icon" href="../../assets/images/logo.jpg" type="image/x-icon">
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<header id="hed"></header>
+
+<body class="body">
+    <div class="headpic">
+        <img src="../../assets/images/banner/cart.png" alt="header img">
+    </div>
+    <div class="head1">Cart</div>
+    <div class="head2">YOUR ITEMS</div>
+    <main>
+        <div class="content">
+            <div class="cont_tab">
+                <table class="product-table">
+                    <caption></caption>
+                    <tr>
+                        <th>ITEMS</th>
+                        <th>DESCRIPTION</th>
+                        <th>PRICE</th>
+                        <th>QTY</th>
+                        <th>SUBTOTAL</th>
+                        <th>
+                            <i class="fa-sharp fa-solid fa-trash" style="color: #886619;"></i>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="/js/header.js"> </script>
+
+    <script>
+        const cart = JSON.parse(localStorage.getItem("cart_details"));
+        const pro_data = JSON.parse(localStorage.getItem("products_details"));
+        const cart_products = [];
+
+        const sam = JSON.parse(localStorage.getItem("user_data"));
+        const check = cart.filter((c_user) => c_user.sam === sam);
+
+        for (let i = 0; i < check.length; i++) {
+            const cartpro = pro_data.find(e => e.puid === check[i].product_id);
+            cart_products.push(cartpro);
+        }
+
+        if (check.length === 0) {
+            document.querySelector("div.content").style.display = "none";
+            const head = document.createElement("h1");
+            head.setAttribute("class", "head3")
+            head.innerText = "NO PRODUCTS ADDED IN THE CART";
+            document.querySelector("main").append(head);
+        }
+
+        let total = 0;
+        for (let i = 0; i < cart_products.length; i++) {
+            // Create the <tr> element
+
+            const trElement = document.createElement("tr");
+            trElement.id = "carit";
+
+            // Create the first <td> element
+            const tdElement1 = document.createElement("td");
+            tdElement1.className = "trex";
+
+            // Create the <img> element
+            const imgElement = document.createElement("img");
+            imgElement.setAttribute("src", cart_products[i].image.main_img);
+            imgElement.setAttribute("class", "cart_img");
+            imgElement.setAttribute("data-id", cart_products[i].puid);
+            imgElement.width = "150";
+            imgElement.height = "130";
+
+            // Append the <img> element to the first <td> element
+            tdElement1.appendChild(imgElement);
+
+            // Append the first <td> element to the <tr> element
+            trElement.appendChild(tdElement1);
+
+            // Create the second <td> element
+            const tdElement2 = document.createElement("td");
+            tdElement2.className = "trex";
+
+            // Create the first <p> element
+            const pElement1 = document.createElement("p");
+            pElement1.textContent = cart_products[i].product_name;
+
+            // Create the second <p> element
+
+            // const pElement2 = document.createElement("p");
+            // pElement2.textContent = cart_products[i].brand_name;
+
+            // // Create the third <p> element
+            // const pElement3 = document.createElement("p");
+            // pElement3.textContent = "Size: L";
+
+            // Append the <p> elements to the second <td> element
+            tdElement2.appendChild(pElement1);
+            // tdElement2.appendChild(pElement2);
+
+            // tdElement2.appendChild(pElement3);
+
+            // Append the second <td> element to the <tr> element
+            trElement.appendChild(tdElement2);
+
+            // Create the third <td> element
+            const tdElement3 = document.createElement("td");
+            tdElement3.className = "trex";
+
+            // Create the <p> element with the price
+            const pElement4 = document.createElement("p");
+            pElement4.innerHTML = `₹${cart_products[i].price}`;
+
+            // Append the <p> element to the third <td> element
+            tdElement3.appendChild(pElement4);
+
+            // Append the third <td> element to the <tr> element
+            trElement.appendChild(tdElement3);
+
+            // Create the fourth <td> element
+            const tdElement4 = document.createElement("td");
+            tdElement4.className = "trex";
+
+            // Create the <input> element
+            // const inputElement = document.createElement("input");
+            // inputElement.className = "quan";
+            // inputElement.type = "number";
+            // inputElement.value = cart_products[i].product_qty;
+            // inputElement.min = "1";
+            // inputElement.max = "12";
+            // inputElement.data = cart_products[i].puid;
+            // Create the necessary elements
+            // Create the <p> element with the total price
+            const pElement = document.createElement("p");
+            pElement.innerHTML = check[i].p_qty;
+
+            // const minusLink = document.createElement('a');
+            // const minusSpan = document.createElement('span');
+            // const input = document.createElement('input');
+            // const plusLink = document.createElement('a');
+            // const plusSpan = document.createElement('span');
+
+            // // Set the necessary attributes and classes
+            // div.setAttribute('id', 'sq');
+            // minusLink.setAttribute('href', '');
+            // minusLink.classList.add('quantity__minus');
+            // minusSpan.textContent = '-';
+            // minusSpan.setAttribute('id', 'minus-btn')
+            // plusLink.setAttribute('href', '');
+            // plusLink.classList.add('quantity__plus');
+            // plusSpan.textContent = '+';
+            // plusSpan.setAttribute('id' ,'plus-btn')
+            // input.setAttribute('type', 'text');
+            // input.readOnly = true;
+            // input.classList.add('sqb');
+            // input.setAttribute('value', '1');
+
+            // Append the elements to build the DOM structure
+            // minusLink.appendChild(minusSpan);
+            // plusLink.appendChild(plusSpan);
+            // div.appendChild(minusLink);
+            // div.appendChild(input);
+            // div.appendChild(plusLink);
+
+            // // Append the div to an existing element on the page, or the body if none exists
+            // const container = document.getElementById('container'); // Replace 'container' with the ID of the desired parent element
+            // if (container) {
+            //   container.appendChild(div);
+            // } else {
+            //   document.body.appendChild(div);
+            // }
+
+            // // Append the <input> element to the fourth <td> element
+            tdElement4.appendChild(pElement);
+
+            // Append the fourth <td> element to the <tr> element
+            trElement.appendChild(tdElement4);
+
+            // Create the fifth <td> element
+            const tdElement5 = document.createElement("td");
+            tdElement5.className = "trex";
+
+            // Create the <p> element with the total price
+            const pElement5 = document.createElement("p");
+            pElement5.id = "pElement5"
+            pElement5.innerHTML = `₹${check[i].p_qty * cart_products[i].price}`;
+
+            // Append the <p> element to the fifth <td> element
+            tdElement5.appendChild(pElement5);
+
+            // Append the fifth <td> element to the <tr> element
+            trElement.appendChild(tdElement5);
+
+            // Create the sixth <td> element
+            const tdElement6 = document.createElement("td");
+            tdElement6.className = "trex";
+
+            // Create the <i> element for the delete icon
+            const iElement = document.createElement("i");
+            iElement.className = "fa-solid fa-xmark fa-sm";
+            iElement.id = "remove_icon";
+            iElement.style.color = "#900c";
+            tdElement6.appendChild(iElement);
+
+            // Append the sixth <td> element to the <tr> element
+            trElement.appendChild(tdElement6);
+
+            total += check[i].p_qty * cart_products[i].price;
+
+            document.querySelector(".product-table").append(trElement);
+        }
+
+        ////// RIGHT SIDE[ORDER SUMMARY] //////
+
+        // Create the parent div element with class "rightside"
+        const risdtosum = document.createElement('div');
+        risdtosum.className = 'rightside';
+
+        // Create the h4 element with text "ORDER SUMMARY"
+        const heading = document.createElement('h4');
+        heading.textContent = 'ORDER SUMMARY';
+        risdtosum.appendChild(heading);
+
+        // Create the table element with class "details"
+        const table = document.createElement('table');
+        table.className = 'details';
+        risdtosum.appendChild(table);
+
+        // Create the caption element
+        const caption = document.createElement('caption');
+        table.appendChild(caption);
+
+        // Create the th element
+        const tableHeader = document.createElement('th');
+        table.appendChild(tableHeader);
+
+        // Create the first row - Subtotal
+        const row1 = document.createElement('tr');
+        const subtotalLabel = document.createElement('td');
+        subtotalLabel.textContent = 'SUBTOTAL';
+        row1.appendChild(subtotalLabel);
+        const subtotalAmount = document.createElement('td');
+        subtotalAmount.className = 'rf';
+        subtotalAmount.id = 'subtotal1';
+        subtotalAmount.innerText = `₹${total}`;
+        row1.appendChild(subtotalAmount);
+        table.appendChild(row1);
+
+        // Add the total in order summary
+
+        // Create the second row - Shipping
+        const row2 = document.createElement('tr');
+        const shippingLabel = document.createElement('td');
+        shippingLabel.textContent = 'SHIPPING';
+        row2.appendChild(shippingLabel);
+        const shippingAmount = document.createElement('td');
+        shippingAmount.className = 'rf';
+        shippingAmount.textContent = 'Free';
+        row2.appendChild(shippingAmount);
+        table.appendChild(row2);
+
+        // Create the third row - Secure Pack
+        const row3 = document.createElement('tr');
+        const securePackLabel = document.createElement('td');
+        securePackLabel.textContent = 'SECURE PACK';
+        row3.appendChild(securePackLabel);
+        const securePackAmount = document.createElement('td');
+        securePackAmount.className = 'rf';
+        securePackAmount.innerHTML = `₹${17}`;
+        row3.appendChild(securePackAmount);
+        table.appendChild(row3);
+
+        const securePackamount = 17;
+
+        // function for discount
+        let str = "";
+        const discalcu = total;
+        if (discalcu <= 1500) {
+            str = 100;
+        } else if (discalcu <= 2500) {
+            str = 200;
+        } else if (discalcu <= 3500) {
+            str = 300;
+        } else if (discalcu <= 4500) {
+            str = 400;
+        } else if (discalcu <= 5500) {
+            str = 450;
+        } else if (discalcu >= 5500) {
+            str = 550;
+        }
+
+        const subtotal = parseInt(total + securePackamount - str);
+
+        // Create the fourth row - Discount
+        const row4 = document.createElement('tr');
+        const discountLabel = document.createElement('td');
+        discountLabel.textContent = 'DISCOUNT';
+        row4.appendChild(discountLabel);
+        const discountAmount = document.createElement('td');
+        discountAmount.className = 'rf';
+        discountAmount.innerHTML = `- ₹${str}`;
+        row4.appendChild(discountAmount);
+        table.appendChild(row4);
+
+        // Create the fifth row - Order Total
+        const row5 = document.createElement('tr');
+        const orderTotalLabel = document.createElement('td');
+        orderTotalLabel.textContent = 'ORDER TOTAL';
+        row5.appendChild(orderTotalLabel);
+        const orderTotalAmount = document.createElement('td');
+        orderTotalAmount.className = 'rf';
+        orderTotalAmount.innerHTML = `₹${subtotal}`;
+        row5.appendChild(orderTotalAmount);
+        table.appendChild(row5);
+
+        // // Create the div element with id "inc" and text "Inclusive of all taxes"
+        // const inclusiveDiv = document.createElement('div');
+        // inclusiveDiv.id = 'inc';
+        // inclusiveDiv.textContent = 'Inclusive of all taxes';
+        // risdtosum.appendChild(inclusiveDiv);
+
+        const checkoutButton = document.createElement('button');
+        checkoutButton.className = 'cbtn';
+        checkoutButton.textContent = 'CHECKOUT';
+        checkoutButton.onclick = function () {
+            window.location.href = `./checkout.html?stotal=${subtotal}`;
+        };
+
+        risdtosum.appendChild(checkoutButton);
+
+        // Append the risdtosum to the document body or any desired container element
+        document.body.appendChild(risdtosum);
+        document.querySelector(".content").append(risdtosum);
+
+        // delete function
+        const cart_remove = document.querySelectorAll("#remove_icon");
+        cart_remove.forEach((remove_item) => {
+            remove_item.addEventListener("click", function del() {
+                if (confirm("Are you Sure on deleting?")) {
+                    const parent = this.parentNode.parentNode;
+                    const id = parent.querySelector(".cart_img").getAttribute("data-id");
+
+                    const tot_cartpro = JSON.parse(localStorage.getItem("cart_details"));
+                    const find_products = tot_cartpro.find(e => e.product_id === id);
+                    const find_index = tot_cartpro.indexOf(find_products);
+                    tot_cartpro.splice(find_index, 1);
+                    localStorage.setItem("cart_details", JSON.stringify(tot_cartpro));
+                    window.location.reload();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
