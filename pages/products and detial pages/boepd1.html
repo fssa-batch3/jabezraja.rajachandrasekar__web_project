@@ -357,7 +357,7 @@
                     }
                 }
                 alert("added to your cart");
-                cart.push({ product_id, sam, p_qty });
+                cart.push({ product_id, sam, p_qty, current_price: p_detail.price});
                 localStorage.setItem("cart_details", JSON.stringify(cart));
                 window.location.href = "../cart/cart.html";
             }

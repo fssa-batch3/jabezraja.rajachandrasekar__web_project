@@ -44,12 +44,15 @@
         const pro_data = JSON.parse(localStorage.getItem("products_details"));
         const cart_products = [];
 
-        for (let i = 0; i < cart.length; i++) {
-            const cartpro = pro_data.find(e => e.puid === cart[i].product_id);
+        const sam = JSON.parse(localStorage.getItem("user_data"));
+        const check = cart.filter((c_user) =>c_user.sam === sam);
+
+        for (let i = 0; i < check.length; i++) {
+            const cartpro = pro_data.find(e => e.puid === check[i].product_id);
             cart_products.push(cartpro);
         }
 
-        if (cart.length === 0) {
+        if (check.length === 0) {
             document.querySelector("div.content").style.display = "none";
             const head = document.createElement("h1");
             head.setAttribute("class", "head3")
@@ -137,7 +140,7 @@
             // Create the necessary elements
             // Create the <p> element with the total price
             const pElement = document.createElement("p");
-            pElement.innerHTML = cart[i].p_qty;
+            pElement.innerHTML = check[i].p_qty;
 
             // const minusLink = document.createElement('a');
             // const minusSpan = document.createElement('span');
@@ -188,7 +191,7 @@
             // Create the <p> element with the total price
             const pElement5 = document.createElement("p");
             pElement5.id = "pElement5"
-            pElement5.innerHTML = `₹${cart[i].p_qty * cart_products[i].price}`;
+            pElement5.innerHTML = `₹${check[i].p_qty * cart_products[i].price}`;
 
             // Append the <p> element to the fifth <td> element
             tdElement5.appendChild(pElement5);
@@ -210,7 +213,7 @@
             // Append the sixth <td> element to the <tr> element
             trElement.appendChild(tdElement6);
 
-            total += cart[i].p_qty * cart_products[i].price;
+            total += check[i].p_qty * cart_products[i].price;
 
             document.querySelector(".product-table").append(trElement);
         }

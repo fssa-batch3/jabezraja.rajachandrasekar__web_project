@@ -48,24 +48,7 @@
 
             <section class="pnem">
                 <h2>ORDERS</h2>
-                <div id="" class="ordmd">
-                    <div id="orderContainer" class="ordmdi">
-                        <div id="ordimg" class="ordi">
-                            <img src="/assets/images/products/r6.jpg" alt="">
-                        </div>
-                        <div id="ordprna" class="ordi">
-                            <p>Luxury Imperia Collection Diamond Buttoned Quilting Back and Golden Strips Sofa</p>
-                        </div>
-                        <div id="ordqtpr" class="ordi">
-                            <p id="ordqty">Qty: 5</p>
-                            <p id="ordpri">Price: 1938</p>
-                        </div>
-                        <div id="ordeli" class="ordi">
-                            <p id="ordate">Delivary Date: 23-05-2023</p>
-                            <p id="ordsta">Status:shipping</p>
-                        </div>
-                    </div>
-                </div>
+                <div id="" class="ordmd"></div>
             </section>
         </div>
     </main>
@@ -218,89 +201,108 @@
     <!-----Footer End----->
     <script src="/js/header.js"></script>
     <script>
-        // Create the main container div
-        const containerDiv = document.createElement('div');
-        containerDiv.id = 'orderContainer';
-        containerDiv.className = 'ordmdi';
 
-        // Create the first div for the image
-        const imageDiv = document.createElement('div');
-        imageDiv.id = 'ordimg';
-        imageDiv.className = 'ordi';
+        const orders = JSON.parse(localStorage.getItem("order_details"));
+        const ord_item = JSON.parse(localStorage.getItem("ordered_items"));
 
-        // Create the image element
-        const image = document.createElement('img');
-        image.src = 'https://m.media-amazon.com/images/I/71cBZJsl+EL._SL1500_.jpg';
-        image.alt = '';
+        const sam = JSON.parse(localStorage.getItem("user_data"));
+        // checking the current user
+        const check = orders.filter((c_user) => c_user.sam === sam);
+        // getting the product details
+        const pro_data = JSON.parse(localStorage.getItem("products_details"));
+        const ord_detail = [];
 
-        // Append the image to the image div
-        imageDiv.appendChild(image);
+        for (let i = 0; i < ord_item.length; i++) {
+            const ord_pro = pro_data.find(e => e.puid === ord_item[i].product_id);
+            ord_detail.push(ord_pro);
+        }
 
-        // Append the image div to the container div
-        containerDiv.appendChild(imageDiv);
+        for (let i = 0; i < ord_detail.length; i++) {
 
-        // Create the second div for the product name
-        const productNameDiv = document.createElement('div');
-        productNameDiv.id = 'ordprna';
-        productNameDiv.className = 'ordi';
+            // Create the main container div
+            const containerDiv = document.createElement('div');
+            containerDiv.id = 'orderContainer';
+            containerDiv.className = 'ordmdi';
 
-        // Create the paragraph element for the product name
-        const productName = document.createElement('p');
-        productName.textContent = 'Boult Audio Maverick Truly Wireless';
+            // Create the first div for the image
+            const imageDiv = document.createElement('div');
+            imageDiv.id = 'ordimg';
+            imageDiv.className = 'ordi';
 
-        // Append the product name paragraph to the product name div
-        productNameDiv.appendChild(productName);
+            // Create the image element
+            const image = document.createElement('img');
+            image.setAttribute("src", ord_detail[i].image.main_img);
+            // image.alt = '';
 
-        // Append the product name div to the container div
-        containerDiv.appendChild(productNameDiv);
+            // Append the image to the image div
+            imageDiv.appendChild(image);
 
-        // Create the third div for quantity and price
-        const quantityPriceDiv = document.createElement('div');
-        quantityPriceDiv.id = 'ordqtpr';
-        quantityPriceDiv.className = 'ordi';
+            // Append the image div to the container div
+            containerDiv.appendChild(imageDiv);
 
-        // Create the paragraph element for quantity
-        const quantity = document.createElement('p');
-        quantity.id = 'ordqty';
-        quantity.textContent = 'Qty: 2';
+            // Create the second div for the product name
+            const productNameDiv = document.createElement('div');
+            productNameDiv.id = 'ordprna';
+            productNameDiv.className = 'ordi';
 
-        // Create the paragraph element for price
-        const price = document.createElement('p');
-        price.id = 'ordpri';
-        price.textContent = 'Price: 2248';
+            // Create the paragraph element for the product name
+            const productName = document.createElement('p');
+            productName.textContent = ord_detail[i]["product_name"];
 
-        // Append the quantity and price paragraphs to the quantity and price div
-        quantityPriceDiv.appendChild(quantity);
-        quantityPriceDiv.appendChild(price);
+            // Append the product name paragraph to the product name div
+            productNameDiv.appendChild(productName);
 
-        // Append the quantity and price div to the container div
-        containerDiv.appendChild(quantityPriceDiv);
+            // Append the product name div to the container div
+            containerDiv.appendChild(productNameDiv);
 
-        // Create the fourth div for delivery date and status
-        const deliveryStatusDiv = document.createElement('div');
-        deliveryStatusDiv.id = 'ordeli';
-        deliveryStatusDiv.className = 'ordi';
+            // Create the third div for quantity and price
+            const quantityPriceDiv = document.createElement('div');
+            quantityPriceDiv.id = 'ordqtpr';
+            quantityPriceDiv.className = 'ordi';
 
-        // Create the paragraph element for delivery date
-        const deliveryDate = document.createElement('p');
-        deliveryDate.id = 'ordate';
-        deliveryDate.textContent = 'Delivery Date: 2023-05-26';
+            // Create the paragraph element for quantity
+            const quantity = document.createElement('p');
+            quantity.id = 'ordqty';
+            quantity.textContent = "Qty: " + ord_item[i].p_qty;
 
-        // Create the paragraph element for status
-        const status = document.createElement('p');
-        status.id = 'ordsta';
-        status.textContent = 'Status: shipping';
+            // Create the paragraph element for price
+            const price = document.createElement('p');
+            price.id = 'ordpri';
+            price.textContent = 'Price: ' + ord_detail[i]["price"] * ord_item[i].p_qty;
 
-        // Append the delivery date and status paragraphs to the delivery and status div
-        deliveryStatusDiv.appendChild(deliveryDate);
-        deliveryStatusDiv.appendChild(status);
+            // Append the quantity and price paragraphs to the quantity and price div
+            quantityPriceDiv.appendChild(quantity);
+            quantityPriceDiv.appendChild(price);
 
-        // Append the delivery and status div to the container div
-        containerDiv.appendChild(deliveryStatusDiv);
+            // Append the quantity and price div to the container div
+            containerDiv.appendChild(quantityPriceDiv);
 
-        // Append the container div to the document body
-        document.body.appendChild(containerDiv);
-        document.querySelector(".ordmd").append(containerDiv);
+            // Create the fourth div for delivery date and status
+            const deliveryStatusDiv = document.createElement('div');
+            deliveryStatusDiv.id = 'ordeli';
+            deliveryStatusDiv.className = 'ordi';
+
+            // Create the paragraph element for delivery date
+            const deliveryDate = document.createElement('p');
+            deliveryDate.id = 'ordate';
+            deliveryDate.textContent = 'Delivery Date: ' + orders[i].delivery_date;
+
+            // Create the paragraph element for status
+            const status = document.createElement('p');
+            status.id = 'ordsta';
+            status.textContent = 'Status: shipping';
+
+            // Append the delivery date and status paragraphs to the delivery and status div
+            deliveryStatusDiv.appendChild(deliveryDate);
+            deliveryStatusDiv.appendChild(status);
+
+            // Append the delivery and status div to the container div
+            containerDiv.appendChild(deliveryStatusDiv);
+
+            // Append the container div to the document body
+            document.body.appendChild(containerDiv);
+            document.querySelector(".ordmd").append(containerDiv);
+        };
     </script>
 </body>
 

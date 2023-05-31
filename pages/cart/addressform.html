@@ -36,7 +36,8 @@
                                 placeholder="MOBILE NUMBER" maxlength="10" required="true">
                         </div>
                         <div class="cot">
-                            <input class="cofd" id="pincode" type="text" placeholder="PIN CODE" maxlength="" required="true">
+                            <input class="cofd" id="pincode" type="text" placeholder="PIN CODE" maxlength=""
+                                required="true">
                             <input class="cofd" id="lmark" style="margin-left:20px" type="text" placeholder="LANDMARK"
                                 required="true">
                         </div>
@@ -95,7 +96,7 @@
             </div>
         </div>
         <div class="multi_add">
-            <div class="single_addcont">
+            <!-- <div class="single_addcont">
                 <div>
                     <label class="container">
                         <input type="radio" checked="checked" name="radio">
@@ -114,7 +115,7 @@
                     <address style="margin-left: 34px;">(Ground Floor)No. 83, Perfect Parkview, Palaniappa Nagar, 2nd
                         street, Gowriwakkam, Chennai 600073</address>
                 </div>
-            </div>
+            </div> -->
         </div>
     </main>
     <script src="/js/header.js"> </script>
@@ -130,84 +131,92 @@
             const add_address = document.getElementById("fon").value;
             const add_district = document.getElementById("cidito").value;
             const add_state = document.getElementById("state").value;
+            const add_uid = crypto.randomUUID();
 
             //array
 
             const a_details = JSON.parse(localStorage.getItem("address_details")) || [];
 
             a_details.push({
-                "name":add_name,
-                "number":add_number,
-                "pincode":add_pincode,
-                "landmark":add_landmark,
-                "address":add_address,
-                "district":add_district,
-                "state":add_state,
+                "name": add_name,
+                "number": add_number,
+                "pincode": add_pincode,
+                "landmark": add_landmark,
+                "address": add_address,
+                "district": add_district,
+                "state": add_state,
+                "uni_id": add_uid,
             });
-            // console.log(a_details)
 
             localStorage.setItem("address_details", JSON.stringify(a_details));
             window.location.reload();
             document.querySelector("form").reset();
         }
-    // </script>
-    // <script>
-        // Create the parent div element
-        const parentDiv = document.createElement('div');
-        parentDiv.className = 'single_addcont';
+    </script>
+    <script>
+        const adsdet = JSON.parse(localStorage.getItem("address_details"));
 
-        // Create the first inner div element
-        const div1 = document.createElement('div');
+        for (let i = 0; i < adsdet.length; i++) {
 
-        // Create the label element
-        const label = document.createElement('label');
-        label.className = 'container';
-        div1.appendChild(label);
+            // Create the parent div element
+            const parentDiv = document.createElement('div');
+            parentDiv.className = 'single_addcont';
 
-        // Create the radio input element
-        const radioInput = document.createElement('input');
-        radioInput.setAttribute('type', 'radio');
-        radioInput.setAttribute('checked', 'checked');
-        radioInput.setAttribute('name', 'radio');
-        label.appendChild(radioInput);
+            // Create the first inner div element
+            const div1 = document.createElement('div');
 
-        // Create the span element for the checkmark
-        const checkmarkSpan = document.createElement('span');
-        checkmarkSpan.className = 'checkmark';
-        label.appendChild(checkmarkSpan);
+            // Create the label element
+            const label = document.createElement('label');
+            label.className = 'container';
+            div1.appendChild(label);
 
-        // Create the span element
-        const span = document.createElement('span');
+            // Create the radio input element
+            const radioInput = document.createElement('input');
+            radioInput.setAttribute('type', 'radio');
+            radioInput.setAttribute('checked', 'checked');
+            radioInput.setAttribute('name', 'radio');
+            label.appendChild(radioInput);
 
-        // Create the second inner div element
-        const div2 = document.createElement('div');
-        div2.setAttribute('class', 'stydiv')
-        div2.textContent = 'KINGJR';
-        span.appendChild(div2);
+            // Create the span element for the checkmark
+            const checkmarkSpan = document.createElement('span');
+            checkmarkSpan.className = 'checkmark';
+            label.appendChild(checkmarkSpan);
 
-        // Create the third inner div element
-        const div3 = document.createElement('div');
-        div3.setAttribute('class', 'stydiv')
-        div3.textContent = '7904615246';
-        span.appendChild(div3);
+            // Create the span element
+            const span = document.createElement('span');
 
-        // Create the fourth inner div element
-        const div4 = document.createElement('div');
+            // Create the second inner div element
+            const div2 = document.createElement('div');
+            div2.setAttribute('class', 'stydiv')
+            div2.innerText = adsdet[i].name;
+            span.appendChild(div2);
 
-        // Create the address element
-        const address = document.createElement('address');
-        address.setAttribute('class', 'stydiv')
-        address.textContent = '(Ground Floor)No. 83, Perfect Parkview, Palaniappa Nagar, 2nd street, Gowriwakkam, Chennai 600073';
-        div4.appendChild(address);
+            // Create the third inner div element
+            const div3 = document.createElement('div');
+            div3.setAttribute('class', 'stydiv')
+            div3.textContent = adsdet[i].number;
+            span.appendChild(div3);
 
-        // Append all the inner divs and span to the parent div
-        parentDiv.appendChild(div1);
-        parentDiv.appendChild(span);
-        parentDiv.appendChild(div4);
+            // Create the fourth inner div element
+            const div4 = document.createElement('div');
 
-        // Append the parent div to the document body or any other desired container element
-        document.body.appendChild(parentDiv);
-        document.querySelector(".multi_add").append(parentDiv);
+            // Create the address element
+            const address = document.createElement('address');
+            address.setAttribute('class', 'stydiv')
+            address.textContent = adsdet[i].address;
+            div4.appendChild(address);
+
+            // Append all the inner divs and span to the parent div
+            parentDiv.appendChild(div1);
+            parentDiv.appendChild(span);
+            parentDiv.appendChild(div4);
+
+            // Append the parent div to the document body or any other desired container element
+            document.body.appendChild(parentDiv);
+            document.querySelector(".multi_add").append(parentDiv);
+        };
+
+
 
     </script>
 </body>
@@ -287,7 +296,7 @@
 
     .single_addcont {
         border: 1px solid #d5c8aa;
-        max-width: 365px;
+        width: 365px;
         padding-left: 10px;
         margin-left: 10px;
     }
