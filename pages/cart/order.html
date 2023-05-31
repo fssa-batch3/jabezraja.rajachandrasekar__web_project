@@ -29,25 +29,26 @@
             <aside class="pow">
                 <ul>
                     <li class="powa">
-                        <a href="../cart/profile.index.html">PROFILE</a>
+                        <a href="../cart/profile.html">PROFILE</a>
                     </li>
                     <li class="powa">
-                        <a href="../cart/order.index.html">ORDERS</a>
+                        <a href="../cart/order.html">ORDERS</a>
                     </li>
                     <li class="powa">
-                        <a href="../cart/wishlist.index.html">WHISHLIST</a>
+                        <a href="../cart/wishlist.html">WHISHLIST</a>
                     </li>
                     <li class="powa">
-                        <a href="../cart/cart.index.html">CART</a>
+                        <a href="../cart/cart.html">CART</a>
                     </li>
                     <li class="powa">
-                        <a href="../cart/notification.index.html">NOTIFICATION</a>
+                        <a href="../cart/notification.html">NOTIFICATION</a>
                     </li>
                 </ul>
             </aside>
 
             <section class="pnem">
                 <h2>ORDERS</h2>
+                
                 <div id="" class="ordmd"></div>
             </section>
         </div>
@@ -207,17 +208,20 @@
 
         const sam = JSON.parse(localStorage.getItem("user_data"));
         // checking the current user
-        const check = orders.filter((c_user) => c_user.sam === sam);
+        const check = orders.filter((c_user) => c_user.user_id === sam);
         // getting the product details
         const pro_data = JSON.parse(localStorage.getItem("products_details"));
         const ord_detail = [];
 
-        for (let i = 0; i < ord_item.length; i++) {
-            const ord_pro = pro_data.find(e => e.puid === ord_item[i].product_id);
-            ord_detail.push(ord_pro);
-        }
 
-        for (let i = 0; i < ord_detail.length; i++) {
+
+
+            for (let i = 0; i < check.length; i++) {
+  const cord_id = ord_item.filter((har) => har.order_id === check[i].ord_uid);
+  console.log(cord_id);
+
+  cord_id.forEach((element) => {
+    const jad = pro_data.find((e) => e.puid === element.product_id);
 
             // Create the main container div
             const containerDiv = document.createElement('div');
@@ -231,7 +235,7 @@
 
             // Create the image element
             const image = document.createElement('img');
-            image.setAttribute("src", ord_detail[i].image.main_img);
+            image.setAttribute("src", jad.image.main_img);
             // image.alt = '';
 
             // Append the image to the image div
@@ -247,7 +251,7 @@
 
             // Create the paragraph element for the product name
             const productName = document.createElement('p');
-            productName.textContent = ord_detail[i]["product_name"];
+            productName.textContent = jad.product_name;
 
             // Append the product name paragraph to the product name div
             productNameDiv.appendChild(productName);
@@ -260,15 +264,14 @@
             quantityPriceDiv.id = 'ordqtpr';
             quantityPriceDiv.className = 'ordi';
 
-            // Create the paragraph element for quantity
             const quantity = document.createElement('p');
-            quantity.id = 'ordqty';
-            quantity.textContent = "Qty: " + ord_item[i].p_qty;
+    quantity.id = 'ordqty';
+    quantity.textContent = 'Qty: ' + element.p_qty;
 
-            // Create the paragraph element for price
-            const price = document.createElement('p');
-            price.id = 'ordpri';
-            price.textContent = 'Price: ' + ord_detail[i]["price"] * ord_item[i].p_qty;
+    const price = document.createElement('p');
+    price.id = 'ordpri';
+    price.textContent = 'Price: ' + element.current_price * element.p_qty;
+
 
             // Append the quantity and price paragraphs to the quantity and price div
             quantityPriceDiv.appendChild(quantity);
@@ -302,6 +305,8 @@
             // Append the container div to the document body
             document.body.appendChild(containerDiv);
             document.querySelector(".ordmd").append(containerDiv);
+
+        });
         };
     </script>
 </body>
