@@ -45,7 +45,7 @@
         const cart_products = [];
 
         const sam = JSON.parse(localStorage.getItem("user_data"));
-        const check = cart.filter((c_user) =>c_user.sam === sam);
+        const check = cart.filter((c_user) => c_user.sam === sam);
 
         for (let i = 0; i < check.length; i++) {
             const cartpro = pro_data.find(e => e.puid === check[i].product_id);
@@ -359,4 +359,5 @@
         });
     </script>
 </body>
+
 </html>
